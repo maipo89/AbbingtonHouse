@@ -1,0 +1,197 @@
+.form-admission {
+    padding: 40px 0;
+    background-color: $corianderOpacity;
+    position: relative;
+
+    @media (max-width: 400px) {
+        padding: 30px 0;
+    }    
+
+    img {
+        position: absolute;
+        width: 50%;
+        top: 0;
+        bottom: 0;
+        height: 719px;
+        opacity: 0.2;
+
+        @media (max-width: 700px) {
+            width: 100%;
+        }    
+    }
+
+    &__form, &__form-complete {
+        width: 1060px;
+        height: 639px;
+        background-color: white;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+
+        @media (max-width: 1280px) {
+            width: 1092px;
+        }
+
+        @media (max-width: 1160px) {
+            width: 900px;
+        }
+
+        @media (max-width: 960px) {
+            width: 668px;
+        }
+
+        @media (max-width: 700px) {
+            width: 90%;
+            height: 818px;
+        }
+
+        @media (max-width: 540px) {
+            height: 880px;
+        }
+
+        @media (max-width: 400px) {
+            height: 900px;
+        }
+
+        @media (max-width: 349px) {
+            height: 950px;
+        }
+
+        h3 {
+            padding-top: 85px;
+            text-align: center;
+
+            @media (max-width: 960px) {
+                padding-top: 50px;
+                font-size: 31px;
+            }
+    
+            @media (max-width: 700px) {
+                padding-top: 33px;
+            }
+        }
+
+        p {
+            text-align: center;
+            font-size: $p-smaller;
+            width: 730px;
+            height: auto;
+            margin: 0 auto;
+            margin-top: 40px;
+            line-height: 19.5px;
+
+            @media (max-width: 960px) {
+                width: 558px;
+                font-size: $p-small;
+                line-height: 24px;
+            }
+
+            @media (max-width: 700px) {
+                width: 90%;
+            }
+        }
+
+
+        &__container {
+            display: flex;
+            column-gap: 20px;
+            width: 858px;
+            margin: 0 auto;
+
+            @media (max-width: 960px) {
+                width: 592px;
+            }
+
+            @media (max-width: 700px) {
+                flex-direction: column;
+                width: 90%;
+            }
+
+            &__left-container, &__right-container {
+                width: 424px;
+                height: 205px;
+                input {
+                    display: block;
+                }
+
+                @media (max-width: 960px) {
+                    width: 286px;
+                }
+
+                @media (max-width: 700px) {
+                    width: 100%;
+                }
+            }
+
+            &__left-container {
+                input:first-of-type {
+                    margin-bottom: 20px;
+                }
+                .select-wrapper {
+                    margin-bottom: 20px;
+                }
+                .email-container {
+                    position: relative;
+                    .email-error {
+                        display: none;
+                    }
+                }
+
+                @media (max-width: 700px) {
+                    margin-bottom: 20px;
+                }
+
+            }
+
+            &__right-container {
+                input {
+                    margin-bottom: 20px;
+                }
+                textarea {
+                    height: 130px;
+                }
+            }
+        }
+
+        &__button-container {
+            @include flexCenter($direction: row);
+        }
+
+        .call-text {
+            color: $mustard-green;
+            font-size: $p-small;
+            text-align: center;
+            margin-top: 7px;
+            line-height: 24px;
+
+            a {
+                text-decoration: none;
+                color: $mustard-green;
+                padding-bottom: 1px;
+                border-bottom: 1px solid $mustard-green;
+
+                &:focus-visible {
+                    border: 2px solid black !important;
+                    outline: 2px solid yellow !important;
+                }
+            }
+        }
+    }
+
+    &__form-complete {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h3 {
+            padding-top: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: $shadow;
+            text-decoration: underline;
+        }
+    }
+}

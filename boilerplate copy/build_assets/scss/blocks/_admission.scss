@@ -1,0 +1,84 @@
+.admission {
+    padding: 0 380px 100px 380px;
+
+    @media (max-width: 1600px) {
+        padding: 0 94px 100px 94px;
+    }
+
+    @media (max-width: 840px) {
+        padding: 0 50px 75px 50px;
+    }
+
+    @media (max-width: 400px) {
+        padding: 0 20px 50px 20px;
+    }
+
+    h5 {
+        background-color: white;
+        border: none;
+        padding: 12px 0 12px 0 !important;
+        cursor: pointer;
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid $tan;
+        border-radius: 0 !important;
+        outline: none !important;
+        
+        p {
+            font-size: $h5-size !important;
+            color: $shadow !important;
+            font-family: $alegreyaSans;
+            margin: 0;
+            padding: 0;
+
+            @media (max-width: 840px) {
+                font-size: $p-small !important;
+            }
+        }
+
+        .ui-icon-triangle-1-e, .ui-icon-triangle-1-s {
+            display: none !important;
+        }
+
+        .arrow {
+            content: "";
+            transition: ease .04s;
+            display: inline-block;
+            border-bottom: 2px solid $shadow;
+            border-left: 2px solid $shadow;
+            width: 12px;
+            height: 12px;
+            transform: rotate(-45deg);
+            margin: 3px 10px;
+            margin-right: 22px;
+            pointer-events: none;
+            position: relative;
+            right: -15px;
+        }
+    }
+
+    .ui-accordion-header-active {
+        border-bottom: none;
+
+        .arrow {
+            transform: rotate(135deg) !important;
+        }
+    }
+    
+    .ui-accordion-content-active {
+        border-bottom: 2px solid $tan;
+    }
+
+    &__content {
+        height: auto !important;
+        border: none;
+        padding-left: 0 !important;
+
+        p {
+            font-size: $p-smaller !important;
+            font-family: $alegreyaSans;
+            line-height: 19.5px;
+        }
+    }
+}

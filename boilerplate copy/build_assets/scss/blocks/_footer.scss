@@ -1,0 +1,177 @@
+.footer {
+    height: 228px;
+    background-color: $shadow;
+
+    @media (max-width: 500px) {
+        height: 390px;
+    }
+
+    &__container {
+        @include spaceBetween($direction: row, $align: flex-start);
+        width: 762px;
+        margin: 0 auto;
+        padding-top: 48px;
+
+        @media (max-width: 760px) {
+           width: 100%;
+        }
+
+        @media (max-width: 680px) {
+            justify-content: space-around;
+        }
+
+        @media (max-width: 500px) {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        svg {
+            margin-left: 37px;
+            @media (max-width: 680px) {
+                margin-left: 15px;
+            }
+            @media (max-width: 500px) {
+                order: 4;
+                position: relative;
+                right: 75px;
+            }
+        }
+
+        .address.options, .socials.options {
+            @media (max-width: 680px) {
+                width: 100px;
+            }
+
+            @media (max-width: 500px) {
+                width: 50%;
+            }
+        }
+
+        .contact.options {
+            @media (max-width: 680px) {
+                width: 160px;
+            }
+
+            @media (max-width: 500px) {
+                width: 50%;
+            }
+        }
+
+        .options {
+            width: 149px;
+            height: 150px;
+
+            @media (max-width: 760px) {
+                width: 20%;
+            }
+
+            @media (max-width: 500px) {
+                height: 140px;
+            }
+
+            h5 {
+                font-size: $h5-size;
+                font-family: $heading-family;
+                color: $white;
+                margin: 0;
+
+                @media (max-width: 500px) {
+                    margin-left: 25px;
+                }
+            }
+
+            .line {
+                width: 47px;
+                height: 2px;
+                background-color: $tan;
+                margin: 13px 0 17px 0;
+
+                @media (max-width: 500px) {
+                    margin-left: 25px;
+                }
+            }
+
+            p {
+                font-family: $alegreyaSans;
+                font-size: $p-thin;
+                font-weight: 300;
+                color: $white;
+                margin: 0;
+                line-height: 15.5px;
+
+                @media (max-width: 500px) {
+                    margin-left: 25px;
+                }
+
+                &:first-of-type {
+                    font-weight: 500;
+                    margin-bottom: 4px;
+                }
+            }
+
+            a  {
+                font-family: $alegreyaSans;
+                font-size: $p-thin;
+                font-weight: 300;
+                color: $white;
+                line-height: 15px;
+                padding: 0;
+                margin: 0;
+                text-decoration: none;
+                display: block;
+                cursor: pointer;
+
+                &:hover {
+                    color: $terracotta;
+                }
+
+                &:focus-visible {
+                    border: 2px solid black;
+                    outline: 2px solid yellow;
+                }
+
+                @media (max-width: 500px) {
+                    margin-left: 25px;
+                }
+            }
+        }
+    }
+
+    &__links {
+        @include flexCenter($direction: row);
+        margin: 0 auto;
+        flex-wrap: wrap;
+        padding-bottom: 14px;
+
+        a {
+            font-size: 8px;
+            line-height: 13.2px;
+            font-weight: 500;
+            font-family: 'Montserrat';
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $white;
+            padding-right: 11px;
+            padding-left: 11px;
+            height: 12px;
+            border-right: 2px solid $tan;
+            cursor: pointer;
+
+            &:focus-visible {
+                border: 1px solid black;
+                outline: 1px solid yellow;
+            }
+
+            &:last-child {
+                border-right: 2px solid transparent;
+
+                @media (max-width: 400px) {
+                    margin-top: 22px;
+                }
+            }
+        }
+
+    }
+}

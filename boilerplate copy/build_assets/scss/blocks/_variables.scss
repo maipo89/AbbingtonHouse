@@ -1,0 +1,83 @@
+// Font Families //
+
+$alegreya: 'Alegreya', serif;
+$alegreyaSans: 'Alegreya Sans', serif;
+
+
+// Headings //
+
+$heading-family: $alegreya;
+$h1-size: 70px;
+$h2-size: 48px;
+$h3-size: 39px;
+$h4-size: 31px;
+$h5-size: 25px;
+
+$p-family: $alegreyaSans;
+$p-normal: 25px;
+$p-small: 20px;
+$p-smaller: 16px;
+$p-thin: 13px;
+$p-light: 16px;
+$p-light1: 13px;
+$p-light2: 10px;
+$p-light-weight: 300;
+$p-normal-weight: 400;
+$p-medium-weight: 500;
+
+
+// Colors Palette //
+
+//primary 
+
+$shadow: #87846A;
+$tan: #CDAC8E;
+$pale-silver: #A2A490;
+$quick-silver: #A9A398;
+$mustard-green: #686A27;
+$white: #FFFFFF;
+$gray: #8B8B8B;
+$black: #000000;
+
+//secondary
+
+$terracotta: #944323;
+$chilled-cucumber: #C8CCB2;
+$antique-white: #FFF9F1;
+$antique-white-opacity: #FFF9F1CF;
+$pale-pink: #F9E4CA;
+$light-gray: #C4C4C4;
+$beige: #D8D7F4;
+
+$corianderOpacity: #C9CEB1A3;
+$coriander: #C9CEB1;
+
+//mixins
+
+@mixin flexCenter($direction) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
+
+@mixin spaceBetween($direction, $align) {
+    display: flex;
+    align-items: $align;
+    justify-content: space-between;
+    flex-direction: $direction;
+}
+
+@mixin spaceAround($direction, $align) {
+    display: flex;
+    align-items: $align;
+    justify-content: space-around;
+    flex-direction: $direction;
+}
+
+@mixin flexStart($direction, $align) {
+    display: flex;
+    align-items: $align;
+    justify-content: flex-start;
+    flex-direction: $direction;
+}

@@ -1,0 +1,97 @@
+.hero {
+    display: flex;
+    width: 100%;
+    padding: 0 150px;
+
+    @media (max-width: 1500px) {
+        padding: 0 50px;
+    }
+    @media (max-width: 1280px) {
+        padding: 0px;
+    }
+
+    @media (max-width: 900px) {
+        flex-direction: column-reverse;
+    }
+
+    &__description, &__photo {
+        width: 50%;
+        height: 633px;
+
+        @media (max-width: 900px) {
+            width: 100%;
+        }
+    }
+
+    &__description {
+        @include flexCenter($direction: column);
+        padding: 0 120px;
+
+        @media (max-width: 1265px) {
+            padding: 0 50px;
+        }
+
+        @media (max-width: 900px) {
+            background-color: $antique-white-opacity;
+            position: relative;
+            height: fit-content;
+            width: 90%;
+            top: -135px;
+            padding: 25px;
+            z-index: 1;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 400px) {
+            top: -60px
+        }
+
+        img {
+            width: 400px;
+            margin-bottom: 30px;
+
+            @media (max-width: 900px) {
+                width: 220px;
+            }
+        }
+
+        p {
+            color: $gray;
+            text-align: center;
+
+            @media (max-width: 900px) {
+                font-size: $p-small;
+                line-height: 24px;
+            }
+        }
+    }
+
+    &__photo {
+        position: relative;
+        background-position: center center;
+        background-size: cover;
+
+        @media (max-width: 900px) {
+            -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)) 90%, to(rgba(0,0,0,0)));
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0));
+        }
+
+        @media (max-width: 400px) {
+            height: 276px;
+        }
+        
+        img {
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            @media (max-width: 1280px) {
+                width: 280px;
+            }
+
+            @media (max-width: 400px) {
+                width: 120px;
+            }
+        }
+    }
+}

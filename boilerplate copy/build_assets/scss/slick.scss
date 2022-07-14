@@ -1,0 +1,48 @@
+//Slick
+
+.slick-dots {
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    height: 17px;
+    justify-content: center;
+
+    li {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: $coriander;
+        margin-right: 5px;
+        cursor: pointer;
+        button {
+            display: none !important;
+        }
+    }
+
+    li.slick-active {
+        background-color: $mustard-green;
+    }
+}
+
+svg.prev-arrow.slick-arrow {
+    position: absolute;
+    left: -5%;
+    top: calc(50% - 19px);
+    cursor: pointer;
+
+    @media (max-width: 1150px) {
+        display: none !important;
+    }
+}
+
+svg.next-arrow.slick-arrow {
+    position: absolute;
+    left: 102%;
+    bottom: calc(50% - 19px);
+    cursor: pointer;
+
+    @media (max-width: 1150px) {
+        display: none !important;
+    }
+}

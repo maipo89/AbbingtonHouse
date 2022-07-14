@@ -1,0 +1,140 @@
+.team {
+position: relative;
+margin-top: 100px;
+
+    &__pattern {
+        position: absolute;
+        width: 40%;
+        height: 750px;
+        z-index: -1;
+
+        @media (max-width: 920px) {
+            height: 770px;
+        }
+
+        @media (max-width: 600px) {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__container {
+        width: 1241px;
+        height: auto;
+        margin: 0 auto;
+
+        @media (max-width: 1250px) {
+            width: 900px;
+        }
+
+        @media (max-width: 920px) {
+            width: 604px;
+        }
+
+        @media (max-width: 600px) {
+            width: 495px;
+        }
+
+        @media (max-width: 480px) {
+            width: 334px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 67px;
+
+            @media (max-width: 920px) {
+                font-size: $h4-size;
+                margin-bottom: 50px;
+            }
+
+            @media (max-width: 480px) {
+                margin-bottom: 32px;
+            }
+        }
+
+        &__cards-container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            @media (max-width: 920px) {
+                justify-content: space-evenly;
+            }
+
+            @media (max-width: 480px) {
+                justify-content: space-between;
+            }
+
+            &__card {
+                width: 287px;
+                height: 281px;
+                margin-bottom: 31px;
+
+                @media (max-width: 1250px) {
+                    width: 205px;
+                }
+
+                @media (max-width: 920px) {
+                    height: 195px;
+                    width: 180px;
+                }
+
+                @media (max-width: 600px) {
+                    width: 210px;
+                }
+
+                @media (max-width: 480px) {
+                    width: 151px;
+                    height: 178px;
+                }
+                
+                .photo {
+                    background-size: cover;
+                    background-position: center center;
+                    width: 100%;
+                    height: 222px;
+
+                    @media (max-width: 920px) {
+                        height: 138px;
+                    }
+
+                    @media (max-width: 480px) {
+                        height: 116px;
+                    }
+                }
+
+                .name {
+                    background-color: $shadow;
+                    height: 55px;
+                    width: 100%;
+                    margin-top: 4px;
+
+                    p {
+                        margin: 0;
+                        padding: 0;
+                        text-align: center;
+
+                        &:first-of-type {
+                            font-size: $p-small;
+                            font-weight: $p-light-weight;
+                            color: $white;
+                            line-height: 15px;
+                            padding-top: 11px;
+                            padding-bottom: 5px;
+                        }
+
+                        &:last-child {
+                            font-size: $p-thin;
+                            font-weight: $p-medium-weight;
+                            color: $white;
+                            line-height: 15px;
+                            padding-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
