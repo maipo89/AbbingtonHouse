@@ -1,18 +1,27 @@
 .header {
-    padding: 23px 0px 23px 290px;
-    @include flexStart($direction: row, $align: center);
+    padding: 23px 40px 23px 40px;
+    @include spaceBetween($direction: row, $align: center);
+    width: 1200px;
+    margin: 0 auto;
 
-    @media (max-width: 1528px) {
-        padding: 23px 0px 23px 145px;
+    @media (max-width: 1200px) {
+        width: 1000px;
     }
 
-    @media (max-width: 1285px) {
-        padding: 23px 0px 23px 37px;
+    @media (max-width: 1000px) {
+        width: 900px;
     }
 
-    @media (max-width: 1285px) {
-        padding: 23px 37px;
-        @include spaceBetween($direction: row, $align: center);
+    @media (max-width: 900px) {
+        width: 100%;
+    }
+
+    @media (max-width: 480px) {
+        padding-top: 55px;
+    }
+
+    .chevron-left {
+        display: none;
     }
     
     .hamburger {
@@ -61,19 +70,11 @@
         margin-right: 40px;
         cursor: pointer;
 
-        @media (max-width: 1150px) {
-            margin-right: 100px;
-        }
-
-        @media (max-width: 1095px) {
-            margin-right: 80px;
-        }
-
         @media (max-width: 1065px) {
             margin-right: 70px;
         }
 
-        @media (max-width: 975px) {
+        @media (max-width: 1000px) {
              margin-right: 50px;
         }
 
@@ -109,6 +110,10 @@
                     }
 
                     a {
+                        font-family: $alegreya;
+                        font-size: $p-small;
+                        font-weight: $p-normal-weight;
+                        color: $mustard-green;
                         &:focus-visible {
                             border: 2px solid black;
                             outline: 2px solid yellow;
@@ -116,7 +121,15 @@
                     }
                 }
         
-                @media (max-width: 1150px) {
+                @media (max-width: 1200px) {
+                    width: 140px;
+                }
+
+                @media (max-width: 1067px) {
+                    width: 120px;
+                }
+
+                @media (max-width: 900px) {
                     width: auto;
                 }
         
@@ -153,6 +166,13 @@
 
         @media (max-width: 580px) {
             display: none;
+        }
+
+        &:hover {
+            background-color: $dark-gray;
+            p {
+                color: white;
+            }
         }
 
         &:focus-visible {
@@ -201,19 +221,14 @@
     @media (max-width: 900px) {
         @include spaceBetween($direction: column, $align: flex-start);
         overflow: auto;
+
+        .chevron-left {
+            margin: 10px 0 0 6px;
+            display: block;
+        }
+
         .hamburger {
-            margin-top: 60px;
-            div.line:first-child {
-                transform: rotate(-45deg);
-                width: 28px;
-            }
-            div.line:nth-child(2) {
-                display: none;
-            }
-            div.line:last-child {
-                transform: rotate(45deg);
-                width: 28px;
-            }
+            display: none !important;
         }
 
         .link-logo {

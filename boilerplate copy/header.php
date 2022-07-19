@@ -51,6 +51,9 @@
 						<div class="line"></div>
 					</div>
 				</div>
+				<svg class="chevron-left" width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M13.2686 0.45044C12.6565 -0.150147 11.6697 -0.150147 11.0577 0.45044L0.677855 10.6359C0.190715 11.1139 0.190715 11.8861 0.677855 12.3641L11.0577 22.5496C11.6697 23.1501 12.6565 23.1501 13.2686 22.5496C13.8806 21.949 13.8806 20.9807 13.2686 20.3801L4.22524 11.4939L13.281 2.60765C13.8806 2.01932 13.8806 1.03877 13.2686 0.45044Z" fill="#87846A"/>
+				</svg>
 				<a href="<?php echo get_home_url(); ?>" class="link-logo">
 					<img class="logo" src="<?php echo esc_url( get_template_directory_uri() . '/build_assets/images/AbbingtonHouse-logo.png' ); ?>" />
 				</a>

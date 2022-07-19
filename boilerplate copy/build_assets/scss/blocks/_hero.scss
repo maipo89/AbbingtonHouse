@@ -48,10 +48,11 @@
 
         img {
             width: 400px;
-            margin-bottom: 30px;
+            margin-bottom: 60px;
 
             @media (max-width: 900px) {
                 width: 220px;
+                margin-bottom: 30px;
             }
         }
 

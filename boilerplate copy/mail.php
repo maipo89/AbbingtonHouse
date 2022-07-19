@@ -1,9 +1,11 @@
 <?php 
     $message_sent = false;
-    
+
     if(isset($_POST['email']) && $_POST['email'] != '') {
 
         if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ) {
+
+            echo
 
             $userName = $_POST['thename'];
             $userEmail = $_POST['email'];

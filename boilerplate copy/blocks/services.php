@@ -16,7 +16,7 @@
                             </div>
                             <img src="<?php echo($image["sizes"]["onqor-logo"]) ?>" />
                         </div>
-                    </div> 
+                    </div>
                 <?php endwhile; ?>
             </div>
         </div>

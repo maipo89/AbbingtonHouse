@@ -95,6 +95,11 @@
                     border: solid 2px black;
                     outline: solid 2px yellow;
                 }
+
+                &:hover {
+                    color: $terracotta;
+                    border-bottom: 1px solid $terracotta;
+                }
             }
         }
     }

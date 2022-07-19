@@ -56,10 +56,10 @@
                 width: 880px;
                 height: 112px;
                 @include flexCenter($direction: row);
-                background-color: #fff9f1e8;
+                background-color: #fff9f1f8;
                 position: absolute;
                 z-index: 1;
-                bottom: -40px;
+                bottom: -20px;
                 left: -160px;
                 @media (max-width: 1080px) {
                     width: 100%;

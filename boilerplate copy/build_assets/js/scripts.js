@@ -3,16 +3,21 @@ $(document).ready(function() {
     // Hamburger Menu
 
     $('.hamburger').on("click", function() {
-        $(".header").toggleClass("mobile-header");
-        $('body').toggleClass("fixed-position");
         var $header = $('.header');
+        $header.addClass("mobile-header");
+        $('body').addClass("fixed-position");
+        $header.attr('aria-expanded', true);
+    });
+
+    $('.chevron-left').on("click", function() {
+        var $header = $('.header');
+        $header.removeClass("mobile-header");
+        $('body').removeClass("fixed-position");
         if ($header.attr('aria-expanded')) {
             $header.removeAttr('aria-expanded');
-        } else {
-            $header.attr('aria-expanded', true);
         }
     });
-    
+
 
     // Accordion
 
@@ -37,11 +42,11 @@ $(document).ready(function() {
                     $carousel.slick('unslick');
                 }
                 $(".services__container__cards-container__card").on("mouseover", function() {
-                    $(this).children('img').css("z-index", "-1");
-                  });
+                    $(this).children('div.services__container__cards-container__card__paragraph').addClass('fade-in');
+                });
               
                 $(".services__container__cards-container__card").on("mouseleave", function() {
-                    $(this).children('img').css("z-index", "0");
+                    $(this).children('div.services__container__cards-container__card__paragraph').removeClass('fade-in');
                 });
             }
             else{
@@ -58,6 +63,26 @@ $(document).ready(function() {
             }
         });
     });
+
+    jQuery.event.special.touchstart = {
+        setup: function( _, ns, handle ){
+            if ( ns.includes("noPreventDefault") ) {
+            this.addEventListener("touchstart", handle, { passive: false });
+            } else {
+            this.addEventListener("touchstart", handle, { passive: true });
+            }
+        }
+    };
+
+    jQuery.event.special.touchmove = {
+        setup: function( _, ns, handle ){
+            if ( ns.includes("noPreventDefault") ) {
+            this.addEventListener("touchmove", handle, { passive: false });
+            } else {
+            this.addEventListener("touchmove", handle, { passive: true });
+            }
+        }
+    };
 
 
     // Slider About Page
