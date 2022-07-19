@@ -63,6 +63,9 @@ input {
     height: 55px;
     color: $mustard-green;
     font-size: $p-small;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
 
     &::placeholder {
         color: $mustard-green;
@@ -103,6 +106,9 @@ textarea {
     font-family: $alegreyaSans;
     resize: none;
     color: $mustard-green;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
 
     &::placeholder {
         color: $mustard-green;
@@ -139,13 +145,15 @@ textarea {
 //Button
 
 .button {
-    padding: 7.5px 50px;
+    padding: 2px 48px;
     border: 2px solid $corianderOpacity;
     font-family: $alegreyaSans;
     font-size: $p-small;
     background-color: white;
     color: $mustard-green;
     margin-top: 20px;
+    width: 139px;
+    height: 39px;
 
     &:hover {
         background-color: $pale-silver;
@@ -212,6 +220,12 @@ textarea {
     position: absolute;
     color: green;
     font-size: 12px;
-    top: 2px;
+    bottom: -2px;
+}
+
+// Hamburger
+
+.fixed-position {
+    position: fixed;
 }
 

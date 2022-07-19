@@ -190,7 +190,7 @@
         left: 0;
         right: 0;
         background-color: white;
-        z-index: 2;
+        z-index: 100;
     }
 }
 
@@ -200,6 +200,7 @@
 .header[aria-expanded=true] {
     @media (max-width: 900px) {
         @include spaceBetween($direction: column, $align: flex-start);
+        overflow: auto;
         .hamburger {
             margin-top: 60px;
             div.line:first-child {

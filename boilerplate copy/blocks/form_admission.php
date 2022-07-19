@@ -16,7 +16,7 @@
     <div class="form-admission__form">
         <h3><?php echo($title) ?></h3>
         <p><?php echo($text) ?></p>
-        <form name="formAdmission" action="/form_admission.php" method="POST">
+        <form id="formAdmission" name="formAdmission" action="<?php echo home_url(); ?>/mail.php" method="POST">
             <div class="form-admission__form__container">
                 <div class="form-admission__form__container__left-container">
                     <div class="select-wrapper">
@@ -47,7 +47,7 @@
                 </div>
             </div>
             <div class="form-admission__form__button-container">
-                <button type="submit" class="button"><?php echo($buttonText)?></button>
+                <input type="submit" class="button" value="<?php echo($buttonText)?>" />
             </div>
             <p class="call-text"><?php echo($textCall)?> <a href="tel:<?php echo($number)?>"><?php echo($number)?></a><p>
         </form>

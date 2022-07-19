@@ -3,6 +3,16 @@
     h2 {
         text-align: center;
         margin: 95px 0 42px 0;
+
+        @media (max-width: 920px) {
+            font-size: $h4-size;
+            margin: 75px 0 31px 0;
+        }
+
+        @media (max-width: 500px) {
+            font-size: $h4-size;
+            margin: 50px 0 31px 0;
+        }
     }
 
     &__map {

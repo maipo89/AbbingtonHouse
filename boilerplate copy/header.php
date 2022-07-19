@@ -51,8 +51,7 @@
 						<div class="line"></div>
 					</div>
 				</div>
-                
-				<a href="http://localhost:8888/wordpress/homepage/" class="link-logo">
+				<a href="<?php echo get_home_url(); ?>" class="link-logo">
 					<img class="logo" src="<?php echo esc_url( get_template_directory_uri() . '/build_assets/images/AbbingtonHouse-logo.png' ); ?>" />
 				</a>
 

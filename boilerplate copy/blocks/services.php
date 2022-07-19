@@ -14,9 +14,9 @@
                             <div class="services__container__cards-container__card__paragraph">
                                 <?php echo($text) ?>
                             </div>
-                            <img src="<?php echo($image["sizes"]["onqor-hd"]) ?>" />
+                            <img src="<?php echo($image["sizes"]["onqor-logo"]) ?>" />
                         </div>
-                    </div>
+                    </div> 
                 <?php endwhile; ?>
             </div>
         </div>

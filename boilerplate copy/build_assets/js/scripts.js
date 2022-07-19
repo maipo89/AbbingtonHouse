@@ -4,6 +4,7 @@ $(document).ready(function() {
 
     $('.hamburger').on("click", function() {
         $(".header").toggleClass("mobile-header");
+        $('body').toggleClass("fixed-position");
         var $header = $('.header');
         if ($header.attr('aria-expanded')) {
             $header.removeAttr('aria-expanded');
@@ -11,7 +12,7 @@ $(document).ready(function() {
             $header.attr('aria-expanded', true);
         }
     });
-
+    
 
     // Accordion
 
@@ -100,10 +101,10 @@ $(document).ready(function() {
 
     let menuItems = $('.menu-item a');
     let url = window.location.href;
-    let fullURL = url.slice(0, -1);
     
     menuItems.each(function() {
-        if($(this).attr('href') === fullURL) {
+        console.log($(this).attr('href'));
+        if($(this).attr('href') === url) {
            $(this).addClass('active');
         }
     });
@@ -111,9 +112,7 @@ $(document).ready(function() {
     
     // Validation Admission Form
 
-    $(".form-admission__form .button").on("click", function(e) {
-        
-        e.preventDefault();
+    $("#formAdmission").on("submit", function(e) {
 
         let inputReferral = $(".form-admission__form .referral-input");
         let inputEmail = $(".form-admission__form .input-email");
@@ -124,9 +123,37 @@ $(document).ready(function() {
 
 
         if( inputName.val().length > 0 && inputContact.val().length > 0 && testEmail.test(inputEmail.val()) === true && inputMessage.val().length > 0 && inputReferral.val().length > 0 ) {
-        $(".form-admission__form").css("display", "none");
-        $(".form-admission__form-complete").css("display", "flex");
+
+        console.log('form submitted');
+        var that = $(this),
+            url = that.attr('action'),
+            method = that. attr('method'),
+            data = {};
+        
+
+        that.find('[name]').each(function(index, value) {
+            var that= $(this),
+                name = that.attr('name'),
+                value = that.val();
+            
+            data[name] = value;
+        });
+
+        $.ajax({
+            url: url,
+            type: method,
+            data: data,
+            success: function(response) {
+                console.log(response);
+                $(".form-admission__form").css("display", "none");
+                $(".form-admission__form-complete").css("display", "flex");
+            }
+        });
+
+        return false;
+
         }else{
+            e.preventDefault;
             $('.form-admission__form .required').each(function() {
                 if($(this).val().length == 0) {
                     $(this).addClass('error');
@@ -141,6 +168,7 @@ $(document).ready(function() {
             if(inputReferral.val().length == 0) {
                 $('.form-admission__form .select__trigger').addClass('error');
             }
+            return false;
 
         }
     });
@@ -162,9 +190,7 @@ $(document).ready(function() {
 
     // Validation Treatments Form
 
-    $(".photo-form .button").on("click", function(e) {
-        
-        e.preventDefault();
+    $("#formEnquire").on("submit", function(e) {
 
         let inputEnquireForm = $(".photo-form .enquire-input");
         let inputEmailForm = $(".photo-form .input-email");
@@ -174,11 +200,40 @@ $(document).ready(function() {
 
 
         if( inputNameForm.val().length > 0 && inputContactForm.val().length > 0 && testEmailForm.test(inputEmailForm.val()) === true && inputEnquireForm.val().length > 0 ) {
-           console.log("success");
-           $('.photo-form .email-error').removeClass('email-error-show');
-           inputEmailForm.removeClass('error');
-           $('.photo-form__form__button-container span').addClass('success');
+
+            console.log('form submitted');
+            var that = $(this),
+                url = that.attr('action'),
+                method = that. attr('method'),
+                data = {};
+            
+
+            that.find('[name]').each(function(index, value) {
+                var that= $(this),
+                    name = that.attr('name'),
+                    value = that.val();
+                
+                data[name] = value;
+            });
+
+            $.ajax({
+                url: url,
+                type: method,
+                data: data,
+                success: function(response) {
+                    console.log(response);
+                    $('.photo-form .email-error').removeClass('email-error-show');
+                    inputEmailForm.removeClass('error');
+                    $('.photo-form__form__button-container span').addClass('success');
+                    setTimeout(function() { 
+                        $('.photo-form__form__button-container span').removeClass('success');
+                    }, 3000);
+                }
+            });
+
+            return false;
         }else{
+            e.preventDefault;
             $('.photo-form .required').each(function() {
                 if($(this).val().length == 0) {
                     $(this).addClass('error');
@@ -193,6 +248,8 @@ $(document).ready(function() {
             if(inputEnquireForm.val().length == 0) {
                 $('.photo-form .select__trigger').addClass('error');
             }
+
+            return false;
 
         }
     });

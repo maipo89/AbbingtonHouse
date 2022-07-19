@@ -9,12 +9,12 @@
 ?>
 
 <div class="photo-form">
-    <div class="photo-form__image" style='background-image: url("<?php echo($photo['sizes']['onqor-hd']) ?>")'>
+    <div class="photo-form__image" style='background-image: url("<?php echo($photo['sizes']['onqor-large']) ?>")'>
     </div>
     <div class="photo-form__form">
         <h4><?php echo($formTitle) ?></h4>
-        <form>
-            <input class="input-name required" name="name" type="text" placeholder="<?php echo($input[0]['input_placeholder']) ?>" />
+        <form id="formEnquire" name="formEnquire" action="<?php echo home_url(); ?>/mail_enquire.php" method="POST">
+            <input class="input-name required" name="thename" type="text" placeholder="<?php echo($input[0]['input_placeholder']) ?>" />
             <input class="input-contact required" name="contact" type="text" placeholder="<?php echo($input[1]['input_placeholder']) ?>" />
             <div class="email-container">
                 <input class="input-email" name="email" type="text" placeholder="<?php echo($input[2]['input_placeholder']) ?>" />
@@ -37,8 +37,8 @@
                 </div>
             </div>
             <div class="photo-form__form__button-container">
-                <span>Success</span>
-                <button type="submit" class="button"><?php echo($buttonText)?></button>
+                <span>Thank you for your message</span>
+                <input type="submit" class="button" value="<?php echo($buttonText)?>" />
             </div>
         </form>
         <p class="call-text"><?php echo($textCall)?> <a href="tel:<?php echo($number)?>"><?php echo($number)?></a><p>

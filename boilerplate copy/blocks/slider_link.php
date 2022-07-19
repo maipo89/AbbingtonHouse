@@ -8,7 +8,7 @@
             <?php while( have_rows('slider') ): the_row(); 
                 $photo = get_sub_field('photo');
                 ?>
-                <img src='<?php echo($photo["sizes"]["onqor-large"]) ?>'>
+                <img src='<?php echo($photo["sizes"]["onqor-hd"]) ?>'>
             <?php endwhile; ?>
         </div>
     <?php endif; ?>
