@@ -1,16 +1,16 @@
 .admission {
-    padding: 0 380px 100px 380px;
+    padding: 0 380px 0px 380px;
 
     @media (max-width: 1600px) {
-        padding: 0 94px 100px 94px;
+        padding: 0 94px 0px 94px;
     }
 
     @media (max-width: 840px) {
-        padding: 0 50px 75px 50px;
+        padding: 0 50px 0px 50px;
     }
 
     @media (max-width: 400px) {
-        padding: 0 20px 50px 20px;
+        padding: 0 20px 0px 20px;
     }
 
     h5 {
@@ -21,9 +21,14 @@
         display: flex !important;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 2px solid $tan;
+        border-top: 2px solid $tan;
         border-radius: 0 !important;
         outline: none !important;
+        opacity: 1;
+
+        &:first-child {
+            border-top: none;
+        }
         
         p {
             font-size: $h5-size !important;
@@ -58,16 +63,33 @@
         }
     }
 
-    .ui-accordion-header-active {
-        border-bottom: none;
+    .admission__content {
+        p {
+            opacity: 0 !important;
+            transition: opacity 0.3s ease-in;
+        }
+    }
 
+    
+    .admission__content[aria-hidden="true"] {
+        p {
+            opacity: 0 !important;
+        }
+    }
+
+    .ui-accordion-header-active {
+        
         .arrow {
             transform: rotate(135deg) !important;
         }
     }
     
     .ui-accordion-content-active {
-        border-bottom: 2px solid $tan;
+        border-radius: 0 !important;
+        p {
+            opacity: 1 !important;
+            transition: opacity 0.3s ease-in;
+        }
     }
 
     &__content {
@@ -81,4 +103,36 @@
             line-height: 19.5px;
         }
     }
+
 }
+
+    .last-row-container {
+        height: 2px;
+        padding-left: 380px;
+        padding-right: 380px;
+        margin-bottom: 100px;
+
+        .last-row {
+            width: 100%;
+            height: 2px;
+            background-color: $tan;
+        }
+
+        @media (max-width: 1600px) {
+            padding-left: 94px;
+            padding-right: 94px;
+            margin-bottom: 100px;
+        }
+    
+        @media (max-width: 840px) {
+            padding-left: 50px;
+            padding-right: 50px;
+            margin-bottom: 75px;
+        }
+    
+        @media (max-width: 400px) {
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-bottom: 50px;
+        }
+    }

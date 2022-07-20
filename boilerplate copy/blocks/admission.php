@@ -10,4 +10,7 @@
                 </div>
             <?php endwhile; ?>
         </div>
+        <div class="last-row-container">
+            <div class="last-row"></div>
+        </div>
 <?php endif; ?>
