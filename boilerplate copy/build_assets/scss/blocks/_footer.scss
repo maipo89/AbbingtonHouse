@@ -125,6 +125,10 @@
                     color: $terracotta;
                 }
 
+                &:active {
+                    color: white;
+                }
+
                 &:focus-visible {
                     border: 2px solid black;
                     outline: 2px solid yellow;
@@ -170,6 +174,14 @@
                 @media (max-width: 400px) {
                     margin-top: 22px;
                 }
+            }
+
+            &:hover {
+                color: $terracotta;
+            }
+
+            &:active {
+                color: $quick-silver;
             }
         }
 

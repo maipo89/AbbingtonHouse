@@ -83,6 +83,10 @@
             transform: rotate(135deg) !important;
         }
     }
+
+    .ui-accordion .ui-accordion-content {
+        padding-bottom: 0px !important;
+    }
     
     .ui-accordion-content-active {
         border-radius: 0 !important;
@@ -93,7 +97,6 @@
     }
 
     &__content {
-        height: auto !important;
         border: none;
         padding-left: 0 !important;
 

@@ -91,7 +91,7 @@
                 padding-bottom: 1px;
                 border-bottom: 1px solid $mustard-green;
 
-                &:focus {
+                &:focus-visible {
                     border: solid 2px black;
                     outline: solid 2px yellow;
                 }
@@ -99,6 +99,11 @@
                 &:hover {
                     color: $terracotta;
                     border-bottom: 1px solid $terracotta;
+                }
+
+                &:active {
+                    color: $quick-silver;
+                    border-bottom: 1px solid $quick-silver;
                 }
             }
         }

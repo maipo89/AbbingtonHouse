@@ -46,6 +46,16 @@
                     margin-bottom: 7px;
                 }
             }
+
+            &:hover {
+                color: $terracotta;
+                border-bottom: 1px solid $terracotta;
+            }
+
+            &:active {
+                color: $quick-silver;
+                border-bottom: 1px solid $quick-silver;
+            }
         }
 
         @media (max-width: 1280px) {

@@ -22,10 +22,9 @@ $(document).ready(function() {
     // Accordion
 
     $(".admission").accordion({
-      animated: 'bounceslide',
-      autoHeight: false, 
       collapsible: true,
-      active: false
+      active: false,
+      heightStyle: 'content',
     });
 
 

@@ -38,12 +38,12 @@
             width: 424px;
             height: 209px;
             position: absolute;
-            right: 242px;
+            left: 242px;
             top: 105px;
             @include flexCenter($direction: row);
 
             @media (max-width: 1600px) {
-                right: 0px;
+                left: 0px;
                 top: 80px;
                 height: 160px;
             }
