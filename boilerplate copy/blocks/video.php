@@ -3,7 +3,7 @@
 
 <div class="video">
     <div class="iframe-container">
-        <div class="thumbnail" style='background-image: url("<?php echo($thumbnail["sizes"]["onqor-large"]) ?>")'></div>
+        <div class="thumbnail" style='background-image: url("<?php echo($thumbnail["sizes"]["onqor-xl"]) ?>")'></div>
         <iframe id="iframe" src="<?php echo($iframe['url']) ?>"></iframe>
     </div>
 </div>
