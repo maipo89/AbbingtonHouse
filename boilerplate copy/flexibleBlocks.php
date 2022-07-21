@@ -56,6 +56,14 @@ if( have_rows('flexible_content') ):
             <?php include 'blocks/map_text.php'; ?>
         <?php endif;
 
+        if( get_row_layout() == 'legal' ): ?>
+            <?php include 'blocks/legal.php'; ?>
+        <?php endif;
+
+        if( get_row_layout() == 'video' ): ?>
+            <?php include 'blocks/video.php'; ?>
+        <?php endif;
+
     endwhile;
 
 endif;

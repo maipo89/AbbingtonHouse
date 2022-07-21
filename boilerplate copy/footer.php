@@ -30,11 +30,11 @@
 				</div>
 
 				<div class="footer__links">
-                    <a href="#">terms & conditions</a>
-					<a href="#">privacy policy</a>
-					<a href="#">cookie policy</a>
-					<a href="#">site map</a>
-					<a href="#">website by onqor</a>
+                    <a href="<?php echo get_home_url(); ?>/terms-conditions">terms & conditions</a>
+					<a href="<?php echo get_home_url(); ?>/privacy">privacy policy</a>
+					<a href="<?php echo get_home_url(); ?>/cookie-policy">cookie policy</a>
+					<a href="<?php echo get_home_url(); ?>/site-map">site map</a>
+					<a href="https://onqor.co.uk/">website by onqor</a>
 				</div>
 
 				<div id="inner-footer" class="wrap cf">

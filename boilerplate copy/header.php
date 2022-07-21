@@ -58,7 +58,7 @@
 					<img class="logo" src="<?php echo esc_url( get_template_directory_uri() . '/build_assets/images/AbbingtonHouse-logo.png' ); ?>" />
 				</a>
 
-				<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+				<nav id="navigation" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 					<?php wp_nav_menu(array(
 								'container' => false,                           // remove nav container
 								'container_class' => 'menu cf',                 // class of container (should you choose to use it)

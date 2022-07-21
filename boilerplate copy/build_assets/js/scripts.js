@@ -3,6 +3,8 @@ $(document).ready(function() {
     // Hamburger Menu
 
     $('.hamburger').on("click", function() {
+        $("#navigation").addClass('transition-left');
+        $(".header__call-icon p").addClass('transition-left');
         var $header = $('.header');
         $header.addClass("mobile-header");
         $('body').addClass("fixed-position");

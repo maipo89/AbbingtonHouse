@@ -1,0 +1,32 @@
+.legal {
+    padding: 0 10% 120px 10%;
+    @media (max-width: 480px) {
+        padding: 0 5% 80px 5%;
+    }
+    h2 {
+        margin-top: 40px;
+        @media (max-width: 768px) {
+            font-size: $h4-size;
+        }
+    }
+
+    h2:first-child {
+        margin-top: 100px;
+        text-align: center;
+        @media (max-width: 768px) {
+            margin-top: 85px;
+        }
+        @media (max-width: 480px) {
+            margin-top: 50px;
+        }
+    }
+
+    p {
+        line-height: 31px;
+        font-size: $p-normal;
+        margin-top: 33px;
+        @media (max-width: 768px) {
+            font-size: $p-small;
+        }
+    }
+}

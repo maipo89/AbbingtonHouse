@@ -223,8 +223,15 @@
         overflow: auto;
 
         .chevron-left {
-            margin: 10px 0 0 6px;
+            margin: 17px 0 0 8px;
             display: block;
+            @media (max-width: 580px) {
+                margin: 10px 0 0 6px;
+            }
+            @media (max-width: 480px) {
+                margin: 10px 0 0 6px;
+                display: block;
+            }
         }
 
         .hamburger {
@@ -241,6 +248,26 @@
                 width: 220px;
             }
 
+        }
+
+        .transition-left {
+            animation-name: moveInleft;
+            animation-duration: 1s;
+        }
+
+        @keyframes moveInleft {
+            0% {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+        
+            80% {
+                transform: translateX(0px);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(0);
+            }
         }
 
         nav {
