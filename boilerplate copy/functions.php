@@ -40,6 +40,7 @@ add_image_size( 'onqor-hd', 1500 );
 add_image_size( 'onqor-large', 1000 );
 add_image_size( 'onqor-logo', 600 );
 add_image_size( 'onqor-small', 300 );
+add_image_size( 'onqor-xs', 80 );
 
 /*
 The function above adds the ability to use the dropdown menu to select

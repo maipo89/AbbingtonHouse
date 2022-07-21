@@ -34,6 +34,7 @@ $(document).ready(function() {
 
     $('.thumbnail').on('click', function(ev) {
         $(this).hide();
+        $('.play-image').hide();
         $("#iframe")[0].src += "?rel=0&autoplay=1";
     });
 
