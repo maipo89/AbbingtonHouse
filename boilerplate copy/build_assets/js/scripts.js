@@ -30,6 +30,14 @@ $(document).ready(function() {
     });
 
 
+    // Video
+
+    $('.thumbnail').on('click', function(ev) {
+        $(this).hide();
+        $("#iframe")[0].src += "?rel=0&autoplay=1";
+    });
+
+
     // Slider Treatments
 
     /* Slick needs no get Reinitialized on window Resize after it was destroyed */
