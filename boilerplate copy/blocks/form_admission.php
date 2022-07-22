@@ -12,7 +12,7 @@
 ?>
 
 <div class="form-admission">
-    <img src="<?php echo($backgroundPattern['sizes']['onqor-large']) ?>" />
+    <img alt="<?php echo($backgroundPattern['alt']) ?>" src="<?php echo($backgroundPattern['sizes']['onqor-large']) ?>" />
     <div class="form-admission__form">
         <h3><?php echo($title) ?></h3>
         <p><?php echo($text) ?></p>

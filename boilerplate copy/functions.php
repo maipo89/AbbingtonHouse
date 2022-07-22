@@ -131,7 +131,7 @@ function theme_styles()
   // Load all of the styles that need to appear on all pages
   wp_enqueue_style( 'main', get_template_directory_uri() . '/dist/styles/all.min.min.css' );
   
-  wp_enqueue_script( 'main', get_template_directory_uri() . '/dist/scripts/all.min.min.js', true );
+  wp_enqueue_script( 'main', get_template_directory_uri() . '/dist/scripts/all.min.min.js', NULL, NULL, true );
 
 
 

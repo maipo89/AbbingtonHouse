@@ -3,7 +3,7 @@
 ?>
 
 <div class="team">
-    <img class="team__pattern" src="<?php echo($backgroundPattern["sizes"]["onqor-large"]) ?>" />
+    <img class="team__pattern" alt="<?php echo($backgroundPattern["alt"]) ?>" src="<?php echo($backgroundPattern["sizes"]["onqor-large"]) ?>" />
     <div class="team__container">
         <h2><?php echo($title) ?></h2>
         <?php if( have_rows('team_cards') ): ?>
