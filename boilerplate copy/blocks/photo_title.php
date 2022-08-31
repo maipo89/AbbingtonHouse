@@ -8,7 +8,7 @@
         <div class="photo-title__container__image" style='background-image: url("<?php echo($image["sizes"]["onqor-hd"]) ?>")'>
             <img src="<?php echo($logoImage["sizes"]["onqor-large"]) ?>" alt="<?php echo($logoImage["alt"]) ?>"/>
             <div class="text">
-                <h3><?php echo($title) ?></h3>
+                <h1><?php echo($title) ?></h1>
             </div>
         </div>
     </div>

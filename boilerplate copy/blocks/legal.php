@@ -4,7 +4,7 @@
 ?>
 
 <div class="legal">
-    <h2><?php echo($titleLegal) ?></h2>
+    <h1><?php echo($titleLegal) ?></h1>
     <?php echo($paragraphLegal) ?>
     <?php if( have_rows('text_area') ): ?>
         <?php while( have_rows('text_area') ): the_row(); 

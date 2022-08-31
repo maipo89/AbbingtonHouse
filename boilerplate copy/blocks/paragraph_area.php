@@ -3,6 +3,6 @@
 ?>
 
 <div class="paragraph-area">
-    <h2><?php echo($title) ?></h2>
+    <h1><?php echo($title) ?></h1>
     <?php echo($text) ?>
 </div>

@@ -83,10 +83,10 @@
                 padding-left: 8px;
             }
 
-            h5 {
+            h2 {
                 text-align: center;
                 margin-bottom: 10px;
-
+                font-size: $h5-size;
 
                 @media (max-width: 1260px) {
                     margin-bottom: 20px;

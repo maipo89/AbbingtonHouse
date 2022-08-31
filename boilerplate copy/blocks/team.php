@@ -5,7 +5,7 @@
 <div class="team">
     <img class="team__pattern" alt="<?php echo($backgroundPattern["alt"]) ?>" src="<?php echo($backgroundPattern["sizes"]["onqor-large"]) ?>" />
     <div class="team__container">
-        <h2><?php echo($title) ?></h2>
+        <h1><?php echo($title) ?></h1>
         <?php if( have_rows('team_cards') ): ?>
             <div class="team__container__cards-container">
                 <?php while( have_rows('team_cards') ): the_row(); 

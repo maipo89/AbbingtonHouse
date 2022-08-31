@@ -6,7 +6,7 @@
 					</svg>
 
 					<div class="options address">
-						<h5>Address</h5>
+						<h3>Address</h3>
 						<div class="line"></div>
 						<p>Name/Number</p>
 						<p>Street</p>
@@ -14,14 +14,14 @@
 					</div>
 
 					<div class="options contact">
-						<h5>Contact</h5>
+						<h3>Contact</h3>
 						<div class="line"></div>
 						<a href="tel:0123456789">0123456789</a>
 						<a href="mailto:contact@abbingtonhouse.co.uk">contact@abbingtonhouse.co.uk</a>
 					</div>
 
 					<div class="options socials">
-						<h5>Socials</h5>
+						<h3>Socials</h3>
 						<div class="line"></div>
 						<a href="#">Twitter</a>
 						<a href="#">Facebook</a>

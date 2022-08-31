@@ -55,10 +55,11 @@
             }
         }
 
-        h4 {
+        h2 {
             text-align: center;
             margin-top: 80px;
             margin-bottom: 36px;
+            font-size: $h4-size;
 
             @media (max-width: 600px) {
                 margin-top: 50px;

@@ -69,7 +69,8 @@
                     right: 0;
                 }
 
-                h3 {
+                h1 {
+                    font-size: $h3-size;
                     @media (max-width: 768px) {
                         font-size: 31px;
                     }

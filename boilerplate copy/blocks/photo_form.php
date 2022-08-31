@@ -12,7 +12,7 @@
     <div class="photo-form__image" style='background-image: url("<?php echo($photo['sizes']['onqor-large']) ?>")'>
     </div>
     <div class="photo-form__form">
-        <h4><?php echo($formTitle) ?></h4>
+        <h2><?php echo($formTitle) ?></h2>
         <form id="formEnquire" name="formEnquire" action="<?php echo home_url(); ?>/mail_enquire.php" method="POST">
             <input class="input-name required" name="thename" type="text" placeholder="<?php echo($input[0]['input_placeholder']) ?>" />
             <input class="input-contact required" name="contact" type="text" placeholder="<?php echo($input[1]['input_placeholder']) ?>" />

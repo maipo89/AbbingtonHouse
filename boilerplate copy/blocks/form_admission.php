@@ -14,7 +14,7 @@
 <div class="form-admission">
     <img alt="<?php echo($backgroundPattern['alt']) ?>" src="<?php echo($backgroundPattern['sizes']['onqor-large']) ?>" />
     <div class="form-admission__form">
-        <h3><?php echo($title) ?></h3>
+        <h2><?php echo($title) ?></h2>
         <p><?php echo($text) ?></p>
         <form id="formAdmission" name="formAdmission" action="<?php echo home_url(); ?>/mail.php" method="POST">
             <div class="form-admission__form__container">

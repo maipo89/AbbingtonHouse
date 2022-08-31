@@ -9,7 +9,7 @@
                     $image = get_sub_field('photo');
                     ?>
                     <div class="services__container__cards-container">
-                        <h5><?php echo($title) ?></h5>
+                        <h2><?php echo($title) ?></h2>
                         <div class="services__container__cards-container__card">
                             <div class="services__container__cards-container__card__paragraph">
                                 <?php echo($text) ?>

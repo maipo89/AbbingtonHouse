@@ -57,9 +57,10 @@
             height: 950px;
         }
 
-        h3 {
+        h2 {
             padding-top: 85px;
             text-align: center;
+            font-size: $h3-size;
 
             @media (max-width: 960px) {
                 padding-top: 50px;
