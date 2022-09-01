@@ -33,7 +33,7 @@
                     <a href="<?php echo get_home_url(); ?>/terms-conditions">terms & conditions</a>
 					<a href="<?php echo get_home_url(); ?>/privacy">privacy policy</a>
 					<a href="<?php echo get_home_url(); ?>/cookie-policy">cookie policy</a>
-					<a href="<?php echo get_home_url(); ?>/sitemap_index.xml">site map</a>
+					<a href="javascript:void(0);">site map</a>
 					<a href="https://onqor.co.uk/">website by onqor</a>
 				</div>
 
