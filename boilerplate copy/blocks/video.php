@@ -6,7 +6,7 @@
 <div class="video">
     <div class="iframe-container">
         <img class="play-image" alt="<?php echo($play["alt"]) ?>" src="<?php echo($play["sizes"]["onqor-xs"]) ?>" />
-        <div class="thumbnail" style='background-image: url("<?php echo($thumbnail["sizes"]["onqor-large"]) ?>")'></div>
+        <div class="thumbnail" style='background-image: url("<?php echo($thumbnail["sizes"]["onqor-large"]) ?>")' alt="<?php echo($thumbnail['alt']) ?>"></div>
         <iframe id="iframe" src="<?php echo($iframe['url']) ?>"></iframe>
     </div>
 </div>

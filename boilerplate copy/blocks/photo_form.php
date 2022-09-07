@@ -9,7 +9,7 @@
 ?>
 
 <div class="photo-form">
-    <div class="photo-form__image" style='background-image: url("<?php echo($photo['sizes']['onqor-large']) ?>")'>
+    <div class="photo-form__image" style='background-image: url("<?php echo($photo['sizes']['onqor-large']) ?>")' alt="<?php echo($photo['alt']) ?>">
     </div>
     <div class="photo-form__form">
         <h2><?php echo($formTitle) ?></h2>

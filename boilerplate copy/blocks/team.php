@@ -14,7 +14,7 @@
                     $photo = get_sub_field('photo');
                     ?>
                     <div class="team__container__cards-container__card">
-                        <div class="photo" style='background-image: url("<?php echo($photo["sizes"]["onqor-large"]) ?>")'></div>
+                        <div class="photo" style='background-image: url("<?php echo($photo["sizes"]["onqor-large"]) ?>")' alt="<?php echo($photo["alt"]) ?>"></div>
                         <div class="name">
                             <p><?php echo($name) ?></p>
                             <p><?php echo($job) ?></p>
