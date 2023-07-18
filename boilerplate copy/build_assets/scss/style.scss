@@ -21,6 +21,8 @@
 @import 'blocks/_map-text.scss';
 @import 'blocks/_legal.scss';
 @import 'blocks/_video.scss';
+@import 'blocks/_404.scss';
+
 
 body {
     background-color: white;
@@ -185,6 +187,38 @@ textarea {
     &:focus-visible {
         border: 2px solid black !important;
         outline: 2px solid yellow !important;
+    }
+}
+
+.secondary-button {
+    background-color: $orinoco;
+    padding: 5.5px 46px;
+    color: $shadow;
+    border: 2px solid $orinoco;
+
+    &:hover {
+        background-color: $dark-gray;
+        color: #fff;
+        text-decoration: none;
+        border: 2px solid $dark-gray;
+    }
+
+    &:active {
+        background-color: $orinoco;
+        color: #fff;
+        border: 2px solid $orinoco;
+    }
+
+    &:focus {
+        outline: 0;
+        border: 2px solid $corianderOpacity;
+    }
+
+    &:focus-visible {
+        border: 2px solid #000!important;
+        outline: 2px solid #ff0!important;
+        background-color: #c9ceb1;
+        text-decoration: none;
     }
 }
 

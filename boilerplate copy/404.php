@@ -1,43 +1,19 @@
 <?php get_header(); ?>
 
-			<div id="content">
+		<div class="page-404" id="content">
 
-				<div id="inner-content" class="wrap cf">
+				<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope="" itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<h1>404</h1>
 
-						<article id="post-not-found" class="hentry cf">
+					<p>It looks like you’ve reached a URL that doesn’t exist. Please use the navigation above to find your way back or visit the homepage using the button below.</p>
 
-							<header class="article-header">
+					<div class="page-404__button">
+						<a class="secondary-button" href="/">Home</a>
+					</div>
 
-								<h1><?php _e( 'Epic 404 - Article Not Found', 'bonestheme' ); ?></h1>
+				</main>
 
-							</header>
-
-							<section class="entry-content">
-
-								<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'bonestheme' ); ?></p>
-
-							</section>
-
-							<section class="search">
-
-									<p><?php get_search_form(); ?></p>
-
-							</section>
-
-							<footer class="article-footer">
-
-									<p><?php _e( 'This is the 404.php template.', 'bonestheme' ); ?></p>
-
-							</footer>
-
-						</article>
-
-					</main>
-
-				</div>
-
-			</div>
+		</div>
 
 <?php get_footer(); ?>
