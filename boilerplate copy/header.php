@@ -57,18 +57,20 @@
 				<a href="<?php echo get_home_url(); ?>" class="link-logo">
 					<img width="400" height="101" alt="logo" class="logo" src="<?php echo esc_url( get_template_directory_uri() . '/build_assets/images/AbbingtonHouse-logo.png' ); ?>" />
 				</a>
-
 				<nav id="navigation" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<?php $arrow_svg = '<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2247_68125)"><path d="M0.293765 3.7379C-0.097922 4.13706 -0.097922 4.78061 0.293765 5.17977L6.93645 11.9492C7.2482 12.2669 7.7518 12.2669 8.06355 11.9492L14.7062 5.17977C15.0979 4.7806 15.0979 4.13706 14.7062 3.7379C14.3145 3.33873 13.6831 3.33873 13.2914 3.7379L7.496 9.63572L1.70064 3.72975C1.31695 3.33874 0.677458 3.33873 0.293765 3.7379Z" fill="#87846A"/></g><defs><clipPath id="clip0_2247_68125"><rect width="15" height="15" fill="white" transform="translate(0 15) rotate(-90)"/></clipPath></defs></svg>'; ?>
 					<?php wp_nav_menu(array(
 								'container' => false,                           // remove nav container
 								'container_class' => 'menu cf',                 // class of container (should you choose to use it)
 								'menu' => __( 'Main Menu', 'bonestheme' ),  // nav name
-								'menu_class' => 'nav top-nav cf',               // adding custom nav class
+								'menu_class' => 'nav top-nav cf accordion-menu',               
+								                                                // adding custom nav class
 								'theme_location' => 'main-nav',                 // where it's located in the theme
 								'before' => '',                                 // before the menu
 								'after' => '',                                  // after the menu
 								'link_before' => '',                            // before each link
-								'link_after' => '',                             // after each link
+								'link_after' => $arrow_svg,                             
+								                                                // after each link
 								'depth' => 0,                                   // limit the depth of the nav
 								'fallback_cb' => ''                             // fallback function (if there is one)
 					)); ?>
@@ -76,8 +78,8 @@
 				</nav>
 
 				<a class="header__button" href="tel:0123456789">
-                   <p>Give us a call</p>
-				   <p>0123456789</p>
+				<p>Give us a call</p>
+				<p>0123456789</p>
 				</a>
 
 				<a href="tel:0123456789" class="header__call-icon">
