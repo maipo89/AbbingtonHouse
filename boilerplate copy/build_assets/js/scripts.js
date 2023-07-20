@@ -303,13 +303,17 @@ $(document).ready(function() {
     })
 
     // Accordion Hamburger
-    console.log('pazza')
-    $('.accordion-menu .menu-item-has-children > a svg').on('click', function(e) {
+
+    const submenu = $('.accordion-menu .menu-item-has-children')
+    console.log(submenu, 'sub');
+
+    $('.accordion-menu .menu-item-has-children > a').on('click', function(e) {
+        console.log('clicked')
         e.preventDefault();
-        $(this).toggleClass('active'); // Add the 'active' class to the clicked heading
-        $(this).siblings('.sub-menu').slideToggle(); // Toggle the sub-menu visibility
-        $(this).parent().siblings('.menu-item-has-children').children('.sub-menu').slideUp(); // Close other accordion items
-        $(this).parent().siblings('.menu-item-has-children').children('a').removeClass('active'); // Remove the 'active' class from other headings
+        // $(this).toggleClass('active'); // Add the 'active' class to the clicked heading
+        // $(this).siblings('.sub-menu').slideToggle(); // Toggle the sub-menu visibility
+        // $(this).parent().siblings('.menu-item-has-children').children('.sub-menu').slideUp(); // Close other accordion items
+        // $(this).parent().siblings('.menu-item-has-children').children('a').removeClass('active'); // Remove the 'active' class from other headings
     });
 
 

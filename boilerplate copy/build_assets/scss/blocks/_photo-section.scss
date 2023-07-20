@@ -17,8 +17,8 @@
 
     &__text {
         background-color: #fff9f1e6;
-        height: 170px;
-        width: 392px;
+        height: auto;
+        width: 419px;
         position: absolute;
         bottom: 136px;
         right: 380px;
@@ -26,11 +26,6 @@
 
         @media (max-width: 2000px) {
             right: 94px;
-            height: 170px;
-        }
-
-        @media (max-width: 1280px) {
-            height: 150px;
         }
 
         @media (max-width: 768px) {

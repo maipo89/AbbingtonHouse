@@ -89,4 +89,8 @@
 				<p>0123456789</p>
 			</a>
 
+			<a href="<?php echo get_home_url(); ?>" class="link-logo-mobile">
+				<img width="400" height="101" alt="logo" class="logo" src="<?php echo esc_url( get_template_directory_uri() . '/build_assets/images/AbbingtonHouse-logo.png' ); ?>" />
+			</a>
+
 		</header>
