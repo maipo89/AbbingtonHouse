@@ -95,6 +95,62 @@ $(document).ready(function() {
     };
 
 
+    // Slider Teams
+
+    /* Slick needs no get Reinitialized on window Resize after it was destroyed */
+    $(window).on('load resize orientationchange', function() {
+        $('.team__container__cards-container').each(function(){
+            var $carousel = $(this);
+            /* Initializes a slick carousel only on mobile screens */
+            // slick on mobile
+            if ($(window).width() > 920) {
+                if ($carousel.hasClass('slick-initialized')) {
+                    $carousel.slick('unslick');
+                }
+                // $(".services__container__cards-container__card").on("mouseover", function() {
+                //     $(this).children('div.services__container__cards-container__card__paragraph').addClass('fade-in');
+                // });
+              
+                // $(".services__container__cards-container__card").on("mouseleave", function() {
+                //     $(this).children('div.services__container__cards-container__card__paragraph').removeClass('fade-in');
+                // });
+            }
+            else{
+                if (!$carousel.hasClass('slick-initialized')) {
+                    $carousel.slick({
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true,
+                        variableWidth: true,
+                        centerMode: true
+                    });
+                }
+            }
+        });
+    });
+
+    jQuery.event.special.touchstart = {
+        setup: function( _, ns, handle ){
+            if ( ns.includes("noPreventDefault") ) {
+            this.addEventListener("touchstart", handle, { passive: false });
+            } else {
+            this.addEventListener("touchstart", handle, { passive: true });
+            }
+        }
+    };
+
+    jQuery.event.special.touchmove = {
+        setup: function( _, ns, handle ){
+            if ( ns.includes("noPreventDefault") ) {
+            this.addEventListener("touchmove", handle, { passive: false });
+            } else {
+            this.addEventListener("touchmove", handle, { passive: true });
+            }
+        }
+    };
+
+
     // Slider About Page
 
     $('.slider-link__slider').slick({
@@ -307,14 +363,28 @@ $(document).ready(function() {
     const submenu = $('.accordion-menu .menu-item-has-children')
     console.log(submenu, 'sub');
 
-    $('.accordion-menu .menu-item-has-children > a').on('click', function(e) {
-        console.log('clicked')
-        e.preventDefault();
-        // $(this).toggleClass('active'); // Add the 'active' class to the clicked heading
-        // $(this).siblings('.sub-menu').slideToggle(); // Toggle the sub-menu visibility
-        // $(this).parent().siblings('.menu-item-has-children').children('.sub-menu').slideUp(); // Close other accordion items
-        // $(this).parent().siblings('.menu-item-has-children').children('a').removeClass('active'); // Remove the 'active' class from other headings
-    });
+    submenu.each(function() {
+        const svg = $(this).children('svg')
+        const submenu = $(this).children('ul.sub-menu')
+        console.log(submenu)
+        var container = $(this)
+
+        $(document).on('click', function(e) {
+            console.log('clicked outside', e.target)
+            console.log('this', container)
+
+            if (!container.is(e.target) && container.has(e.target).length === 0) {
+                submenu.removeClass('open');
+                svg.removeClass('rotate');
+            }
+        });
+        
+        svg.on('click', function() {
+            submenu.toggleClass('open');
+            svg.toggleClass('rotate');
+            console.log('clicked')
+        });
+    })
 
 
     // Accessability

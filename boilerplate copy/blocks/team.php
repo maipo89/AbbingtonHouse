@@ -12,12 +12,23 @@
                     $name = get_sub_field('name');
                     $job = get_sub_field('job');
                     $photo = get_sub_field('photo');
+                    $bio = get_sub_field('bio');
                     ?>
                     <div class="team__container__cards-container__card">
-                        <div class="photo" style='background-image: url("<?php echo($photo["sizes"]["onqor-large"]) ?>")' alt="<?php echo($photo["alt"]) ?>"></div>
-                        <div class="name">
-                            <p><?php echo($name) ?></p>
-                            <p><?php echo($job) ?></p>
+
+                        <div class="photo">
+                            <img src="<?php echo($photo["sizes"]["onqor-large"]) ?>" alt="<?php echo($photo["alt"]) ?>">
+                            <div class="bio">
+                                <p><?php echo($bio) ?></p>
+                            </div>
+                        </div>
+                        
+                        <div class="info">
+                            <div class="name">
+                                <p><?php echo($name) ?></p>
+                                <p><?php echo($job) ?></p>
+                            </div>
+                            <p class="bio-mobile"><?php echo($bio) ?></p>
                         </div>
                     </div>
                 <?php endwhile; ?>
