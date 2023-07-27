@@ -8,24 +8,55 @@
 					<div class="options address">
 						<h3>Address</h3>
 						<div class="line"></div>
-						<p>Name/Number</p>
-						<p>Street</p>
-						<p>Postcode</p>
+						<?php wp_nav_menu(array(
+    					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
+    					'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
+    					'menu' => __( 'Footer Menu Left', 'bonestheme' ),   // nav name
+    					'menu_class' => 'nav footer-nav cf address-menu',            // adding custom nav class
+    					'theme_location' => 'footer-links',             // where it's located in the theme
+    					'before' => '',                                 // before the menu
+    					'after' => '',                                  // after the menu
+    					'link_before' => '',                            // before each link
+    					'link_after' => '',                             // after each link
+    					'depth' => 0,                                   // limit the depth of the nav
+    					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
+						)); ?>
 					</div>
 
 					<div class="options contact">
 						<h3>Contact</h3>
 						<div class="line"></div>
-						<a href="tel:0123456789">0123456789</a>
-						<a href="mailto:contact@abbingtonhouse.co.uk">contact@abbingtonhouse.co.uk</a>
+						<?php wp_nav_menu(array(
+    					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
+    					'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
+    					'menu' => __( 'Footer Menu Center', 'bonestheme' ),   // nav name
+    					'menu_class' => 'nav footer-nav cf contact-menu',            // adding custom nav class
+    					'theme_location' => 'footer-links',             // where it's located in the theme
+    					'before' => '',                                 // before the menu
+    					'after' => '',                                  // after the menu
+    					'link_before' => '',                            // before each link
+    					'link_after' => '',                             // after each link
+    					'depth' => 0,                                   // limit the depth of the nav
+    					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
+						)); ?>
 					</div>
 
 					<div class="options socials">
 						<h3>Socials</h3>
 						<div class="line"></div>
-						<a href="#">Twitter</a>
-						<a href="#">Facebook</a>
-						<a href="#">Instagram</a>
+						<?php wp_nav_menu(array(
+    					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
+    					'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
+    					'menu' => __( 'Footer Menu Right', 'bonestheme' ),   // nav name
+    					'menu_class' => 'nav footer-nav cf socials-menu',            // adding custom nav class
+    					'theme_location' => 'footer-links',             // where it's located in the theme
+    					'before' => '',                                 // before the menu
+    					'after' => '',                                  // after the menu
+    					'link_before' => '',                            // before each link
+    					'link_after' => '',                             // after each link
+    					'depth' => 0,                                   // limit the depth of the nav
+    					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
+						)); ?>
 					</div>
 				</div>
 
@@ -38,22 +69,6 @@
 				</div>
 
 				<div id="inner-footer" class="wrap cf">
-
-					<nav role="navigation">
-						<?php wp_nav_menu(array(
-    					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
-    					'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
-    					'menu' => __( 'Footer Links', 'bonestheme' ),   // nav name
-    					'menu_class' => 'nav footer-nav cf',            // adding custom nav class
-    					'theme_location' => 'footer-links',             // where it's located in the theme
-    					'before' => '',                                 // before the menu
-    					'after' => '',                                  // after the menu
-    					'link_before' => '',                            // before each link
-    					'link_after' => '',                             // after each link
-    					'depth' => 0,                                   // limit the depth of the nav
-    					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
-						)); ?>
-					</nav>
 
 				</div>
 

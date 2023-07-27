@@ -154,6 +154,32 @@
                     font-size: 11px;
                 }
             }
+
+            .socials-menu {
+                display: block;
+            }
+
+            .address-menu {
+                display: block;
+
+                li:first-of-type {
+                    a {
+                        font-weight: 500;
+                        margin-bottom: 4px;
+                    }
+                }
+
+                li {
+                    pointer-events: none;
+                    a {
+                        pointer-events: none;
+                    }
+                }
+
+                a:hover {
+                    color: white;
+                }
+            }
         }
     }
 
