@@ -164,4 +164,10 @@ function wpb_custom_new_menu() {
 }
 add_action( 'init', 'wpb_custom_new_menu' );
 
+if( function_exists('acf_add_options_page') ) {
+    
+  acf_add_options_page();
+  
+}
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
