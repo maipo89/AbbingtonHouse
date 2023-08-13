@@ -1,0 +1,40 @@
+.paragraph-title {
+    margin: 100px 0 100px 0;
+    padding-right: 200px;
+    padding-left: 200px;
+    @media (max-width: 1290px) {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+    @media (max-width: 900px) {
+        margin: 75px 0 75px 0;
+    }
+    @media (max-width: 450px) {
+        padding-right: 20px;
+        padding-left: 20px;
+        margin: 75px 0 75px 0;
+    }
+    h1, p {
+        text-align: left;
+    }
+
+    h1 {
+        margin: 0 0 30px 0;
+        font-size: 31px;
+
+        @media (max-width: 900px) {
+            margin: 0 0 35px 0;
+            font-size: $p-normal;
+        }
+    }
+
+    p {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 19px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}

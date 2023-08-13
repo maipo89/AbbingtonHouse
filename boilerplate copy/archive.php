@@ -1,74 +1,104 @@
 <?php get_header(); ?>
+        <div class="blogs">
+			<div class="blogs__inputs">
+			    <div class="blogs__inputs__container">
+					<div class="dropdowns">
 
-			<div id="content">
+						<div class="category-category">
+							<div class="select-wrapper">
+								<div class="select">
+									<input class="category-input" type="text" name="referral" value=""/>
+									<div class="select__trigger">
+									<span>
+									    <?php if(strpos($_SERVER['REQUEST_URI'], "author") !== false){
 
-				<div id="inner-content" class="wrap cf">
+											echo('Subject');
+											
+											}else{
+												$categories = get_categories();
+												foreach ($categories as $category) {
 
-						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+														if(strpos($_SERVER['REQUEST_URI'], $category->name) !== false){
+															echo($category->name);
 
-							<?php
-							the_archive_title( '<h1 class="page-title">', '</h1>' );
-							the_archive_description( '<div class="taxonomy-description">', '</div>' );
-							?>
-							
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+														}
+											    }
+											} 
+										?>
+									</span>
+										<div class="arrow"></div>
+									</div>
+										<div class="custom-options">
+											<?php $categories = get_categories(); ?>
+											<?php foreach ($categories as $category) { ?>
+												<a href="<?php echo get_home_url(); ?>/blogs/<?php echo($category->name) ?>">
+													<span class="custom-option" data-value="<?php echo($category->name) ?>"><?php echo($category->name) ?></span>
+												</a>
+											<?php } ?>
+										</div>
+								</div>
+							</div>
+						</div>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+						<div class="author-category">
+							<div class="select-wrapper">
+								<div class="select">
+									<input class="author-input" type="text" name="referral" value=""/>
+									<div class="select__trigger">
+										<span>
+										<?php if(strpos($_SERVER['REQUEST_URI'], "author") === false){
+                                            echo('Author');
+										}else{
+											$users = get_users();
+											foreach ($users as $user) 
+											{
+												$userNeme = $user->display_name;
+												$parts = explode(' ', $userNeme);
+												$firstPart = $parts[0];
 
-								<header class="entry-header article-header">
-
-									<h3 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-									<p class="byline entry-meta vcard">
-										<?php printf( __( 'Posted', 'bonestheme' ).' %1$s %2$s',
-                  							     /* the time the post was published */
-                  							     '<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
-                       								/* the author of the post */
-                       								'<span class="by">'.__('by', 'bonestheme').'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
-                    							); ?>
-									</p>
-
-								</header>
-
-								<section class="entry-content cf">
-
-									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
-
-									<?php the_excerpt(); ?>
-
-								</section>
-
-								<footer class="article-footer">
-
-								</footer>
-
-							</article>
-
-							<?php endwhile; ?>
-
-									<?php bones_page_navi(); ?>
-
-							<?php else : ?>
-
-									<article id="post-not-found" class="hentry cf">
-										<header class="article-header">
-											<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-										</header>
-										<section class="entry-content">
-											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-										</section>
-										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the archive.php template.', 'bonestheme' ); ?></p>
-										</footer>
-									</article>
-
-							<?php endif; ?>
-
-						</main>
-
-					<?php get_sidebar(); ?>
-
+												if(strpos($_SERVER['REQUEST_URI'], strtolower($firstPart)) !== false){
+													echo($user->display_name);
+												}
+											}
+										} 
+										?>
+										</span>
+										<div class="arrow"></div>
+									</div>
+									<div class="custom-options">
+									    <?php
+											wp_list_authors(array('hide_empty' => true));
+										?>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="search">
+						<input placeholder="Search"/>
+					</div>
 				</div>
-
 			</div>
+			<div class="blogs__container">
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		
+				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'single-post-thumbnail' ); ?>
+
+					<div class="blogs__card">
+						<div class="blogs__card__image" style="background-image: url('<?php echo($image[0]) ?>');"></div>
+						<div class="blogs__card__description">
+							<h2><?php the_title(); ?></h2>
+							<?php the_content(); ?>
+							<div class="blogs__card__description__button">
+								<a class="button" href="<?php the_permalink() ?>">Read More</a>
+							</div>
+						</div>
+					</div>
+
+				<?php endwhile; ?>
+
+				<?php endif; ?>
+			</div>
+		</div>
 
 <?php get_footer(); ?>

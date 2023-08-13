@@ -1,76 +1,70 @@
 <?php get_header(); ?>
+		<div class="blogs">
+			<div class="blogs__inputs">
+			    <div class="blogs__inputs__container">
+					<div class="dropdowns">
 
-			<div id="content">
+						<div class="category">
+							<div class="select-wrapper">
+								<div class="select">
+									<input class="category-input" type="text" name="referral" value=""/>
+									<div class="select__trigger"><span>Subject</span>
+										<div class="arrow"></div>
+									</div>
+										<div class="custom-options">
+											<?php $categories = get_categories(); ?>
+											<?php foreach ($categories as $category) { ?>
+												<a href="<?php echo get_home_url(); ?>/blogs/<?php echo($category->name) ?>">
+													<span class="custom-option" data-value="<?php echo($category->name) ?>"><?php echo($category->name) ?></span>
+												</a>
+											<?php } ?>
+										</div>
+								</div>
+							</div>
+						</div>
 
-				<div id="inner-content" class="wrap cf">
-
-						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
-
-								<header class="article-header">
-
-									<h1 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-									<p class="byline entry-meta vcard">
-                                                                        <?php printf( __( 'Posted', 'bonestheme' ).' %1$s %2$s',
-                       								/* the time the post was published */
-                       								'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>',
-                       								/* the author of the post */
-                       								'<span class="by">'.__( 'by', 'bonestheme').'</span> <span class="entry-author author" itemprop="author" itemscope itemptype="http://schema.org/Person">' . get_the_author_link( get_the_author_meta( 'ID' ) ) . '</span>'
-                    							); ?>
-									</p>
-
-								</header>
-
-								<section class="entry-content cf">
-									<?php the_content(); ?>
-								</section>
-
-								<footer class="article-footer cf">
-									<p class="footer-comment-count">
-										<?php comments_number( __( '<span>No</span> Comments', 'bonestheme' ), __( '<span>One</span> Comment', 'bonestheme' ), __( '<span>%</span> Comments', 'bonestheme' ) );?>
-									</p>
-
-
-                 	<?php printf( '<p class="footer-category">' . __('filed under', 'bonestheme' ) . ': %1$s</p>' , get_the_category_list(', ') ); ?>
-
-                  <?php the_tags( '<p class="footer-tags tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
-
-
-								</footer>
-
-							</article>
-
-							<?php endwhile; ?>
-
-									<?php bones_page_navi(); ?>
-
-							<?php else : ?>
-
-									<article id="post-not-found" class="hentry cf">
-											<header class="article-header">
-												<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-										</header>
-											<section class="entry-content">
-												<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-										</section>
-										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the index.php template.', 'bonestheme' ); ?></p>
-										</footer>
-									</article>
-
-							<?php endif; ?>
-
-
-						</main>
-
-					<?php get_sidebar(); ?>
-
+						<div class="author">
+							<div class="select-wrapper">
+								<div class="select">
+									<input class="author-input" type="text" name="referral" value=""/>
+									<div class="select__trigger"><span>Author</span>
+										<div class="arrow"></div>
+									</div>
+									<div class="custom-options">
+									    <?php
+											wp_list_authors(array('hide_empty' => true));
+										?>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="search">
+						<input placeholder="Search"/>
+					</div>
 				</div>
-
 			</div>
+			<div class="blogs__container">
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		
+				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'single-post-thumbnail' ); ?>
+
+					<div class="blogs__card">
+						<div class="blogs__card__image" style="background-image: url('<?php echo($image[0]) ?>');"></div>
+						<div class="blogs__card__description">
+							<h2><?php the_title(); ?></h2>
+							<?php the_content(); ?>
+							<div class="blogs__card__description__button">
+								<a class="button" href="<?php the_permalink() ?>">Read More</a>
+							</div>
+						</div>
+					</div>
+
+				<?php endwhile; ?>
+
+				<?php endif; ?>
+			</div>
+		</div>
 
 
 <?php get_footer(); ?>

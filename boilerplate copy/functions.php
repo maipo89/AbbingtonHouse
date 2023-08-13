@@ -170,4 +170,8 @@ if( function_exists('acf_add_options_page') ) {
   
 }
 
+// Post Thumbnails 
+
+add_theme_support( 'post-thumbnails' );
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>

@@ -20,6 +20,14 @@ if( have_rows('flexible_content') ):
             <?php include 'blocks/paragraph_area.php'; ?>
         <?php endif;
 
+        if( get_row_layout() == 'paragraph_title' ): ?>
+            <?php include 'blocks/paragraph_title.php'; ?>
+        <?php endif;
+
+        if( get_row_layout() == 'paragraph_image' ): ?>
+            <?php include 'blocks/paragraph_image.php'; ?>
+        <?php endif;
+
         if( get_row_layout() == 'two_columns' ): ?>
             <?php include 'blocks/two_columns.php'; ?>
         <?php endif;

@@ -187,6 +187,43 @@ $(document).ready(function() {
         $(this).addClass('active-dropdown');
     });
 
+    // $('.category .custom-option').on("click", function() {
+    //     $('.category .custom-option').removeClass("active-dropdown");
+    //     var inputData = $(this).data('value');
+    //     console.log(inputData);
+    //     $('.category-input').val(inputData);
+    //     $('.category .select__trigger span').html(inputData);
+    //     $(this).addClass('active-dropdown');
+    // });
+
+    // $('.author .custom-option').on("click", function() {
+    //     $('.author .custom-option').removeClass("active-dropdown");
+    //     var inputData = $(this).data('value');
+    //     console.log(inputData);
+    //     $('.author-input').val(inputData);
+    //     $('.author .select__trigger span').html(inputData);
+    //     $(this).addClass('active-dropdown');
+    // });
+
+
+    // $('.author-category .custom-option').on("click", function() {
+    //     $('.author-category .custom-option').removeClass("active-dropdown");
+    //     var inputData = $(this).data('value');
+    //     console.log(inputData);
+    //     $('.author-input-category').val(inputData);
+    //     $('.author-category .select__trigger span').html(inputData);
+    //     $(this).addClass('active-dropdown');
+    // });
+
+    // $('.category-category .custom-option').on("click", function() {
+    //     $('.category-category .custom-option').removeClass("active-dropdown");
+    //     var inputData = $(this).data('value');
+    //     console.log(inputData);
+    //     $('.category-input-category').val(inputData);
+    //     $('.category-category .select__trigger span').html(inputData);
+    //     $(this).addClass('active-dropdown');
+    // });
+
 
     // Active State Menu Header
 
