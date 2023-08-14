@@ -75,7 +75,7 @@
 						</div>
 					</div>
 					<div class="search">
-						<input placeholder="Search"/>
+						<input id="search-archive" placeholder="Search"/>
 					</div>
 				</div>
 			</div>

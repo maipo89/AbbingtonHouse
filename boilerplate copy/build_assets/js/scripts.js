@@ -224,6 +224,38 @@ $(document).ready(function() {
     //     $(this).addClass('active-dropdown');
     // });
 
+    // Search Functionality
+
+    $("#search-blog").on("input", function () {
+        var searchTerm = $(this).val().toLowerCase();
+        
+        $(".blogs__card").each(function () {
+            var blogTitle = $(this).find("h2").text().toLowerCase();
+            var blogContent = $(this).find(".blogs__card__description").text().toLowerCase();
+            
+            if (blogTitle.includes(searchTerm) || blogContent.includes(searchTerm)) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    });
+
+    $("#search-archive").on("input", function () {
+        var searchTerm = $(this).val().toLowerCase();
+        
+        $(".blogs__card").each(function () {
+            var blogTitle = $(this).find("h2").text().toLowerCase();
+            var blogContent = $(this).find(".blogs__card__description").text().toLowerCase();
+            
+            if (blogTitle.includes(searchTerm) || blogContent.includes(searchTerm)) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    });
+
 
     // Active State Menu Header
 

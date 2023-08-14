@@ -77,10 +77,19 @@
                 font-family: $p-family;
                 font-weight: $p-medium-weight;
                 font-size: $p-thin;
-                padding: 0 10px 20px 10px;
-                margin: 0;
+                margin: 0 10px 20px 10px;
                 color: white;
                 line-height: 15px;
+                height: 50px;
+                overflow: auto;
+
+                @media (max-width: 510px) {
+                    height: 65px;
+                }
+
+                @media (max-width: 450px) {
+                    height: 35px;
+                }
             }
 
             &__button {

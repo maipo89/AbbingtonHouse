@@ -40,12 +40,23 @@
 						</div>
 					</div>
 					<div class="search">
-						<input placeholder="Search"/>
+						<input id="search-blog" placeholder="Search"/>
 					</div>
 				</div>
 			</div>
 			<div class="blogs__container">
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php
+				$args = array(
+					'post_type' => 'post',
+					'posts_per_page' => -1, // Display all posts
+					'order' => 'ASC', // Order posts alphabetically
+					'orderby' => 'title' // Order by post title
+				);
+
+				$query = new WP_Query($args);
+
+				
+			if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
 		
 				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'single-post-thumbnail' ); ?>
 
