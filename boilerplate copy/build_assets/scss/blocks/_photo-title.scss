@@ -102,7 +102,19 @@
                     left: -130px;
 
                     &:hover {
-                        text-decoration: underline;
+                        color: $chilled-cucumber;
+
+                        &::before {
+                            background-color: $chilled-cucumber;
+                        }
+                    }
+
+                    &:focus {
+                        color: #85876A;
+
+                        &::before {
+                            background-color: #85876A;
+                        }
                     }
 
                     @media (max-width: 1080px) {
@@ -115,13 +127,16 @@
                     }
     
                     &::before {
-                        content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.0129 0.313349C11.5871 -0.10445 10.9007 -0.10445 10.4749 0.313349L3.25416 7.39888C2.91528 7.73141 2.91528 8.26858 3.25416 8.60112L10.4749 15.6867C10.9007 16.1045 11.5871 16.1045 12.0129 15.6867C12.4387 15.2689 12.4387 14.5953 12.0129 14.1775L5.7219 7.99574L12.0216 1.81402C12.4387 1.40474 12.4387 0.722622 12.0129 0.313349Z' fill='%2385876A'/%3E%3C/svg%3E");
+                        content: '';
+                        mask: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.0129 0.313349C11.5871 -0.10445 10.9007 -0.10445 10.4749 0.313349L3.25416 7.39888C2.91528 7.73141 2.91528 8.26858 3.25416 8.60112L10.4749 15.6867C10.9007 16.1045 11.5871 16.1045 12.0129 15.6867C12.4387 15.2689 12.4387 14.5953 12.0129 14.1775L5.7219 7.99574L12.0216 1.81402C12.4387 1.40474 12.4387 0.722622 12.0129 0.313349Z' fill='%2385876A'/%3E%3C/svg%3E") no-repeat 50% 50%;
                         display: block;
                         position: absolute;
                         width: 16px;
                         height: 16px;
                         left: -30px;
                         top: -0.1rem;
+                        mask-size: cover;
+                        background-color: #85876A;
                     }
                 }
             }
