@@ -31,11 +31,11 @@
 
     p {
         margin-bottom: 33px;
+        font-size: $p-light;
+        line-height: 20px;
 
         @media (max-width: 900px) {
             margin: 0 0 35px 0;
-            font-size: $p-small;
-            line-height: 24px;
         }
     }
 }

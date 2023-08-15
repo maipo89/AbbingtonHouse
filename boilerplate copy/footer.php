@@ -68,8 +68,8 @@
 					<a href="https://onqor.co.uk/">website by onqor</a>
 				</div>
 
-				<div id="inner-footer" class="wrap cf">
-
+				<div id="inner-footer" class="wrap cf inner-footer">
+                    <p>Designed and built by <a href="https://onqor.com/">ONQOR</a></p>
 				</div>
 
 			</footer>

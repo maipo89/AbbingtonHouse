@@ -1,6 +1,6 @@
 .footer {
     height: 228px;
-    background-color: $shadow;
+    background-color: #85876A;
 
     @media (max-width: 500px) {
         height: 390px;
@@ -231,5 +231,32 @@
             }
         }
 
+    }
+
+    .inner-footer {
+        height: 25px;
+        width: 100%;
+        background-color: white;
+        @include flexCenter($direction: row);
+
+        @media (max-width: 500px) {
+            height: 30px;
+            position: relative;
+        }
+
+        p {
+            font-size: 14px;
+            color: black;
+            font-weight: 400;
+            text-align: center;
+            font-family: $poppins;
+            margin: 0;
+
+            a {
+                text-decoration: none;
+                text-transform: none;
+                color: black;
+            }
+        }
     }
 }

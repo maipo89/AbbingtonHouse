@@ -36,9 +36,11 @@
     }
 
     p {
+        font-size: $p-small;
+        line-height: 24px;
         @media (max-width: 900px) {
-            font-size: $p-small;
-            line-height: 24px;
+            font-size: $p-smaller;
+            line-height: 20px;
         }
     }
 

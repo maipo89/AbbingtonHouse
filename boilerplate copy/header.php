@@ -21,6 +21,10 @@
 	<?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
 	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
+
+	<!-- Hotjar Tracking Code -->
+	<script>(function(h,o,t,j,a,r){h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};h._hjSettings={hjid:3605603,hjsv:6};a=o.getElementsByTagName('head')[0];r=o.createElement('script');r.async=1;r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;a.appendChild(r);})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');</script>
+
 	<!--[if IE]>
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 	<![endif]-->
