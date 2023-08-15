@@ -60,13 +60,7 @@
 					</div>
 				</div>
 
-				<div class="footer__links">
-                    <a href="<?php echo get_home_url(); ?>/terms-conditions">terms & conditions</a>
-					<a href="<?php echo get_home_url(); ?>/privacy">privacy policy</a>
-					<a href="<?php echo get_home_url(); ?>/cookie-policy">cookie policy</a>
-					<a href="javascript:void(0);">site map</a>
-					<a href="https://onqor.co.uk/">website by onqor</a>
-				</div>
+				<p class="legal-text">© 2023 Abbington House | All Rights Reserved | Abbington House is the trading name of Abbington House Limited | <a href="<?php echo get_home_url(); ?>/cookie-policy/">Legal</a></p>
 
 				<div id="inner-footer" class="wrap cf inner-footer">
                     <p>Designed and built by <a href="https://onqor.com/">ONQOR</a></p>
