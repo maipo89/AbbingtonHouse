@@ -60,6 +60,10 @@ if( have_rows('flexible_content') ):
             <?php include 'blocks/team.php'; ?>
         <?php endif;
 
+        if( get_row_layout() == 'testimonial' ): ?>
+            <?php include 'blocks/testimonial.php'; ?>
+        <?php endif;
+
         if( get_row_layout() == 'map_text' ): ?>
             <?php include 'blocks/map_text.php'; ?>
         <?php endif;

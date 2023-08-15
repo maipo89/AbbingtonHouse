@@ -166,6 +166,15 @@ $(document).ready(function() {
         $(this).children('.select').toggleClass('open');
     })
 
+    // Slider Testimonial
+
+    $('.testimonial__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+    });
+    
 
     // Input Custom Dropdown
 
