@@ -35,6 +35,9 @@
 													<span class="custom-option" data-value="<?php echo($category->name) ?>"><?php echo($category->name) ?></span>
 												</a>
 											<?php } ?>
+											<a href="<?php echo get_home_url(); ?>/blogs/">
+												<span class="custom-option">All Filters</span>
+											</a>
 										</div>
 								</div>
 							</div>
@@ -69,6 +72,9 @@
 									    <?php
 											wp_list_authors(array('hide_empty' => true));
 										?>
+										<li>
+											<a href="<?php echo get_home_url(); ?>/blogs/">All Authors</a>
+										</li>
 									</div>
 								</div>
 							</div>

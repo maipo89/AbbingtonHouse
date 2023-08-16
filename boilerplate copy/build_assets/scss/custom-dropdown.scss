@@ -80,6 +80,10 @@
                 text-decoration: none;
                 text-transform: none;
             }
+
+            span {
+                text-transform: capitalize;
+            }
         }
 
         .custom-option, li {

@@ -6,28 +6,48 @@
 
     h1 {
         margin-top: 100px;
-        text-align: center;
+        font-size: 39px;
+        margin-bottom: 30px;
         @media (max-width: 768px) {
-            margin-top: 85px;
+            margin-top: 60px;
+            font-size: 31px;
+            margin-bottom: 20px;
         }
         @media (max-width: 480px) {
             margin-top: 50px;
+            font-size: 25px;
+            margin-bottom: 30px;
         }
     }
 
     h2 {
-        margin-top: 40px;
+        margin-top: 100px;
+        font-size: 39px;
+        margin-bottom: 30px;
         @media (max-width: 768px) {
-            font-size: $h4-size;
+            font-size: 31px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 480px) {
+            font-size: 25px;
+            margin-bottom: 30px;
         }
     }
 
     p {
-        line-height: 31px;
-        font-size: $p-normal;
-        margin-top: 33px;
-        @media (max-width: 768px) {
-            font-size: $p-small;
+        line-height: 20px;
+        font-size: $p-smaller;
+        margin-bottom: 20px;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: center;
+        a {
+            &:nth-child(2) {
+                margin: 0 30px;
+            }
         }
     }
 }

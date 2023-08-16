@@ -4,6 +4,11 @@
 ?>
 
 <div class="legal">
+    <div class="legal__links">
+        <a href="<?php get_home_url(); ?>/cookie-policy/">Cookies</a>
+        <a href="<?php get_home_url(); ?>/privacy/">Privacy Policy</a>
+        <a href="<?php get_home_url(); ?>/terms-conditions/">Terms & Conditions</a>
+    </div>
     <h1><?php echo($titleLegal) ?></h1>
     <?php echo($paragraphLegal) ?>
     <?php if( have_rows('text_area') ): ?>
