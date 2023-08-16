@@ -182,12 +182,8 @@ $(document).ready(function() {
 
     $('.legal__links a').each(function() {
         var href = $(this).attr('href');
-
-        console.log(currentUrl, 'current')
-        var link = 'https://abingdon-house.onqor.group' + href
-
         
-        if (currentUrl === link) {
+        if (currentUrl.includes(href)) {
             $(this).addClass('active');
         }
     });
