@@ -1,7 +1,6 @@
 <?php 
     $titleLegal = get_sub_field('title');
     $paragraphLegal = get_sub_field('paragraph');
-    $titlePage = get_the_title();
 ?>
 
 <div class="legal">
