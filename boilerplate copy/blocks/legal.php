@@ -1,12 +1,13 @@
 <?php 
     $titleLegal = get_sub_field('title');
     $paragraphLegal = get_sub_field('paragraph');
+    $titlePage = get_the_title();
 ?>
 
 <div class="legal">
     <div class="legal__links">
         <a href="<?php get_home_url(); ?>/cookie-policy/">Cookies</a>
-        <a href="<?php get_home_url(); ?>/privacy/">Privacy Policy</a>
+        <a href="<?php get_home_url(); ?>/privacy-policy/">Privacy Policy</a>
         <a href="<?php get_home_url(); ?>/terms-conditions/">Terms & Conditions</a>
     </div>
     <h1><?php echo($titleLegal) ?></h1>

@@ -174,6 +174,23 @@ $(document).ready(function() {
         infinite: true,
         dots: true,
     });
+
+    
+    //Legal Page Tabs
+
+    var currentUrl = window.location.href;
+
+    $('.legal__links a').each(function() {
+        var href = $(this).attr('href');
+
+        console.log(currentUrl, 'current')
+        var link = 'https://abingdon-house.onqor.group' + href
+
+        
+        if (currentUrl === link) {
+            $(this).addClass('active');
+        }
+    });
     
 
     // Input Custom Dropdown
