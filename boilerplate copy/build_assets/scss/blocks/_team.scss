@@ -61,14 +61,10 @@ margin-top: 100px;
             width: 100%;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            column-gap: 31px;
 
-            @media (max-width: 920px) {
-                justify-content: space-evenly;
-            }
-
-            @media (max-width: 480px) {
-                justify-content: space-between;
+            @media (max-width: 1250px) {
+                column-gap: 26px;
             }
 
             &__card {

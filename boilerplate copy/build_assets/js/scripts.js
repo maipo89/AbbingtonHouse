@@ -209,6 +209,29 @@ $(document).ready(function() {
         $(this).addClass('active-dropdown');
     });
 
+    $(document).on("click", function(event) {
+        var authorDropdownList = $(".author .custom-options .custom-option");
+        var authorDropdownListA = $(".author .custom-options a");
+        var authorSelect = $(".author .select");
+        var authorSelectTrigger = $(".author .select__trigger");
+        var authorSelectTriggerSpan = $(".author .select__trigger span");
+        var authorSelectTriggerArrow = $(".author .select__trigger .arrow");
+        var categoryDropdownList = $(".category .custom-options .custom-option");
+        var categoryDropdownListA = $(".category .custom-options a");
+        var categorySelect = $(".category .select");
+        var categorySelectTrigger = $(".category .select__trigger");
+        var categorySelectTriggerSpan = $(".category .select__trigger span");
+        var categorySelectTriggerArrow = $(".category .select__trigger .arrow");
+
+        if (!authorDropdownList.is(event.target) && !authorDropdownListA.is(event.target) && !authorSelectTrigger.is(event.target) && !authorSelectTriggerArrow.is(event.target) && !authorSelectTriggerSpan.is(event.target)) {
+            authorSelect.removeClass("open");
+        }
+
+        if (!categoryDropdownList.is(event.target) && !categoryDropdownListA.is(event.target) && !categorySelectTrigger.is(event.target) && !categorySelectTriggerArrow.is(event.target) && !categorySelectTriggerSpan.is(event.target)) {
+            categorySelect.removeClass("open");
+        }
+    });
+
     // $('.category .custom-option').on("click", function() {
     //     $('.category .custom-option').removeClass("active-dropdown");
     //     var inputData = $(this).data('value');
