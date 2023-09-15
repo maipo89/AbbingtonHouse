@@ -1,23 +1,44 @@
 .hero {
     display: flex;
-    width: 100%;
-    padding: 0 150px;
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 0 40px;
+    margin-bottom: 172px;
 
-    @media (max-width: 1500px) {
-        padding: 0 50px;
-    }
     @media (max-width: 1280px) {
         padding: 0px;
     }
 
     @media (max-width: 900px) {
+        position: relative;
         flex-direction: column-reverse;
     }
 
-    &__description, &__photo {
-        width: 50%;
-        height: 633px;
+    @media (max-width: 600px) {
+        margin-bottom: 192px;
+    }
 
+    @media (max-width: 550px) {
+        margin-bottom: 202px;
+    }
+
+    @media (max-width: 480px) {
+        margin-bottom: 0px;
+    }
+
+    &__description, &__photo {
+        height: 633px;
+    }
+
+    &__description {
+        width: 43%;
+        @media (max-width: 900px) {
+            width: 100%;
+        }
+    }
+
+    &__photo {
+        width: 50.5%;
         @media (max-width: 900px) {
             width: 100%;
         }
@@ -25,29 +46,53 @@
 
     &__description {
         @include flexCenter($direction: column);
-        padding: 0 120px;
+        margin: 0 72px 0 0;
 
-        @media (max-width: 1265px) {
-            padding: 0 50px;
+        @media (max-width: 1280px) {
+            width: 45%;
+            padding: 0 0 0 93px;
+        }
+
+        @media (max-width: 1100px) {
+            padding: 0 0 0 50px;
+        }
+
+        @media (max-width: 940px) {
+            padding: 0 0 0 40px;
         }
 
         @media (max-width: 900px) {
-            background-color: $antique-white-opacity;
-            position: relative;
+            background-color: #ECEDE3F2;
+            position: absolute;
             height: fit-content;
             width: 90%;
-            top: -135px;
             padding: 25px;
+            bottom: -100px;
             z-index: 1;
             margin: 0 auto;
+            opacity: 0.95;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
-        @media (max-width: 400px) {
-            top: -60px
+        @media (max-width: 600px) {
+            bottom: -120px;
+        }
+
+        @media (max-width: 550px) {
+            bottom: -130px;
+        }
+
+        @media (max-width: 480px) {
+            top: -60px;
+            position: relative;
+            bottom: initial;
+            left: initial;
+            transform: none;
         }
 
         img {
-            width: 400px;
+            width: 330px;
             height: auto;
             margin-bottom: 60px;
 
@@ -60,22 +105,26 @@
         p {
             color: $gray;
             text-align: center;
+            font-size: 16px;
+            line-height: 24px;
 
             @media (max-width: 900px) {
                 font-size: $p-small;
-                line-height: 24px;
             }
         }
     }
 
     &__photo {
-        position: relative;
+        position: absolute;
+        right: 0;
         background-position: center center;
         background-size: cover;
 
         @media (max-width: 900px) {
-            -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)) 90%, to(rgba(0,0,0,0)));
-            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0));
+            position: initial;
+            right: initial;
+            -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)) 70%, to(rgba(0,0,0,0)));
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0));
         }
 
         @media (max-width: 400px) {
@@ -89,6 +138,10 @@
 
             @media (max-width: 1280px) {
                 width: 280px;
+            }
+
+            @media (max-width: 480px) {
+                width: 210px;
             }
 
             @media (max-width: 400px) {

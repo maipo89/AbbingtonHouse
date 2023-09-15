@@ -1,38 +1,43 @@
 .paragraph-area {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 0 40px;
+    margin-bottom: 150px;
+
+    @media (max-width: 1280px) {
+        padding: 0 93px;
+    }
+
+    @media (max-width: 1100px) {
+        padding: 0 50px;
+    }
+
+    @media (max-width: 900px) {
+        margin-bottom: 72px;
+    }
+
+    @media (max-width: 400px) {
+        padding: 0 20px;
+    }
+
+
     h1, p {
         text-align: center;
-        padding: 0 270px;
-
-        @media (max-width: 1500px) {
-            padding: 0 170px;
-        }
-
-        @media (max-width: 1280px) {
-            padding: 0 120px;
-        }
-
-        @media (max-width: 1265px) {
-            padding: 0 50px;
-        }
-
-        @media (max-width: 400px) {
-            padding: 0 20px;
-        }
     }
 
     h1 {
         margin: 150px 0 35px 0;
 
         @media (max-width: 900px) {
-            margin: 0 0 35px 0;
+            margin: 0 0 32px 0;
             font-size: $h4-size
         }
     }
 
     p {
         margin-bottom: 33px;
-        font-size: $p-light;
-        line-height: 20px;
+        font-size: $p-smaller;
+        line-height: 22px;
 
         @media (max-width: 900px) {
             margin: 0 0 35px 0;

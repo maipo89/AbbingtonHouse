@@ -1,9 +1,15 @@
 .blogs {
-    width: 1240px;
     margin: 0 auto;
+    max-width: 1280px;
+    padding: 0 40px;
 
-    @media (max-width: 1250px) {
-        width: 922px;
+    @media (max-width: 1280px) {
+        padding: 0 20px;
+    }
+
+    @media (max-width: 1241px) {
+        max-width: 1080px;
+        padding: 0 40px;
     }
 
     @media (max-width: 930px) {
@@ -21,8 +27,20 @@
 
     &__card {
         height: 408px;
-        width: 286px;
+        width: 276px;
         margin-bottom: 100px;
+
+        @media (max-width: 1241px) {
+            width: 22.5%;
+        }
+
+        @media (max-width: 1046px) {
+            width: 30.8%;
+        }
+
+        @media (max-width: 994px) {
+            width: 31%;
+        }
 
         @media (max-width: 930px) {
             width: 48%;
@@ -108,7 +126,7 @@
     }
  
     &__inputs {
-        margin: 100px 0 100px 0;
+        margin: 72px 0 96px 0;
         display: flex;
         justify-content: flex-end;
         @media (max-width: 805px) {
@@ -161,6 +179,13 @@
                     border-top: none;
                     border-right: none;
                     border-left: none;
+                    font-size: 16px;
+                }
+            }
+
+            .category {
+                .select__trigger {
+                    border-right: none;
                 }
             }
         }
