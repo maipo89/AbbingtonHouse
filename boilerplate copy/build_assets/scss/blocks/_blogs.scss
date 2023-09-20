@@ -17,6 +17,14 @@
         max-width: 100%;
     }
 
+    @media (max-width: 580px) {
+        padding: 0 20px;
+    }
+
+    @media (max-width: 480px) {
+        margin-bottom: 32px;
+    }
+
     &__container {
         display: flex;
         flex-wrap: wrap;
@@ -32,7 +40,7 @@
     &__card {
         height: 408px;
         width: 276px;
-        margin-bottom: 100px;
+        margin-bottom: 96px;
 
         @media (max-width: 1241px) {
             width: 22.5%;
@@ -48,7 +56,7 @@
 
         @media (max-width: 930px) {
             width: 48%;
-            margin-bottom: 50px;
+            margin-bottom: 64px;
         }
 
         @media (max-width: 595px) {
@@ -58,6 +66,7 @@
         @media (max-width: 480px) {
             width: 100%;
             height: 445px;
+            margin-bottom: 32px;
         }
 
         &__image {
@@ -65,7 +74,7 @@
             height: 222px;
             background-position: center;
             background-size: cover;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
 
             @media (max-width: 480px) {
                 height: 263px;
@@ -74,15 +83,15 @@
 
         &__description {
             width: 100%;
-            height: 179px;
+            height: 125px;
             background-color: $dark-gray;
 
             @media (max-width: 595px) {
-                height: 195px;
+                height: 140px;
             }
 
             @media (max-width: 480px) {
-                height: 175px;
+                height: 120px;
             }
 
             h2 {
@@ -110,21 +119,20 @@
                 }
 
                 @media (max-width: 450px) {
-                    height: 35px;
+                    height: 45px;
                 }
             }
+        }
 
-            &__button {
-                @include flexCenter($direction: row);
+        &__button {
+            @include flexCenter($direction: row);
 
-                .button {
-                    padding: 7px 25px;
-                    margin-top: 0;
-                    width: fit-content;
-                    height: initial;
-                    line-height: 20px;
-                    margin-bottom: 16px;
-                }
+            .button {
+                padding: 10px 50px;
+                width: fit-content;
+                height: initial;
+                line-height: 20px;
+                margin-top: 10px;
             }
         }
     }
@@ -137,57 +145,107 @@
             margin: 50px 0 50px 0;
         }
         &__container {
-            width: 840px;
-            @include spaceBetween($direction: row, $align: center);
+            width: 790px;
+            position: relative;
+            @include spaceBetween($direction: row-reverse, $align: center);
 
-            @media (max-width: 1250px) {
-                width: 100%;
+            @media (max-width: 900px) {
+                display: block;
+                height: 112px;
             }
 
-            @media (max-width: 805px) {
-                flex-direction: column;
+            @media (max-width: 750px) {
+                height: 106px;
+                display: block;
             }
+
             .dropdowns {
-                width: 440px;
+                width: 340px;
                 display: flex;
+                position: relative;
 
-                @media (max-width: 805px) {
+                @media (max-width: 900px) {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 318px;
+                }
+
+                @media (max-width: 750px) {
+                    left: initial;
+                    right: initial;
                     width: 100%;
                 }
 
                 .author, .category, .category-category, .author-category {
                     width: 50%;
+
+                    .select-wrapper .select {
+                        position: initial;
+                    }
+
+                    .open {
+
+                        .select__trigger {
+                            border-bottom: none;
+                        }
+                    }
+    
+                    .select-wrapper {
+                        position: initial;
+
+                        .custom-options {
+                            margin-top: 0;
+                            top: 40px;
+                            box-shadow: none;
+                            border: 2px solid $green-white;
+                            border-top: none;
+                            z-index: 0;
+                        }
+                    }
                 }
             }
 
             .search {
                 position: relative;
-                width: 286px;
+                width: 278px;
 
-                @media (max-width: 805px) {
-                    width: 100%;
-                    margin-top: 40px;
+                @media (max-width: 900px) {
+                    position: absolute;
+                    right: 0;
+                    width: 170px;
+                }
+
+                @media (max-width: 750px) {
+                    position: absolute;
+                    left: 0;
+                    width: 90%;
+                    margin: auto;
                 }
 
                 &::after {
-                    content: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 21L14.3333 14.3333M1 8.77778C1 9.79917 1.20118 10.8106 1.59205 11.7542C1.98292 12.6978 2.55582 13.5553 3.27806 14.2775C4.00029 14.9997 4.85771 15.5726 5.80135 15.9635C6.74499 16.3544 7.75639 16.5556 8.77778 16.5556C9.79917 16.5556 10.8106 16.3544 11.7542 15.9635C12.6978 15.5726 13.5553 14.9997 14.2775 14.2775C14.9997 13.5553 15.5726 12.6978 15.9635 11.7542C16.3544 10.8106 16.5556 9.79917 16.5556 8.77778C16.5556 7.75639 16.3544 6.74499 15.9635 5.80135C15.5726 4.85771 14.9997 4.00029 14.2775 3.27806C13.5553 2.55582 12.6978 1.98292 11.7542 1.59205C10.8106 1.20118 9.79917 1 8.77778 1C7.75639 1 6.74499 1.20118 5.80135 1.59205C4.85771 1.98292 4.00029 2.55582 3.27806 3.27806C2.55582 4.00029 1.98292 4.85771 1.59205 5.80135C1.20118 6.74499 1 7.75639 1 8.77778Z' stroke='%2385876A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                    content: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 13L9 9M1 5.66667C1 6.2795 1.12071 6.88634 1.35523 7.45252C1.58975 8.01871 1.93349 8.53316 2.36683 8.9665C2.80018 9.39984 3.31462 9.74358 3.88081 9.97811C4.447 10.2126 5.05383 10.3333 5.66667 10.3333C6.2795 10.3333 6.88634 10.2126 7.45252 9.97811C8.01871 9.74358 8.53316 9.39984 8.9665 8.9665C9.39984 8.53316 9.74358 8.01871 9.97811 7.45252C10.2126 6.88634 10.3333 6.2795 10.3333 5.66667C10.3333 5.05383 10.2126 4.447 9.97811 3.88081C9.74358 3.31462 9.39984 2.80018 8.9665 2.36683C8.53316 1.93349 8.01871 1.58975 7.45252 1.35523C6.88634 1.12071 6.2795 1 5.66667 1C5.05383 1 4.447 1.12071 3.88081 1.35523C3.31462 1.58975 2.80018 1.93349 2.36683 2.36683C1.93349 2.80018 1.58975 3.31462 1.35523 3.88081C1.12071 4.447 1 5.05383 1 5.66667Z' stroke='%2385876A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
                     display: block;
                     position: absolute;
                     right: 16px;
-                    width: 20px;
-                    height: 20px;
-                    top: 16px;
+                    width: 12px;
+                    height: 12px;
+                    top: 9px;
                 }
 
                 input {
                     border-top: none;
                     border-right: none;
                     border-left: none;
-                    font-size: 16px;
+                    &::placeholder {
+                        font-size: $p-smaller;
+                    }
                 }
             }
 
-            .category {
+            .category, .category-category {
                 .select__trigger {
                     border-right: none;
                 }

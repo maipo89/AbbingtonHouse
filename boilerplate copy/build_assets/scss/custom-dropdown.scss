@@ -19,14 +19,14 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 12.5px 22px 12.5px 8px;
-            font-size: $p-small;
+            padding: 15px 12px 15px 10px;
+            font-size: $p-smaller;
             font-family: $alegreyaSans;
             color: $mustard-green;
-            height: 55px;
+            height: 40px;
             line-height: 24px;
             cursor: pointer;
-            border: 2px solid $corianderOpacity;
+            border: 2px solid $green-white;
 
             span {
                 text-transform: capitalize;
@@ -34,8 +34,8 @@
 
             .arrow {
                 position: relative;
-                height: 15px;
-                width: 15px;
+                height: 12px;
+                width: 12px;
 
                 &::before, &::after {
                     content: "";
@@ -47,13 +47,13 @@
                 } 
 
                 &::before {
-                    left: -5px;
+                    left: -3.5px;
                     transform: rotate(-45deg);
                     background-color: $mustard-green;
                 }
 
                &::after {
-                    left: 5px;
+                    left: 3.5px;
                     transform: rotate(45deg);
                     background-color: $mustard-green;
                 }
@@ -95,17 +95,23 @@
             display: block;
             cursor: pointer;
             transition: all 0.5s;
-            padding-left: 8px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            font-size: $p-small;
+            padding-left: 10px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-size: $p-smaller;
             font-family: $alegreyaSans;
             color: $mustard-green;
-            line-height: 24px;
+            line-height: 11px;
+            height: 40px;
 
             &:hover {
                 cursor: pointer;
-                background-color: $corianderOpacity;
+                background-color: $dark-gray;
+                color: white;
+
+                a {
+                    color: white;
+                }
             }
 
             a {

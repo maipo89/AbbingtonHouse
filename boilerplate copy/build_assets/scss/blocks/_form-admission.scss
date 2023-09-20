@@ -1,11 +1,15 @@
 .form-admission {
-    padding: 40px 0;
+    padding: 64px 0 96px 0;
     background-color: $corianderOpacity;
     position: relative;
 
-    @media (max-width: 400px) {
-        padding: 30px 0;
-    }    
+    @media (max-width: 1280px) {
+        padding: 48px 0 112px 0;
+    } 
+
+    @media (max-width: 768px) {
+        padding: 32px 0 64px 0;
+    }     
 
     img {
         position: absolute;
@@ -20,29 +24,38 @@
         }    
     }
 
+    .container {
+        max-width: 995px;
+        margin: 0 auto;
+        padding: 0;
+
+        @media (max-width: 1040px) {
+            max-width: 980px;
+            padding: 0 40px;
+        }
+
+        @media (max-width: 940px) {
+            max-width: 100%;
+        }
+
+        @media (max-width: 580px) {
+            padding: 0 20px;
+        }
+    }
+
     &__form, &__form-complete {
-        width: 1060px;
         height: 639px;
         background-color: white;
-        margin: 0 auto;
         position: relative;
         z-index: 2;
-
-        @media (max-width: 1280px) {
-            width: 1092px;
-        }
-
-        @media (max-width: 1160px) {
-            width: 900px;
-        }
-
-        @media (max-width: 960px) {
-            width: 668px;
-        }
+        padding: 64px 72px;
 
         @media (max-width: 700px) {
-            width: 90%;
             height: 818px;
+        }
+
+        @media (max-width: 768px) {
+            padding: 48px 16px;
         }
 
         @media (max-width: 540px) {
@@ -53,29 +66,27 @@
             height: 900px;
         }
 
+        @media (max-width: 480px) {
+            padding: 32px 13px;
+        }
+
         @media (max-width: 349px) {
             height: 950px;
         }
 
         h2 {
-            padding-top: 85px;
             text-align: center;
             font-size: $h3-size;
 
             @media (max-width: 960px) {
-                padding-top: 50px;
                 font-size: 31px;
-            }
-    
-            @media (max-width: 700px) {
-                padding-top: 33px;
             }
         }
 
         p {
             text-align: center;
             font-size: $p-smaller;
-            width: 730px;
+            width: 100%;
             height: auto;
             margin: 0 auto;
             margin-top: 40px;
@@ -96,7 +107,7 @@
         &__container {
             display: flex;
             column-gap: 20px;
-            width: 858px;
+            width: 602px;
             margin: 0 auto;
 
             @media (max-width: 960px) {
@@ -109,7 +120,7 @@
             }
 
             &__left-container, &__right-container {
-                width: 424px;
+                width: 50%;
                 height: 205px;
                 input {
                     display: block;

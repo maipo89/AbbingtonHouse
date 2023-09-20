@@ -15,6 +15,10 @@
         max-width: 100%;
     }
 
+    @media (max-width: 580px) {
+        padding: 18px 20px;
+    }
+
     @media (max-width: 480px) {
         padding-top: 55px;
     }
@@ -235,7 +239,7 @@
 
     &__button{
         padding: 9px 21px;
-        background-color: #C8CCB2;
+        background-color: $green-white;
         cursor: pointer;
         text-decoration: none !important;
         color: $mustard-green;
@@ -263,6 +267,11 @@
             p {
                 color: white;
             }
+        }
+
+        &:active {
+            background-color: $orinoco;
+            color: #fff;
         }
 
         &:focus-visible {

@@ -79,21 +79,21 @@ a {
 // Inputs 
 
 input {
-    border: 2px solid $corianderOpacity;
-    padding: 12.5px 0 12.5px 8px;
+    border: 2px solid $green-white;
+    padding: 15px 12px 15px 10px;
     width: 100%;
     font-size: $p-small;
     font-family: $alegreyaSans;
-    height: 55px;
+    height: 40px;
     color: $mustard-green;
-    font-size: $p-small;
+    font-size: $p-smaller;
     border-radius: 0;
     -webkit-appearance: none;
     -webkit-border-radius: 0;
 
     &::placeholder {
         color: $mustard-green;
-        font-size: $p-small;
+        font-size: $p-smaller;
         opacity: 1
     }
 
@@ -123,10 +123,10 @@ input {
 }
 
 textarea {
-    border: 2px solid $corianderOpacity;
-    padding: 12.5px 0 0 8px;
+    border: 2px solid $green-white;
+    padding: 10px;
     width: 100%;
-    font-size: $p-small;
+    font-size: $p-smaller;
     font-family: $alegreyaSans;
     resize: none;
     color: $mustard-green;
@@ -136,7 +136,7 @@ textarea {
 
     &::placeholder {
         color: $mustard-green;
-        font-size: $p-small;
+        font-size: $p-smaller;
         opacity: 1;
     }
 
@@ -203,10 +203,10 @@ textarea {
 }
 
 .secondary-button {
-    background-color: $orinoco;
+    background-color: $green-white;
     padding: 5.5px 46px;
     color: $shadow;
-    border: 2px solid $orinoco;
+    border: 2px solid $green-white;
 
     &:hover {
         background-color: $dark-gray;
@@ -238,7 +238,7 @@ textarea {
 // Accessibility
 
 .input-focus {
-    border: 2px solid $corianderOpacity;
+    border: 2px solid $green-white;
     outline: solid 2px transparent !important;
 
     &:focus {

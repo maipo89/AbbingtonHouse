@@ -2,6 +2,9 @@
         <div class="blogs">
 			<div class="blogs__inputs">
 			    <div class="blogs__inputs__container">
+				    <div class="search">
+						<input id="search-archive" placeholder="Search..."/>
+					</div>
 					<div class="dropdowns">
 
 						<div class="category-category">
@@ -80,9 +83,6 @@
 							</div>
 						</div>
 					</div>
-					<div class="search">
-						<input id="search-archive" placeholder="Search"/>
-					</div>
 				</div>
 			</div>
 			<div class="blogs__container">
@@ -95,9 +95,9 @@
 						<div class="blogs__card__description">
 							<h2><?php the_title(); ?></h2>
 							<?php the_content(); ?>
-							<div class="blogs__card__description__button">
-								<a class="button" href="<?php the_permalink() ?>">Read More</a>
-							</div>
+						</div>
+						<div class="blogs__card__button">
+								<a class="button secondary-button" href="<?php the_permalink() ?>">Read More</a>
 						</div>
 					</div>
 

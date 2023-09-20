@@ -1,16 +1,21 @@
 .admission {
-    padding: 0 380px 0px 380px;
+    max-width: 995px;
+    margin: 0 auto;
 
-    @media (max-width: 1600px) {
-        padding: 0 94px 0px 94px;
+    @media (max-width: 1040px) {
+        max-width: 980px;
+        padding: 0 40px;
     }
 
-    @media (max-width: 840px) {
-        padding: 0 50px 0px 50px;
+    @media (max-width: 940px) {
+        max-width: 100%;
     }
 
-    @media (max-width: 400px) {
-        padding: 0 20px 0px 20px;
+    @media (max-width: 580px) {
+        padding: 0 20px;
+    }
+
+    @media (max-width: 480px) {
     }
 
     h5 {
@@ -111,9 +116,9 @@
 
     .last-row-container {
         height: 2px;
-        padding-left: 380px;
-        padding-right: 380px;
-        margin-bottom: 100px;
+        max-width: 995px;
+        margin: 0 auto;
+        margin-bottom: 145px;
 
         .last-row {
             width: 100%;
@@ -121,21 +126,24 @@
             background-color: $tan;
         }
 
-        @media (max-width: 1600px) {
-            padding-left: 94px;
-            padding-right: 94px;
-            margin-bottom: 100px;
-        }
-    
-        @media (max-width: 840px) {
-            padding-left: 50px;
-            padding-right: 50px;
-            margin-bottom: 75px;
-        }
-    
-        @media (max-width: 400px) {
-            padding-left: 20px;
-            padding-right: 20px;
+        @media (max-width: 1280px) {
             margin-bottom: 50px;
+        }
+
+        @media (max-width: 1080px) {
+            margin-bottom: 32px;
+        }
+
+        @media (max-width: 1040px) {
+            max-width: 980px;
+            padding: 0 40px;
+        }
+
+        @media (max-width: 940px) {
+            max-width: 100%;
+        }
+
+        @media (max-width: 580px) {
+            padding: 0 20px;
         }
     }

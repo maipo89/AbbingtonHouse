@@ -42,12 +42,15 @@
             top: 290px;
         }
 
+        @media (max-width: 580px) {
+            padding: 0 20px;
+        }
+
         @media (max-width: 525px) {
             top: 260px;
         }
 
         @media (max-width: 480px) {
-            padding: 0 20px;
             top: 318px;
         }
 

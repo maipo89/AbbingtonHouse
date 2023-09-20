@@ -230,6 +230,27 @@ $(document).ready(function() {
         if (!categoryDropdownList.is(event.target) && !categoryDropdownListA.is(event.target) && !categorySelectTrigger.is(event.target) && !categorySelectTriggerArrow.is(event.target) && !categorySelectTriggerSpan.is(event.target)) {
             categorySelect.removeClass("open");
         }
+
+        var authorCategoryDropdownList = $(".author-category .custom-options .custom-option");
+        var authorCategoryDropdownListA = $(".author-category .custom-options a");
+        var authorCategorySelect = $(".author-category .select");
+        var authorCategorySelectTrigger = $(".author-category .select__trigger");
+        var authorCategorySelectTriggerSpan = $(".author-category .select__trigger span");
+        var authorCategorySelectTriggerArrow = $(".author-category .select__trigger .arrow");
+        var categoryCategoryDropdownList = $(".category-category .custom-options .custom-option");
+        var categoryCategoryDropdownListA = $(".category-category .custom-options a");
+        var categoryCategorySelect = $(".category-category .select");
+        var categoryCategorySelectTrigger = $(".category-category .select__trigger");
+        var categoryCategorySelectTriggerSpan = $(".category-category .select__trigger span");
+        var categoryCategorySelectTriggerArrow = $(".category-category .select__trigger .arrow");
+
+        if (!authorCategoryDropdownList.is(event.target) && !authorCategoryDropdownListA.is(event.target) && !authorCategorySelectTrigger.is(event.target) && !authorCategorySelectTriggerArrow.is(event.target) && !authorCategorySelectTriggerSpan.is(event.target)) {
+            authorCategorySelect.removeClass("open");
+        }
+
+        if (!categoryCategoryDropdownList.is(event.target) && !categoryCategoryDropdownListA.is(event.target) && !categoryCategorySelectTrigger.is(event.target) && !categoryCategorySelectTriggerArrow.is(event.target) && !categoryCategorySelectTriggerSpan.is(event.target)) {
+            categoryCategorySelect.removeClass("open");
+        }
     });
 
     // $('.category .custom-option').on("click", function() {
