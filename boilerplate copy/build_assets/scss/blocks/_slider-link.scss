@@ -1,22 +1,34 @@
 .slider-link {
-
+    padding-bottom: 48px;
+    @media (max-width: 768px) {
+        padding-bottom: 32px;
+    }
     p {
         padding: 0 35px;
         width: 1092px;
         margin: 0 auto;
-        margin-bottom: 16px;
+        margin-bottom: 24px;
         font-size: $p-smaller;
         line-height: 19.5px;
         text-align: center;
-        margin-top: 21px;
+        margin-top: 24px;
 
         @media (max-width: 1026px) {
             width: 100%;
             padding: 0 20px;
-            font-size: $p-small;
-            line-height: 24px;
+            font-size: $p-smaller;
             margin-top: 30px;
             margin-bottom: 36px;
+        }
+
+        @media (max-width: 768px) {
+            margin-top: 24px;
+            margin-bottom: 32px;
+        }
+
+        @media (max-width: 480px) {
+            margin-top: 32px;
+            margin-bottom: 32px;
         }
     }
 
@@ -25,13 +37,15 @@
         display: flex;
         justify-content: center;
         margin-bottom: 109;
+        column-gap: 32px;
 
         a {
-            border-bottom: 1px solid $mustard-green;
+            border-bottom: 1px solid transparent;            
             padding-bottom: 2px;
             color: $mustard-green;
             text-decoration: none;
             cursor: pointer;
+            font-size: $p-smaller;
 
             &:focus-visible {
                 border: 2px solid black;
@@ -58,18 +72,9 @@
             }
         }
 
-        @media (max-width: 1280px) {
-            margin-bottom: 95px;
-        }
-
-        @media (max-width: 768px) {
-            margin-bottom: 74px;
-        }
-
         @media (max-width: 500px) {
             flex-direction: column;
             align-items: center;
-            margin-bottom: 49px;
         }
     }
 
@@ -81,6 +86,10 @@
 
         @media (max-width: 1280px) {
             width: 1028px;
+        }
+
+        @media (max-width: 1240px) {
+            width: 1000px;
         }
 
         @media (max-width: 1026px) {
@@ -102,7 +111,11 @@
         }
 
         .slick-dots {
-            margin-top: 31px;
+            margin-top: 32px;
+
+            @media (max-width: 768px) {
+                margin-top: 16px;
+            }
         }
     }
 }

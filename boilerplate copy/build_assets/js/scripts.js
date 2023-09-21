@@ -59,7 +59,7 @@ $(document).ready(function() {
                     $(this).children('div.services__container__cards-container__card__paragraph').removeClass('fade-in');
                 });
             }
-            else if($(window).width() <= 769){
+            else {
                 if (!$carousel.hasClass('slick-initialized')) {
                     $carousel.slick({
                         infinite: false,
@@ -112,7 +112,7 @@ $(document).ready(function() {
             var $carousel = $(this);
             /* Initializes a slick carousel only on mobile screens */
             // slick on mobile
-            if ($(window).width() > 920) {
+            if ($(window).width() > 769) {
                 if ($carousel.hasClass('slick-initialized')) {
                     $carousel.slick('unslick');
                 }
@@ -167,8 +167,8 @@ $(document).ready(function() {
         slidesToScroll: 1,
         infinite: true,
         dots: true,
-        nextArrow: '<svg class="next-arrow" width="22" height="39" viewBox="0 0 22 39" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.27467 38.2508C2.2199 39.2497 3.74385 39.2497 4.68908 38.2508L20.7194 21.3107C21.4718 20.5156 21.4718 19.2314 20.7194 18.4363L4.68908 1.49617C3.74385 0.49729 2.21991 0.49729 1.27467 1.49617C0.32944 2.49505 0.32944 4.10549 1.27467 5.10436L15.241 19.8837L1.25538 34.663C0.329441 35.6415 0.329437 37.2723 1.27467 38.2508Z" fill="#87846A"/></svg>',
-        prevArrow: '<svg class="prev-arrow" width="23" height="39" viewBox="0 0 23 39" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.7205 0.749159C20.7026 -0.24972 19.0614 -0.24972 18.0435 0.749159L0.780012 17.6893C-0.0301864 18.4844 -0.0301864 19.7686 0.780012 20.5637L18.0435 37.5038C19.0614 38.5027 20.7026 38.5027 21.7205 37.5038C22.7385 36.505 22.7385 34.8945 21.7205 33.8956L6.67992 19.1163L21.7413 4.33697C22.7385 3.35848 22.7385 1.72765 21.7205 0.749159Z" fill="#87846A"/></svg>',
+        nextArrow: '<svg width="20" class="next-arrow" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2565_41867)"><path d="M5.3719 19.6083C5.8661 20.1306 6.66287 20.1306 7.15707 19.6083L15.5383 10.7514C15.9316 10.3357 15.9316 9.66427 15.5383 9.2486L7.15707 0.391687C6.66287 -0.130563 5.8661 -0.130563 5.3719 0.391686C4.8777 0.913936 4.8777 1.75593 5.3719 2.27818L12.674 10.0053L5.36181 17.7325C4.8777 18.2441 4.8777 19.0967 5.3719 19.6083Z" fill="#85876A"/></g><defs><clipPath id="clip0_2565_41867"><rect width="20" height="20" fill="white" transform="translate(20 20) rotate(-180)"/></clipPath></defs></svg>',
+        prevArrow: '<svg width="13" class="prev-arrow" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.0161 0.391687C11.4839 -0.130562 10.6259 -0.130562 10.0936 0.391687L1.0677 9.2486C0.6441 9.66427 0.6441 10.3357 1.0677 10.7514L10.0936 19.6083C10.6259 20.1306 11.4839 20.1306 12.0161 19.6083C12.5484 19.0861 12.5484 18.2441 12.0161 17.7218L4.15238 9.99467L12.027 2.26752C12.5484 1.75593 12.5484 0.903277 12.0161 0.391687Z" fill="#85876A"/></svg>',
     });
 
     $('.select-wrapper').on('click', function() {

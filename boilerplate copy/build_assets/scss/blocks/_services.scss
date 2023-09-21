@@ -266,7 +266,6 @@
         .slick-list.draggable {
             height: 1000px;
 
-
             @media (max-width: 650px) {
                 height: 950px;
             }
@@ -283,6 +282,17 @@
             }
             @media (max-width: 450px) {
                 bottom: 0px;
+            }
+
+            .slick-active {
+                @media (max-width: 769px) {
+                    width: 35px;
+                    border-radius: 10px;
+                }
+                @media (max-width: 755px) {
+                    width: 15px;
+                    border-radius: 50%;
+                }
             }
         }
 
