@@ -180,20 +180,22 @@ textarea {
     height: 39px;
 
     &:hover {
-        background-color: $pale-silver;
-        border: 2px solid $coriander;
-        color: $white;
+        background-color: $green-white;
+        border: 2px solid $corianderOpacity;
+        color: $mustard-green;
     }
 
     &:active {
-        background-color: $coriander;
-        border: 2px solid $pale-silver;
+        background-color: $orinoco;
+        border: 2px solid $orinoco;
         color: $white;
     }
 
     &:focus {
         outline: 0;
-        border: 2px solid $corianderOpacity;
+        background-color: $orinoco;
+        border: 2px solid $orinoco;
+        color: $white;
     }
 
     &:focus-visible {
@@ -268,7 +270,7 @@ textarea {
     color: red;
     font-size: 12px;
     position: absolute;
-    top: 53px;
+    top: 43px;
 }
 
 .success {
