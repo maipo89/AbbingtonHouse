@@ -18,6 +18,8 @@
         @media (max-width: 600px) {
             width: 100%;
             height: 100%;
+            top: 0;
+            bottom: 0;
         }
     }
 
@@ -61,7 +63,7 @@
             }
 
             @media (max-width: 480px) {
-                margin-bottom: 32px;
+                margin-bottom: 40px;
             }
         }
 
@@ -97,13 +99,13 @@
 
                 @media (max-width: 499px) {
                     height: 445px;
-                    width: 287px !important;
+                    width: 335px!important;
                     display: flex !important;
                     flex-direction: column;
                 }
 
                 @media (max-width: 320px) {
-                    width: 150px !important;
+                    width: 300px !important;
                 }
 
                 // @media (max-width: 600px) {
@@ -200,6 +202,11 @@
                     @media (max-width: 700px) {
                         width: 253px;
                     }
+                    @media (max-width: 480px) {
+                        width: 85%;
+                        margin: 0 auto;
+                        margin-bottom: 24px;
+                    }
                 }
 
                 .bio-mobile {
@@ -210,19 +217,19 @@
                         font-size: 16px;
                         font-weight: 500;
                         width: 100%;
-                        height: 190px;
+                        height: fit-content;
                         overflow: auto;
                         line-height: 19px;
                         margin: 0;
-                        margin-left: 22px;
+                        padding-left: 22px;
                     }
 
                     @media (max-width: 500px) {
-                        margin-left: 15px;
+                        padding-left: 15px;
                     }
 
                     @media (max-width: 499px) {
-                        margin: 0;
+                        padding-left: 0;
                         width: 100%;
                     }
                 }
@@ -270,7 +277,7 @@
                                 color: $shadow;
                                 text-align: left;
                                 padding-top: 0;
-                                padding-bottom: 10px;
+                                padding-bottom: 8px;
                             }
 
                             @media (max-width: 499px) {
@@ -305,10 +312,9 @@
             }
 
             .slick-slide {
-                margin: 0 40px;
 
-                @media (max-width: 700px) {
-                    margin: 0 60px;
+                @media (max-width: 769px) {
+                    margin: 0 35px;
                 }
 
                 @media (max-width: 499px) {
@@ -325,11 +331,6 @@
             }
           
             .slick-list {
-                margin: 0 -40px;
-
-                @media (max-width: 700px) {
-                    margin: 0 -60px;
-                }
 
                 @media (max-width: 499px) {
                     margin: 0 -25px;

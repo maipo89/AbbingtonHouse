@@ -21,6 +21,10 @@
         flex-direction: column;
     }
 
+    @media (max-width: 450px) {
+        margin-top: 20px;
+    }
+
     &__image {
        width: 60%;
        height: 576px;

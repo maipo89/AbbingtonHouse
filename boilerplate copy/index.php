@@ -1,9 +1,32 @@
 <?php get_header(); ?>
+
+        <?php
+
+		$args = array(
+			'post_type' => 'post',
+			'posts_per_page' => -1, // Display all posts
+			'order' => 'ASC', // Order posts alphabetically
+			'orderby' => 'title' // Order by post title
+		);
+
+		$query = new WP_Query($args); 
+
+		?>
+
 		<div class="blogs">
 			<div class="blogs__inputs">
 			    <div class="blogs__inputs__container">
 				    <div class="search">
 						<input id="search-blog" placeholder="Search..."/>
+						<div class="search__list">
+							<?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
+							  
+								<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+
+							<?php endwhile; ?>
+
+							<?php endif; ?>
+						</div>
 					</div>
 					<div class="dropdowns">
 
@@ -51,33 +74,22 @@
 				</div>
 			</div>
 			<div class="blogs__container">
-			<?php
-				$args = array(
-					'post_type' => 'post',
-					'posts_per_page' => -1, // Display all posts
-					'order' => 'ASC', // Order posts alphabetically
-					'orderby' => 'title' // Order by post title
-				);
-
-				$query = new WP_Query($args);
-
-				
-			if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
+			    <?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
 		
-				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'single-post-thumbnail' ); ?>
+					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'single-post-thumbnail' ); ?>
 
-					<div class="blogs__card">
-						<div class="blogs__card__image" style="background-image: url('<?php echo($image[0]) ?>');"></div>
-						<div class="blogs__card__description">
-							<h2><?php the_title(); ?></h2>
-							<?php the_content(); ?>
+						<div class="blogs__card">
+							<div class="blogs__card__image" style="background-image: url('<?php echo($image[0]) ?>');"></div>
+							<div class="blogs__card__description">
+								<h2><?php the_title(); ?></h2>
+								<?php the_content(); ?>
+							</div>
+							<div class="blogs__card__button">
+									<a class="button secondary-button" href="<?php the_permalink() ?>">Read More</a>
+							</div>
 						</div>
-						<div class="blogs__card__button">
-								<a class="button secondary-button" href="<?php the_permalink() ?>">Read More</a>
-						</div>
-					</div>
 
-				<?php endwhile; ?>
+					<?php endwhile; ?>
 
 				<?php endif; ?>
 			</div>

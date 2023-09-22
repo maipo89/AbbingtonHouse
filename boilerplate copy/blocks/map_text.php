@@ -7,8 +7,10 @@
     <h2><?php echo($title) ?></h2>
     <div class="map-text__map">
         <div id="map"></div>
-        <div class="map-text__map__text">
-            <p><?php echo($text) ?></p>
+        <div class="map-text__map__container">
+            <div class="map-text__map__text">
+                <p><?php echo($text) ?></p>
+            </div>
         </div>
     </div>
 </div>

@@ -67,9 +67,11 @@ $(document).ready(function() {
                         variableWidth: true,
                         slidesToShow: 2,
                         slidesToScroll: 1,
+                        adaptiveHeight: true,
+                        centerMode: true,
                         responsive: [
                             {
-                                breakpoint: 755,
+                                breakpoint: 480,
                                 settings: {
                                     slidesToShow: 1,
                                     slidesToScroll: 1,
