@@ -243,6 +243,12 @@
                         font-size: $p-smaller;
                     }
                 }
+
+                &__list {
+                    a {
+                        display: none;
+                    }
+                }
             }
 
             .category, .category-category {

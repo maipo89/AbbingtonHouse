@@ -305,6 +305,11 @@ $(document).ready(function() {
 
     $("#search-blog").on("input", function () {
         var searchTerm = $(this).val().toLowerCase();
+
+        if (!searchTerm) {
+            $(".search__list, .search__list a").css('display', 'none');
+            return;
+        }
         
         $(".blogs__card").each(function () {
             var blogTitle = $(this).find("h2").text().toLowerCase();
@@ -314,6 +319,28 @@ $(document).ready(function() {
                 $(this).show();
             } else {
                 $(this).hide();
+            }
+        });
+
+        $(".search__list").each(function () {
+            if(searchTerm) {
+                var blogName = $(this).text().toLowerCase();
+                
+                if (blogName.includes(searchTerm)) {
+                    $(this).css('display', 'block');
+                } else {
+                    $(this).css('display', 'none');
+                }
+            }
+        });
+
+        $(".search__list a").each(function () {
+            var blogName = $(this).text().toLowerCase();
+            
+            if (blogName.includes(searchTerm)) {
+                $(this).css('display', 'block');
+            } else {
+                $(this).css('display', 'none');
             }
         });
     });
