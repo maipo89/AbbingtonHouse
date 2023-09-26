@@ -21,7 +21,10 @@
 						<div class="search__list">
 							<?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
 							  
-								<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+							<a href="<?php the_permalink(); ?>">
+                                 
+								<?php the_title(); ?>
+							</a>
 
 							<?php endwhile; ?>
 

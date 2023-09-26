@@ -1,9 +1,34 @@
 <?php get_header(); ?>
+
+		<?php
+
+		$args = array(
+			'post_type' => 'post',
+			'posts_per_page' => -1, // Display all posts
+			'order' => 'ASC', // Order posts alphabetically
+			'orderby' => 'title' // Order by post title
+		);
+
+		$query = new WP_Query($args); 
+
+		?>
+
         <div class="blogs">
 			<div class="blogs__inputs">
 			    <div class="blogs__inputs__container">
 				    <div class="search">
 						<input id="search-archive" placeholder="Search..."/>
+						<div class="search__list-archive">
+							<?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
+								
+								<a href="<?php the_permalink(); ?>">
+									<?php the_title(); ?>
+								</a>
+
+							<?php endwhile; ?>
+
+							<?php endif; ?>
+						</div>
 					</div>
 					<div class="dropdowns">
 

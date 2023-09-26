@@ -307,29 +307,20 @@ $(document).ready(function() {
         var searchTerm = $(this).val().toLowerCase();
 
         if (!searchTerm) {
-            $(".search__list, .search__list a").css('display', 'none');
+            $(".search__list, .search__list a, #search-blog").removeClass('active');
             return;
         }
-        
-        $(".blogs__card").each(function () {
-            var blogTitle = $(this).find("h2").text().toLowerCase();
-            var blogContent = $(this).find(".blogs__card__description").text().toLowerCase();
-            
-            if (blogTitle.includes(searchTerm) || blogContent.includes(searchTerm)) {
-                $(this).show();
-            } else {
-                $(this).hide();
-            }
-        });
 
         $(".search__list").each(function () {
             if(searchTerm) {
                 var blogName = $(this).text().toLowerCase();
                 
                 if (blogName.includes(searchTerm)) {
-                    $(this).css('display', 'block');
+                    $(this).addClass('active');
+                    $("#search-blog").addClass('active');
                 } else {
-                    $(this).css('display', 'none');
+                    $(this).removeClass('active');
+                    $("#search-blog").removeClass('active');
                 }
             }
         });
@@ -338,26 +329,95 @@ $(document).ready(function() {
             var blogName = $(this).text().toLowerCase();
             
             if (blogName.includes(searchTerm)) {
-                $(this).css('display', 'block');
+                $(this).addClass('active');
+
+                // var originalString = $(this).text().trim();
+
+                // if (originalString.length > 30) {
+
+                //     truncatedString = originalString.substring(0, 30) + '...';
+            
+                //     $(this).html(truncatedString);
+
+                // }
+        
+                // var truncatedString = originalString.substring(0, 18);
+
+                $("#search-blog").addClass('active');
             } else {
-                $(this).css('display', 'none');
+                $(this).removeClass('active');
+                $("#search-blog").removeClass('active');
             }
         });
+        
+        // $(".blogs__card").each(function () {
+        //     var blogTitle = $(this).find("h2").text().toLowerCase();
+        //     var blogContent = $(this).find(".blogs__card__description").text().toLowerCase();
+            
+        //     if (blogTitle.includes(searchTerm) || blogContent.includes(searchTerm)) {
+        //         $(this).show();
+        //     } else {
+        //         $(this).hide();
+        //     }
+        // });
     });
 
     $("#search-archive").on("input", function () {
         var searchTerm = $(this).val().toLowerCase();
-        
-        $(".blogs__card").each(function () {
-            var blogTitle = $(this).find("h2").text().toLowerCase();
-            var blogContent = $(this).find(".blogs__card__description").text().toLowerCase();
-            
-            if (blogTitle.includes(searchTerm) || blogContent.includes(searchTerm)) {
-                $(this).show();
-            } else {
-                $(this).hide();
+
+        if (!searchTerm) {
+            $(".search__list-archive, .search__list-archive a, #search-archive").removeClass('active');
+            return;
+        }
+
+        $(".search__list-archive").each(function () {
+            if(searchTerm) {
+                var blogName = $(this).text().toLowerCase();
+
+                
+                if (blogName.includes(searchTerm)) {
+                    $(this).addClass('active');
+                    $("#search-archive").addClass('active');
+                } else {
+                    $(this).removeClass('active');
+                    $("#search-archive").removeClass('active');
+                }
             }
         });
+
+        $(".search__list-archive a").each(function () {
+            var blogName = $(this).text().toLowerCase();
+
+            if (blogName.includes(searchTerm)) {
+                $(this).addClass('active');
+
+                // var originalString = $(this).text().trim();
+
+                // if (originalString.length > 30) {
+
+                //     truncatedString = originalString.substring(0, 30) + '...';
+            
+                //     $(this).html(truncatedString);
+
+                // }
+
+                $("#search-archive").addClass('active');
+            } else {
+                $(this).removeClass('active');
+                $("#search-archive").removeClass('active');
+            }
+        });
+        
+        // $(".blogs__card").each(function () {
+        //     var blogTitle = $(this).find("h2").text().toLowerCase();
+        //     var blogContent = $(this).find(".blogs__card__description").text().toLowerCase();
+            
+        //     if (blogTitle.includes(searchTerm) || blogContent.includes(searchTerm)) {
+        //         $(this).show();
+        //     } else {
+        //         $(this).hide();
+        //     }
+        // });
     });
 
 

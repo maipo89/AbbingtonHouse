@@ -100,15 +100,16 @@
                 font-family: $p-family;
                 color: white;
                 text-align: center;
-                padding: 16px 0 20px 0;
+                padding: 16px 0 0 0;
                 margin: 0;
+                height: 68px;
             }
 
             p {
                 font-family: $p-family;
                 font-weight: $p-medium-weight;
                 font-size: $p-thin;
-                margin: 0 10px 15px 10px;
+                margin: 0 10px 7px;
                 color: white;
                 line-height: 15px;
                 height: 50px;
@@ -157,6 +158,7 @@
             @media (max-width: 750px) {
                 height: 106px;
                 display: block;
+                width: 100%;
             }
 
             .dropdowns {
@@ -177,6 +179,10 @@
                     left: initial;
                     right: initial;
                     width: 100%;
+                }
+
+                .category-input, .author-input {
+                    display: none;
                 }
 
                 .author, .category, .category-category, .author-category {
@@ -242,11 +248,58 @@
                     &::placeholder {
                         font-size: $p-smaller;
                     }
+                    &.active {
+                        border-bottom: none;
+                    }
                 }
 
-                &__list {
+                &__list, &__list-archive {
+                    height: fit-content;
+                    width: 100%;
+                    border-bottom: none;
+                    display: none;
+                    position: absolute;
+                    background-color: white;
+                    z-index: 2;
+
+                    &.active {
+                        display: block;
+                        border-bottom: 2px solid $green-white;
+                    }
                     a {
                         display: none;
+                        font-size: $p-smaller;
+                        color: $mustard-green;
+                        height: 40px;
+                        padding: 7px;
+                        text-decoration: none;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        max-width: 278px;
+
+                        @media (max-width: 900px) {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            max-width: 200px;
+                        }
+
+                        @media (max-width: 750px) {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            max-width: 100%;
+                        }
+
+                        &.active {
+                            display: block;
+                        }
+
+                        &:hover {
+                            background-color: #A1A58E;
+                            color: white;
+                        }
                     }
                 }
             }
