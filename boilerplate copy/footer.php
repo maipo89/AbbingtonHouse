@@ -68,6 +68,35 @@
 
 			</footer>
 
+			<div id="cookie-banner" class="cookie-banner">
+				<div class="cookie-banner__container">
+					<div class="cookie-banner__content">
+						<div>
+							<h5>Our use of cookies</h5>
+							<p>abbingtonhouse.co.uk uses cookies, some are necessary for the operation of the website and some are designed to improve your experience. For more information, <a href="<?php echo get_home_url(); ?>/cookie-policy">click here</a>.</p>
+						</div>
+						<div>
+							<h5>Necessary cookies</h5>
+							<p>Are essential to move around abbingtonhouse.co.uk and use its core functionality and enhanced features. Without these cookies, services you have asked for cannot be provided.</p>
+						</div>
+					</div>
+					<div class="cookie-banner__content">
+						<div>
+							<h5>Functional cookies</h5>
+							<p>Allow abbingtonhouse.co.uk to remember choices you make to give you better functionality and personal features. <input type="checkbox" id="functional-cookies" name="functional-cookies"></p>
+						</div>
+						<div>
+							<h5>Performance cookies</h5>
+							<p>Help improve the performance of abbingtonhouse.co.uk by collecting and reporting information about how you use the website. <input type="checkbox" id="performance-cookies" name="performance-cookies"></p>
+						</div>
+					</div>
+					<svg id="cookie-svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect width="3.64861" height="24.3241" rx="1.82431" transform="matrix(0.699152 -0.714973 0.699152 0.714973 0 2.6084)" fill="#A1A58E"/>
+						<rect width="3.64861" height="24.3241" rx="1.82431" transform="matrix(0.699152 0.714973 -0.699152 0.714973 17.449 0)" fill="#A1A58E"/>
+					</svg>
+				</div>
+			</div>
+
 		</div>
 
 		<?php // all js scripts are loaded in library/bones.php ?>

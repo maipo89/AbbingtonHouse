@@ -66,10 +66,6 @@
             }
         }
 
-        div.content:last-child {
-            background-color: red;
-        }
-
         .line {
             width: 200px;
             height: 2px;
@@ -98,6 +94,14 @@
                 &.current {
                     color: #85876A;
                 }
+            }
+        }
+    }
+
+    &__content {
+        &.last-of-page, &.single-comment, &.two-comments, &.three-comments {
+            .line {
+                display: none;
             }
         }
     }

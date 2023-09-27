@@ -105,10 +105,15 @@
         border: none;
         padding-left: 0 !important;
 
-        p {
+        p, li span, li {
             font-size: $p-smaller !important;
             font-family: $alegreyaSans;
             line-height: 19.5px;
+            color: $gray;
+        }
+
+        li::marker {
+            color: $gray;
         }
     }
 

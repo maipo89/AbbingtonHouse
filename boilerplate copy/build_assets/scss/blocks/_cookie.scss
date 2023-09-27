@@ -1,0 +1,133 @@
+.cookie-banner {
+    display: flex;
+    position: fixed;
+    background-color: $green-white;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0.95;
+    height: 180px;
+    width: 100%;
+    z-index: 100;
+
+    @media (max-width: 1241px) {
+        height: fit-content;
+    }
+
+    &__container {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        column-gap: 24px;
+        padding: 17px 40px 17px 40px;
+        position: relative;
+
+        @media (max-width: 1241px) {
+            max-width: 1080px;
+        }
+
+        @media (max-width: 940px) {
+            max-width: 100%;
+        }
+
+        @media (max-width: 900px) {
+            flex-direction: column;
+            padding: 30px;
+        }
+
+        @media (max-width: 580px) {
+            flex-direction: column;
+            padding: 14px 20px;
+        }
+
+        h5 {
+            font-size: 25px;
+            font-weight: 400;
+            margin-bottom: 14px;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+
+            input[type=checkbox] {
+                margin-left: 5px;
+            }
+
+            a {
+                text-decoration: none;
+                text-transform: none;
+                color: $gray;
+                text-decoration: underline;
+            }
+        }
+
+        // div {
+        //     width: 22%;
+        // }
+
+        svg {
+            position: absolute;
+            right: 40px;
+            top: 23px;
+            cursor: pointer;
+
+            @media (max-width: 1241px) {
+                right: 20px;
+            }
+
+            @media (max-width: 995px) {
+                right: 40px;
+            }
+
+            @media (max-width: 900px) {
+                right: 30px;
+            }
+
+            @media (max-width: 580px) {
+                right: 20px;
+                top: 20px;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        width: 50%;
+        column-gap: 24px;
+
+        @media (max-width: 900px) {
+            width: auto;
+            column-gap: 32px;
+
+            &:first-of-type {
+                padding-bottom: 59px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            flex-direction: column;
+
+            &:first-of-type {
+                padding-bottom: 0;
+                margin-top: 16px;
+            }
+        }
+
+        @media (max-height: 375px) {
+
+            &:first-of-type {
+                padding-bottom: 0;
+            }
+        }
+
+        div {
+            width: 50%;
+
+            @media (max-width: 480px) {
+                width: initial;
+            }
+        }
+    }
+}

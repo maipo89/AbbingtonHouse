@@ -17,14 +17,18 @@ if ($comments) {
     <p class="testimonial-comments__paragraph"><?php echo $paragraph; ?></p>
 
     <div class="testimonial-comments__container">
-        <?php foreach ($comments_slice as $comment) :
-            $admission = $comment['admission_day'];
-            $dismissal = $comment['dismissal_day'];
-            $author = $comment['author'];
-            $comment_text = $comment['comment'];
+        <?php 
+            $count = 0;
+            $total_comments = count($comments_slice);
+            foreach ($comments_slice as $comment) :
+                $count++; 
+                $admission = $comment['admission_day'];
+                $dismissal = $comment['dismissal_day'];
+                $author = $comment['author'];
+                $comment_text = $comment['comment'];
         ?>
 
-        <div class="content">
+        <div class="testimonial-comments__content <?php if ($count % $comments_per_page === 0) echo 'last-of-page'; ?> <?php if ($count === 1 && count($comments_slice) === 1) echo 'single-comment'; ?> <?php if ($total_comments === 2 && $count === 2) echo 'two-comments'; ?> <?php if ($total_comments === 3 && $count === 3) echo 'three-comments'; ?>">
 
             <p class="author"><strong><?php echo $author; ?></strong>, <?php echo $admission; ?> - <?php echo $dismissal; ?></p>
             <p class="comment"><?php echo $comment_text; ?></p>

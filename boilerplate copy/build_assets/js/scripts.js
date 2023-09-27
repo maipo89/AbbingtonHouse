@@ -670,5 +670,72 @@ $(document).ready(function() {
             $(this).addClass('input-focus-accessibility');
         }
     });
+
+
+    //Cookie Banner
+
+    var cookieBanner = $('#cookie-banner');
+    var functionalCookies = $('#functional-cookies');
+    var performanceCookies = $('#performance-cookies');
+    var closeCookies = $('#cookie-svg');
+
+    // Check if the user has previously accepted cookies
+    var cookiesAccepted = localStorage.getItem('cookiesAccepted');
+    var performanceCookiesAccepted = localStorage.getItem('performanceCookiesAccepted');
+
+    console.log(cookiesAccepted)
+    console.log(performanceCookiesAccepted)
+
+    closeCookies.on('click', function () {
+        cookieBanner.hide();
+    });
+
+    // If cookies have not been accepted, show the banner
+    if (!cookiesAccepted) {
+        cookieBanner.show();
+
+        performanceCookies.add(functionalCookies).on('change', function () {
+
+            if (functionalCookies.prop('checked') || performanceCookies.prop('checked')) {
+                localStorage.setItem('cookiesAccepted', 'true');
+                console.log('checked')
+
+                if (performanceCookies.prop('checked') && !performanceCookiesAccepted) {
+                    localStorage.setItem('performanceCookiesAccepted', 'true');
+
+                    // Load Hotjar script
+                    var script = document.createElement('script');
+                    script.innerHTML = `(function(h,o,t,j,a,r){
+                        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                        h._hjSettings={hjid:3605603,hjsv:6};
+                        a=o.getElementsByTagName('head')[0];
+                        r=o.createElement('script');r.async=1;
+                        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                        a.appendChild(r);
+                    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`;
+
+                    // Append the script element to the head of the document
+                    $('head').append(script);
+                }
+            }
+
+        })
+    } else {
+        cookieBanner.hide();
+        if (performanceCookiesAccepted) {
+            // Load Hotjar script
+            var script = document.createElement('script');
+            script.innerHTML = `(function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:3605603,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`;
+            // Append the script element to the head of the document
+            $('head').append(script);
+        }
+    }
     
 });
