@@ -4,6 +4,14 @@
     flex-direction: column;
     justify-content: space-between;
 
+    header {
+        justify-content: center;
+        nav, .header__button, .hamburger, .header__call-icon {
+            display: none !important;
+        }
+
+    }
+
     .page-404 {
         display: flex;
         align-items: center;

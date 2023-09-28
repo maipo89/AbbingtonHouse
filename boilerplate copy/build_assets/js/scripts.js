@@ -214,7 +214,7 @@ $(document).ready(function() {
     $('.form-admission .custom-option').on("click", function() {
         $('.form-admission .custom-option').removeClass("active-dropdown");
         var inputData = $(this).data('value');
-        console.log(inputData);
+        console.log($('.referral-input'));
         $('.referral-input').val(inputData);
         $('.form-admission .select__trigger span').html(inputData);
         $(this).addClass('active-dropdown');
@@ -436,160 +436,204 @@ $(document).ready(function() {
     
     // Validation Admission Form
 
-    $("#formAdmission").on("submit", function(e) {
+    $(".zcwf_col_fld").each(function() {
+        $(this).removeClass("zcwf_col_fld");
+    });
 
-        let inputReferral = $(".form-admission__form .referral-input");
-        let inputEmail = $(".form-admission__form .input-email");
-        let inputContact = $(".form-admission__form .input-contact");
-        let inputName = $(".form-admission__form .input-name");
-        let inputMessage = $(".form-admission__form .input-message");
-        let testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+    $("#formsubmit").removeClass("zcwf_button");
+
+    $("#LEADCF5").attr("placeholder", "First Name");
+    $("#Last_Name").attr("placeholder", "Last Name");
+    $("#LEADCF4").attr("placeholder", "Telephone");
+    $("#Email").attr("placeholder", "Email");
+    $("#Description").attr("placeholder", "Comment");
+    $(".input-focus-accessibility").attr("placeholder", "Captcha");
+
+    // $(".form-admission__form__container .input-name").on("input", function() {
+    //     $("#LEADCF5").val($(this).val());
+    // });
+
+    // $(".form-admission__form__container .input-last-name").on("input", function() {
+    //     $("#Last_Name").val($(this).val());
+    // });
+
+    // $(".form-admission__form__container .input-contact").on("input", function() {
+    //     $("#LEADCF4").val($(this).val());
+    // });
+
+    // $(".form-admission__form__container .input-email").on("input", function() {
+    //     $("#Email").val($(this).val());
+    // });
+
+    // $(".form-admission__form__container .input-message").on("input", function() {
+    //     $("#Description").val($(this).val());
+    // });
+
+    // $(".form-admission__form__container__left-container .custom-option").on("click", function() {
+    //     var optionText = $(this).text(); // Get the text of the clicked custom option
+    //     var selectElement = $("#LEADCF7"); // Get the select element
+
+    //     // Find the matching option in the select element
+    //     var matchingOption = selectElement.find('option:contains("' + optionText + '")');
+
+    //     // Set the selected attribute for the matching option
+    //     matchingOption.prop("selected", true);
+    // });
+
+    // $("#formAdmission").on("submit", function(e) {
+
+    //     let inputReferral = $(".form-admission__form .referral-input");
+    //     let inputEmail = $(".form-admission__form .input-email");
+    //     let inputContact = $(".form-admission__form .input-contact");
+    //     let inputName = $(".form-admission__form .input-name");
+    //     let inputMessage = $(".form-admission__form .input-message");
+    //     let testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
 
 
-        if( inputName.val().length > 0 && inputContact.val().length > 0 && testEmail.test(inputEmail.val()) === true && inputMessage.val().length > 0 && inputReferral.val().length > 0 ) {
+    //     if( inputName.val().length > 0 && inputContact.val().length > 0 && testEmail.test(inputEmail.val()) === true && inputMessage.val().length > 0 && inputReferral.val().length > 0 ) {
 
-        console.log('form submitted');
-        var that = $(this),
-            url = that.attr('action'),
-            method = that. attr('method'),
-            data = {};
+    //     console.log('form submitted');
+    //     var that = $(this),
+    //         url = that.attr('action'),
+    //         method = that. attr('method'),
+    //         data = {};
         
 
-        that.find('[name]').each(function(index, value) {
-            var that= $(this),
-                name = that.attr('name'),
-                value = that.val();
+    //     that.find('[name]').each(function(index, value) {
+    //         var that= $(this),
+    //             name = that.attr('name'),
+    //             value = that.val();
             
-            data[name] = value;
-        });
+    //         data[name] = value;
+    //     });
 
-        $.ajax({
-            url: url,
-            type: method,
-            data: data,
-            success: function(response) {
-                console.log(response);
-                $(".form-admission__form").css("display", "none");
-                $(".form-admission__form-complete").css("display", "flex");
-            }
-        });
+    //     $.ajax({
+    //         url: url,
+    //         type: method,
+    //         data: data,
+    //         success: function(response) {
+    //             console.log(response);
+    //             $(".form-admission__form").css("display", "none");
+    //             $(".form-admission__form-complete").css("display", "flex");
+    //         }
+    //     });
 
-        return false;
+    //     return false;
 
-        }else{
-            e.preventDefault;
-            $('.form-admission__form .required').each(function() {
-                if($(this).val().length == 0) {
-                    $(this).addClass('error');
-                }
-            });
+    //     }else{
+    //         e.preventDefault;
+    //         $('.form-admission__form .required').each(function() {
+    //             if($(this).val().length == 0) {
+    //                 $(this).addClass('error');
+    //             }
+    //         });
 
-            if(testEmail.test(inputEmail.val()) === false) {
-                $('.form-admission__form .email-error').addClass('email-error-show');
-                inputEmail.addClass('error');
-            }
+    //         if(testEmail.test(inputEmail.val()) === false) {
+    //             $('.form-admission__form .email-error').addClass('email-error-show');
+    //             inputEmail.addClass('error');
+    //         }
 
-            if(inputReferral.val().length == 0) {
-                $('.form-admission__form .select__trigger').addClass('error');
-            }
-            return false;
+    //         if(inputReferral.val().length == 0) {
+    //             $('.form-admission__form .select__trigger').addClass('error');
+    //         }
+    //         return false;
 
-        }
-    });
+    //     }
+    // });
 
-    $(".form-admission__form .required").on("keyup", function(){
-        $(this).removeClass('error');
-    });
+    // $(".form-admission__form .required").on("keyup", function(){
+    //     $(this).removeClass('error');
+    // });
 
-    $('.form-admission__form .select__trigger').on("click", function() {
-        $(this).removeClass('error');
-    })
+    // $('.form-admission__form .select__trigger').on("click", function() {
+    //     $(this).removeClass('error');
+    // })
 
-    $(".form-admission__form .input-email").on("click", function(){
-        $(this).removeClass('error');
-        $('.form-admission__form .email-error').removeClass('email-error-show');
-    })
-
-
-
-    // Validation Treatments Form
-
-    $("#formEnquire").on("submit", function(e) {
-
-        let inputEnquireForm = $(".photo-form .enquire-input");
-        let inputEmailForm = $(".photo-form .input-email");
-        let inputContactForm = $(".photo-form .input-contact");
-        let inputNameForm = $(".photo-form .input-name");
-        let testEmailForm = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+    // $(".form-admission__form .input-email").on("click", function(){
+    //     $(this).removeClass('error');
+    //     $('.form-admission__form .email-error').removeClass('email-error-show');
+    // })
 
 
-        if( inputNameForm.val().length > 0 && inputContactForm.val().length > 0 && testEmailForm.test(inputEmailForm.val()) === true && inputEnquireForm.val().length > 0 ) {
 
-            console.log('form submitted');
-            var that = $(this),
-                url = that.attr('action'),
-                method = that. attr('method'),
-                data = {};
+    // // Validation Treatments Form
+
+    // $("#formEnquire").on("submit", function(e) {
+
+    //     let inputEnquireForm = $(".photo-form .enquire-input");
+    //     let inputEmailForm = $(".photo-form .input-email");
+    //     let inputContactForm = $(".photo-form .input-contact");
+    //     let inputNameForm = $(".photo-form .input-name");
+    //     let testEmailForm = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+
+
+    //     if( inputNameForm.val().length > 0 && inputContactForm.val().length > 0 && testEmailForm.test(inputEmailForm.val()) === true && inputEnquireForm.val().length > 0 ) {
+
+    //         console.log('form submitted');
+    //         var that = $(this),
+    //             url = that.attr('action'),
+    //             method = that. attr('method'),
+    //             data = {};
             
 
-            that.find('[name]').each(function(index, value) {
-                var that= $(this),
-                    name = that.attr('name'),
-                    value = that.val();
+    //         that.find('[name]').each(function(index, value) {
+    //             var that= $(this),
+    //                 name = that.attr('name'),
+    //                 value = that.val();
                 
-                data[name] = value;
-            });
+    //             data[name] = value;
+    //         });
 
-            $.ajax({
-                url: url,
-                type: method,
-                data: data,
-                success: function(response) {
-                    console.log(response);
-                    $('.photo-form .email-error').removeClass('email-error-show');
-                    inputEmailForm.removeClass('error');
-                    $('.photo-form__form__button-container span').addClass('success');
-                    setTimeout(function() { 
-                        $('.photo-form__form__button-container span').removeClass('success');
-                    }, 3000);
-                }
-            });
+    //         $.ajax({
+    //             url: url,
+    //             type: method,
+    //             data: data,
+    //             success: function(response) {
+    //                 console.log(response);
+    //                 $('.photo-form .email-error').removeClass('email-error-show');
+    //                 inputEmailForm.removeClass('error');
+    //                 $('.photo-form__form__button-container span').addClass('success');
+    //                 setTimeout(function() { 
+    //                     $('.photo-form__form__button-container span').removeClass('success');
+    //                 }, 3000);
+    //             }
+    //         });
 
-            return false;
-        }else{
-            e.preventDefault;
-            $('.photo-form .required').each(function() {
-                if($(this).val().length == 0) {
-                    $(this).addClass('error');
-                }
-            });
+    //         return false;
+    //     }else{
+    //         e.preventDefault;
+    //         $('.photo-form .required').each(function() {
+    //             if($(this).val().length == 0) {
+    //                 $(this).addClass('error');
+    //             }
+    //         });
 
-            if(testEmailForm.test(inputEmailForm.val()) === false) {
-                $('.photo-form .email-error').addClass('email-error-show');
-                inputEmailForm.addClass('error');
-            }
+    //         if(testEmailForm.test(inputEmailForm.val()) === false) {
+    //             $('.photo-form .email-error').addClass('email-error-show');
+    //             inputEmailForm.addClass('error');
+    //         }
 
-            if(inputEnquireForm.val().length == 0) {
-                $('.photo-form .select__trigger').addClass('error');
-            }
+    //         if(inputEnquireForm.val().length == 0) {
+    //             $('.photo-form .select__trigger').addClass('error');
+    //         }
 
-            return false;
+    //         return false;
 
-        }
-    });
+    //     }
+    // });
 
-    $(".photo-form .required").on("keyup", function(){
-        $(this).removeClass('error');
-    });
+    // $(".photo-form .required").on("keyup", function(){
+    //     $(this).removeClass('error');
+    // });
 
-    $('.photo-form .select__trigger').on("click", function() {
-        $(this).removeClass('error');
-    })
+    // $('.photo-form .select__trigger').on("click", function() {
+    //     $(this).removeClass('error');
+    // })
 
-    $(".photo-form .input-email").on("keyup", function(){
-        $(this).removeClass('error');
-        $('.photo-form .email-error').removeClass('email-error-show');
-    })
+    // $(".photo-form .input-email").on("keyup", function(){
+    //     $(this).removeClass('error');
+    //     $('.photo-form .email-error').removeClass('email-error-show');
+    // })
 
     // Accordion Hamburger
 

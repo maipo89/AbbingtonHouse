@@ -17,7 +17,10 @@
         <div class="form-admission__form">
             <h2><?php echo($title) ?></h2>
             <p><?php echo($text) ?></p>
-            <form id="formAdmission" name="formAdmission" action="<?php echo home_url(); ?>/mail.php" method="POST">
+
+            <script id='formScript592080000000423007' src='https://crm.zoho.eu/crm/WebFormServeServlet?rid=7457700bb80fd4a717c79294e0b3d565116ff360f1720fc66d096e71312ce04bgid43c814f375139ebc4a3e1bf337eb5a1ecb6317eb8bb744f1b84fafbd669e4dba&script=$sYG'></script>
+            
+            <!-- <form id="formAdmission" name="formAdmission" action="<?php echo home_url(); ?>/mail.php" method="POST">
                 <div class="form-admission__form__container">
                     <div class="form-admission__form__container__left-container">
                         <div class="select-wrapper">
@@ -44,6 +47,7 @@
                     </div>
                     <div class="form-admission__form__container__right-container">
                         <input class="input-name required" name="thename" type="text" placeholder="<?php echo($input[2]['input_placeholder']) ?>" />
+                        <input class="input-last-name required" name="thename" type="text" placeholder="<?php echo($input[3]['input_placeholder']) ?>" />
                         <textarea class="input-message required" name="message" type="text" placeholder="<?php echo($textArea) ?>"></textarea>
                     </div>
                 </div>
@@ -51,7 +55,7 @@
                     <input type="submit" class="button" value="<?php echo($buttonText)?>" />
                 </div>
                 <p class="call-text"><?php echo($textCall)?> <a href="tel:<?php echo($number)?>"><?php echo($number)?></a><p>
-            </form>
+            </form> -->
             <div>
             </div>
         </div>
