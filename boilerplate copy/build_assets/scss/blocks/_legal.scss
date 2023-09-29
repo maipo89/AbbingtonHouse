@@ -51,6 +51,23 @@
         line-height: 20px;
         font-size: $p-smaller;
         margin-bottom: 20px;
+
+        a {
+            text-transform: none;
+            color: #8b8b8b;
+            text-decoration: underline;
+        }
+    }
+
+    li span, li {
+        font-size: $p-smaller !important;
+        font-family: $alegreyaSans;
+        line-height: 19.5px;
+        color: $gray;
+    }
+
+    li::marker {
+        color: $gray;
     }
 
     &__links {
@@ -68,9 +85,22 @@
             font-weight: 400;
             font-family: $alegreya;
             color: $mustard-green;
-            text-decoration: underline;
-            text-underline-offset: 3px;
-            text-decoration-thickness: 1px;
+            text-decoration: none;
+            text-transform: none;
+
+            &:hover {
+                color: $terracotta;
+            }
+
+            &:focus {
+                color: $quick-silver;
+            }
+
+            &:focus-visible {
+                color: $mustard-green;
+                border: 2px solid black !important;
+                outline: 2px solid yellow !important;
+            }
 
             @media (max-width: 375px) {
                 font-size: 18px;

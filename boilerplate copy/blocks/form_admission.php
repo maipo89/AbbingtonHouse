@@ -54,10 +54,8 @@
                 <div class="form-admission__form__button-container">
                     <input type="submit" class="button" value="<?php echo($buttonText)?>" />
                 </div>
-                <p class="call-text"><?php echo($textCall)?> <a href="tel:<?php echo($number)?>"><?php echo($number)?></a><p>
             </form> -->
-            <div>
-            </div>
+            <p class="call-text"><?php echo($textCall)?> <a href="tel:<?php echo($number)?>"><?php echo($number)?></a><p>
         </div>
     </div>
     <div class="form-admission__form-complete">

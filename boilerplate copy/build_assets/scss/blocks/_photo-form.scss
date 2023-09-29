@@ -27,7 +27,6 @@
 
     &__image {
        width: 60%;
-       height: 576px;
        background-position: center center;
        background-size: cover;
 
@@ -43,7 +42,7 @@
 
     &__form {
         width: 40%;
-        height: 576px;
+        height: fit-content;
         padding-left: 74px;
         padding-right: 94px;
 
@@ -60,6 +59,171 @@
             width: 100%;
             height: fit-content;
             margin-bottom: 64px;
+        }
+
+        .zcwf_title {
+            display: none;
+        }
+
+        .zcwf_row a {
+            color: $gray;
+            font-size: 16px;
+            font-family: $alegreyaSans;
+        }
+
+        img#imgid592080000000423007 {
+            width: 190px;
+            height: 66px;
+            position: relative;
+            bottom: 0;
+        }
+
+        input[type="reset"] {
+            display: none;
+        }
+
+        input[type="submit"] {
+            margin: 0;
+            padding: 10.5px 48px;
+            font-family: Alegreya Sans,serif;
+            font-size: 16px;
+            background-color: #fff;
+            width: 150px;
+            height: 50px;
+            line-height: 10px;
+            border: 2px solid $corianderOpacity;
+            color: $mustard-green;
+            position: relative;
+            left: calc(50% - 75px);
+
+            &:hover {
+                background-color: $green-white;
+            }
+
+            &:focus {
+                background-color: $orinoco;
+                border: 2px solid $orinoco;
+                color: white;
+            }
+
+            &:focus-visible {
+                border: 2px solid #000!important;
+                outline: 2px solid #ff0!important;
+                background-color: white;
+                color: $mustard-green;
+            }
+        }
+
+        .zcwf_col_fld_slt {
+            height: 155px;
+        }
+
+        .zcwf_lblLeft .zcwf_col_fld_slt {
+            width: 100%;
+        }
+
+        .zcwf_row label, .zcwf_col_lab {
+            font-size: 12px;
+            color: $gray;
+            font-family: $alegreyaSans !important;
+        }
+
+        textarea#Description {
+            height: 60px;
+        }
+
+        .zcwf_lblLeft .zcwf_col_lab {
+            padding: 0;
+        }
+
+        #LEADCF7 option {
+            font-size: 16px;
+            font-family: $alegreyaSans;
+            padding: 10px;
+            color: $mustard-green;
+            appearance: none; /* Remove default browser styling */
+            -webkit-appearance: none;
+            outline: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $green-white;
+                color: $mustard-green;
+            }
+
+            &:focus, &:checked {
+                outline: 0 !important;
+                background: linear-gradient($dark-gray, $dark-gray);
+                color: white;
+            }
+        }
+
+        #LEADCF7 {
+            -webkit-appearance: none;
+            appearance: none; /* Remove default browser styling */
+            outline: none;
+            font-size: 16px;
+            font-family: $alegreyaSans;
+            padding: 10px;
+            height: 85px;
+            border: 2px solid #ecede3;
+            border-radius: none !important;
+            color: $mustard-green;
+            margin-bottom: 6px;
+
+            @media (max-width: 768px) {
+                height: fit-content;
+                padding: 10px;
+            }
+
+            &:focus {
+                outline:0;
+            }
+        }
+
+        .tempCalDiv {
+            position: absolute;
+            top: 70px;
+        }
+
+        .zcwf_lblLeft .zcwf_row {
+            margin: 0px 0px;
+            position: relative;
+        }
+
+        #crmWebToEntityForm.zcwf_lblLeft {
+            width: 100%;
+            padding-top: 0 25px !important;
+        }
+
+        .zcwf_lblLeft .zcwf_col_lab {
+            width: 100%;
+        }
+
+        .zcwf_privacy {
+            height: 50px;
+
+            @media (max-width: 1240px) {
+                height: 60px;
+            }
+        }
+
+        .dIB.zcwf_privacy_txt {
+            position: relative;
+            top: -27px;
+            left: 20px;      
+            font-family: $alegreyaSans !important;
+            color: $gray !important;
+
+            @media (max-width: 600px) {
+                top: 3px;
+                left: 0;
+            }
+
+            @media (max-width: 400px) {
+                top: -28px;
+                left: 20px;
+            }
         }
 
         .email-container {
@@ -104,6 +268,11 @@
             text-align: center;
             margin-top: 4px;
             line-height: 24px;
+            margin-bottom: 50px;
+
+            @media (max-width: 600px) {
+                margin-bottom: 0;
+            }
     
             a {
                 text-decoration: none;

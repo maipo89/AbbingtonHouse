@@ -55,7 +55,7 @@
         }
 
         @media (max-width: 480px) {
-            padding: 32px 13px 0 13px;
+            padding: 32px 13px 1px 13px;
             // height: 820px;
         }
 
@@ -106,11 +106,30 @@
             font-family: $alegreyaSans;
         }
 
+        .zcwf_privacy {
+            @media (max-width: 480px) {
+                height: 50px;
+            }
+        }
+
+        .zcwf_row {
+            position: relative;
+        }
+
         img#imgid592080000000423007 {
             width: 250px;
             height: 90px;
             position: relative;
             bottom: 0;
+
+            @media (max-width: 280px) {
+                width: initial;
+                height: initial;
+            }
+        }
+
+        #crmWebToEntityForm.zcwf_lblLeft {
+            padding: 0 25px !important;
         }
 
         input[type="reset"] {
@@ -128,10 +147,10 @@
             line-height: 10px;
             border: 2px solid $corianderOpacity;
             color: $mustard-green;
-            margin-left: 20px;
-            margin-left: 0;
+            margin-left: 22px;
 
             @media (max-width: 600px) {
+                margin-left: 0;
                 position: relative;
                 left: calc(50% - 73px);
             }
@@ -179,9 +198,10 @@
         #LEADCF7 option {
             font-size: 16px;
             font-family: $alegreyaSans;
-            padding: 10px 20px 10px 20px;
+            padding: 10px;
             color: $mustard-green;
             appearance: none; /* Remove default browser styling */
+            -webkit-appearance: none;
             outline: none;
             cursor: pointer;
 
@@ -192,20 +212,23 @@
 
             &:focus, &:checked {
                 outline: 0 !important;
-                background-color: $dark-gray;
-                color: white;
+                background: linear-gradient($dark-gray, $dark-gray);
+                color: white !important;
             }
         }
 
         #LEADCF7 {
             appearance: none; /* Remove default browser styling */
+            -webkit-appearance: none;
             outline: none;
             font-size: 16px;
             font-family: $alegreyaSans;
-            padding: 0px;
-            height: 400px;
+            height: fit-content;
             border: 2px solid #ecede3;
             border-radius: none !important;
+            color: $mustard-green;
+            margin-bottom: 5px;
+            padding: 10px;
 
             &:focus {
                 outline:0;
@@ -213,7 +236,8 @@
         }
 
         .tempCalDiv {
-            top: 517px;
+            position: absolute;
+            top: 72px;
         }
 
         .dIB.zcwf_privacy_txt {

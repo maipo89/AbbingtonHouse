@@ -13,7 +13,10 @@
     </div>
     <div class="photo-form__form">
         <h2><?php echo($formTitle) ?></h2>
-        <form id="formEnquire" name="formEnquire" action="<?php echo home_url(); ?>/mail_enquire.php" method="POST">
+
+        <script id='formScript592080000000423007' src='https://crm.zoho.eu/crm/WebFormServeServlet?rid=7457700bb80fd4a717c79294e0b3d565116ff360f1720fc66d096e71312ce04bgid43c814f375139ebc4a3e1bf337eb5a1ecb6317eb8bb744f1b84fafbd669e4dba&script=$sYG'></script>
+
+        <!-- <form id="formEnquire" name="formEnquire" action="<?php echo home_url(); ?>/mail_enquire.php" method="POST">
             <input class="input-name required" name="thename" type="text" placeholder="<?php echo($input[0]['input_placeholder']) ?>" />
             <input class="input-contact required" name="contact" type="text" placeholder="<?php echo($input[1]['input_placeholder']) ?>" />
             <div class="email-container">
@@ -40,7 +43,7 @@
                 <span>Thank you for your message</span>
                 <input type="submit" class="button" value="<?php echo($buttonText)?>" />
             </div>
-        </form>
+        </form> -->
         <p class="call-text"><?php echo($textCall)?> <a href="tel:<?php echo($number)?>"><?php echo($number)?></a><p>
     </div>
 </div>
