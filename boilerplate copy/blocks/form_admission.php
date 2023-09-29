@@ -58,8 +58,8 @@
             <p class="call-text"><?php echo($textCall)?> <a href="tel:<?php echo($number)?>"><?php echo($number)?></a><p>
         </div>
     </div>
-    <div class="form-admission__form-complete">
+    <!-- <div class="form-admission__form-complete">
         <h3><?php echo($completeText)?></h3>
         <p><?php echo($completeSubtext)?> <a href="tel:<?php echo($number)?>"><?php echo($number)?></a></p>
-    </div>
+    </div> -->
 </div>
