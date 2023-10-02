@@ -186,6 +186,28 @@ $(document).ready(function() {
         dots: true,
     });
 
+
+    // Slider Testimonial Comments
+
+    $('.testimonial-comments__container').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: false,
+        dots: true,
+        customPaging : function(slider, i) {
+            var thumb = $(slider.$slides[i]).data();
+            return '<a class="dot">'+ (i + 1) +'</a>';
+        },
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    adaptiveHeight: true
+                }
+            },
+        ]
+    });
+
     
     //Legal Page Tabs
 
@@ -664,6 +686,11 @@ $(document).ready(function() {
     })
 
 
+    // External links footer
+
+    $('#menu-footer-menu-right a').attr('target', '_blank');
+
+
     // Accessability
 
     $('input').on("mousedown", function(e){
@@ -723,15 +750,40 @@ $(document).ready(function() {
     var performanceCookies = $('#performance-cookies');
     var closeCookies = $('#cookie-svg');
 
-    // Check if the user has previously accepted cookies
-    var cookiesAccepted = localStorage.getItem('cookiesAccepted');
-    var performanceCookiesAccepted = localStorage.getItem('performanceCookiesAccepted');
+    // Function to set a cookie with an expiration date
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + "; " + expires + "; path=/";
+    }
 
-    console.log(cookiesAccepted)
-    console.log(performanceCookiesAccepted)
+    // Function to get a cookie value by name
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    // Check if the user has previously accepted cookies
+    var cookiesAccepted = getCookie('cookiesAccepted');
+    var performanceCookiesAccepted = getCookie('performanceCookiesAccepted');
 
     closeCookies.on('click', function () {
         cookieBanner.hide();
+        
+        // Set a cookie to remember that the user closed the banner
+        setCookie('cookiesAccepted', 'true', 365); // 365 days expiration (adjust as needed)
     });
 
     // If cookies have not been accepted, show the banner
@@ -741,11 +793,11 @@ $(document).ready(function() {
         performanceCookies.add(functionalCookies).on('change', function () {
 
             if (functionalCookies.prop('checked') || performanceCookies.prop('checked')) {
-                localStorage.setItem('cookiesAccepted', 'true');
+                localStorage.setItem('cookiesAccepted', 'true', 365);
                 console.log('checked')
 
                 if (performanceCookies.prop('checked') && !performanceCookiesAccepted) {
-                    localStorage.setItem('performanceCookiesAccepted', 'true');
+                    localStorage.setItem('performanceCookiesAccepted', 'true', 365);
 
                     // Load Hotjar script
                     var script = document.createElement('script');

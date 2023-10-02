@@ -20,7 +20,7 @@
                 $linkUrl = get_sub_field('link_url');
                 $linkText = get_sub_field('link_text');
                 ?>
-                <a href="<?php echo($linkUrl) ?>"><?php echo($linkText) ?></a>
+                <a target="_blank" href="<?php echo($linkUrl) ?>"><?php echo($linkText) ?></a>
             <?php endwhile; ?>
         <?php endif; ?>
     </div>

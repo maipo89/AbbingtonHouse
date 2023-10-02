@@ -41,6 +41,33 @@
             text-align: center;
         }
 
+        .page {
+            padding: 10px;
+        }
+
+        .slick-prev, .slick-next {
+            display: none !important;
+        }
+
+        .slick-dots li {
+            background-color: white;
+
+            a {
+                text-decoration: none;
+                text-transform: none;
+                font-family: $alegreyaSans;
+                font-size: 20px;
+                font-weight: 400;
+                color: $dark-gray;
+            }
+
+            &.slick-active {
+                a {
+                    color: #85876A;;
+                }
+            }
+        }
+
         .author {
             margin-bottom: 24px;
             margin-top: 48px;
@@ -97,12 +124,10 @@
             }
         }
     }
+}
 
-    &__content {
-        &.last-of-page, &.single-comment, &.two-comments, &.three-comments {
-            .line {
-                display: none;
-            }
-        }
+.testimonial-comments__content:last-child {
+    .line {
+        display: none;
     }
 }
