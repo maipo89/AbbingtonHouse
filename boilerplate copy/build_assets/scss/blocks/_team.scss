@@ -160,7 +160,7 @@
                         width: 100%;
                         background-color: $antique-white;
                         opacity: 0;
-                        padding: 22px;
+                        padding: 10px;
                         @include flexCenter($direction: row);
 
                         @media (max-width: 769px) {
@@ -174,7 +174,11 @@
                             line-height: 19px;
                             margin: 0;
                             height: 171px;
-                            overflow: auto;
+                            overflow-y: scroll;
+                        }
+
+                        p::-webkit-scrollbar {
+                            display: none;
                         }
                     }
 
