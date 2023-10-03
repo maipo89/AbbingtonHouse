@@ -143,6 +143,14 @@ input[type=checkbox] {
     height: 15px;
     width: 15px;
     -webkit-appearance: none;
+
+    &:hover {
+        background-color: $green-white;
+
+        &:before {
+            display: none;
+        } 
+    }
 }
 
 input[type=checkbox]:checked {

@@ -15,9 +15,8 @@
                     $bio = get_sub_field('bio');
                     ?>
                     <div class="team__container__cards-container__card">
-
                         <div class="photo">
-                            <img src="<?php echo($photo["sizes"]["onqor-large"]) ?>" alt="<?php echo($photo["alt"]) ?>">
+                            <img src="<?php echo($photo["sizes"]["onqor-small"]) ?>" alt="<?php echo($photo["alt"]) ?>">
                             <div class="bio">
                                 <p><?php echo($bio) ?></p>
                             </div>

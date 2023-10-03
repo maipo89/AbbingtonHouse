@@ -245,6 +245,19 @@
             color: white;
             text-decoration: none;
             text-transform: none;
+
+            &:focus-visible {
+                border: 2px solid black !important;
+                outline: 2px solid yellow !important;
+            }
+
+            &:hover {
+                color: $terracotta;
+            }
+
+            &:active {
+                color: white;
+            }
         }
 
         @media (max-width: 450px) {

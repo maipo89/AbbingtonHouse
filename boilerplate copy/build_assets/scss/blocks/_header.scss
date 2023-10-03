@@ -322,7 +322,7 @@
         display: block;
         // @include spaceBetween($direction: column, $align: flex-start);
         overflow: auto;
-        padding: 23px 40px;
+        padding: 23px 20px;
 
         .chevron-left {
             margin: 17px 0 0 8px;
@@ -351,22 +351,11 @@
             display: block;
             margin: 0 auto;
             position: absolute;
-            bottom: 50px;
+            bottom: 65px;
             left: calc(50% - 110px);
 
-            @media (max-width: 550px) {
-                margin-top: 40px;
-                position: initial;
-            }
-
             @media (max-width: 380px) {
-                margin-top: 22px;
-                position: initial;
-            }
-
-            @media (max-width: 320px) {
-                margin-top: 50px;
-                position: initial;
+                left: calc(50% - 85px);
             }
 
             .logo {
@@ -416,11 +405,11 @@
                 height: fit-content;
                 text-align: left;
                 border-bottom: 2px solid $tan;
-                padding: 25px 0 25px 0;
+                padding: 16px 0;
                 display: block;
 
-                @media (max-width: 380px) {
-                    padding: 22px 0 22px 0;
+                @media (max-width: 320px) {
+                    padding: 10px 0;
                 }
 
                 a {
