@@ -5,8 +5,8 @@
 		$args = array(
 			'post_type' => 'post',
 			'posts_per_page' => -1, // Display all posts
-			'order' => 'ASC', // Order posts alphabetically
-			'orderby' => 'title' // Order by post title
+			'order' => 'DESC', // Order posts alphabetically
+			'orderby' => 'date' // Order by post title
 		);
 
 		$query = new WP_Query($args); 

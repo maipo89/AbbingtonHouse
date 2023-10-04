@@ -3,6 +3,8 @@
 ?>
 
 <div class="paragraph-title">
-    <h1><?php echo($title) ?></h1>
+    <?php if($title): ?>
+        <h1><?php echo($title) ?></h1>
+    <?php endif; ?>
     <?php echo($text) ?>
 </div>

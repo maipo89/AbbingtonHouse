@@ -8,7 +8,9 @@
     <div class="paragraph-image__container">
         <div style='background-image: url("<?php echo($image["sizes"]["onqor-large"]) ?>")' alt="<?php echo($image["alt"]) ?>" class="paragraph-image__image"></div>
         <div class="paragraph-image__text">
-            <h1><?php echo($title) ?></h1>
+            <?php if($title): ?>
+                <h1><?php echo($title) ?></h1>
+            <?php endif; ?>
             <?php echo($text) ?>
         </div>
     </div>
