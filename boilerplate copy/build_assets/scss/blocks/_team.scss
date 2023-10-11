@@ -84,13 +84,14 @@
 
 
                 @media (max-width: 769px) {
-                    height: 255px;
+                    height: 261px;
                     width: 648px!important;
                     display: flex !important;
                 }
 
                 @media (max-width: 700px) {
                     width: 540px!important;
+                    height: 265px;
                 }
 
                 @media (max-width: 581px) {
@@ -98,7 +99,7 @@
                 }
 
                 @media (max-width: 499px) {
-                    height: 445px;
+                    height: fit-content;
                     width: 335px!important;
                     display: flex !important;
                     flex-direction: column;
@@ -161,7 +162,11 @@
                         background-color: $antique-white;
                         opacity: 0;
                         padding: 10px;
-                        @include flexCenter($direction: row);
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        flex-direction: column;
+                        overflow: auto;
 
                         @media (max-width: 769px) {
                             display: none;
@@ -173,13 +178,12 @@
                             font-weight: 500;
                             line-height: 19px;
                             margin: 0;
-                            height: 171px;
-                            overflow-y: scroll;
+                            margin-bottom: 16px;
                         }
+                    }
 
-                        p::-webkit-scrollbar {
-                            display: none;
-                        }
+                    .bio::-webkit-scrollbar {
+                        display: none;
                     }
 
                     &:hover {
@@ -202,6 +206,7 @@
                 .info {
                     @media (max-width: 769px) {
                         width: 361px;
+                        height: 100%;
                     }
                     @media (max-width: 700px) {
                         width: 253px;
@@ -218,14 +223,17 @@
 
                     @media (max-width: 769px) {
                         display: block;
-                        font-size: 16px;
-                        font-weight: 500;
                         width: 100%;
                         height: fit-content;
                         overflow: auto;
-                        line-height: 19px;
                         margin: 0;
                         padding-left: 22px;
+                        height: 205px;
+                        overflow-y: scroll;
+                    }
+
+                    @media (max-width: 700px) {
+                        height: 208px;
                     }
 
                     @media (max-width: 500px) {
@@ -236,7 +244,21 @@
                         padding-left: 0;
                         width: 100%;
                     }
+
+                    p {
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 19px;
+                        @media (max-width: 499px) {
+                            text-align: center;
+                        }
+                    }
                 }
+
+                .bio-mobile::-webkit-scrollbar {
+                    display: none;
+                }
+
 
                 .name {
                     background-color: $shadow;

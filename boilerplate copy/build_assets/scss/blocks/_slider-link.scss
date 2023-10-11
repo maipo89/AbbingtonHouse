@@ -1,8 +1,19 @@
 .slider-link {
     padding-bottom: 48px;
+    padding-top: 102px;
+    
     @media (max-width: 768px) {
         padding-bottom: 32px;
     }
+
+    @media (max-width: 580px) {
+        padding-top: 78px;
+    }
+    
+    @media (max-width: 480px) {
+        padding-top: 115px;
+    }
+
     p {
         padding: 0 35px;
         width: 1092px;

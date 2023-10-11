@@ -3,21 +3,27 @@
     margin: 0 auto;
     max-width: 1280px;
     padding: 0 40px;
-    margin-top: 54px;
     margin-bottom: 115px;
+    padding-top: 156px;
     @media (max-width: 1241px) {
         max-width: 1080px;
-        margin-top: 0;
     }
     @media (max-width: 1080px) {
         padding: 0;
+        padding-top: 156px;
         margin-bottom: 167px;
     }
     @media (max-width: 769px) {
         margin-bottom: 167px;
     }
+    @media (max-width: 580px) {
+        padding: 0;
+        padding-top: 78px;
+    }
     @media (max-width: 480px) {
         margin-bottom: 132px;
+        padding: 0;
+        padding-top: 115px;
     }
     &.button-exist {
         @media (max-width: 1080px) {

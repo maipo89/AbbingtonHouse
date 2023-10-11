@@ -4,14 +4,17 @@
     max-width: 1280px;
     padding: 0 40px;
     margin-bottom: 172px;
+    padding-top: 102px;
 
     @media (max-width: 1280px) {
         padding: 0px;
+        padding-top: 102px;
     }
 
     @media (max-width: 900px) {
         position: relative;
         flex-direction: column-reverse;
+        padding-top: 102px;
     }
 
     @media (max-width: 600px) {
@@ -22,8 +25,13 @@
         margin-bottom: 202px;
     }
 
+    @media (max-width: 580px) {
+        padding-top: 78px;
+    }
+
     @media (max-width: 480px) {
         margin-bottom: 0px;
+        padding-top: 115px;
     }
 
     &__description, &__photo {
@@ -142,6 +150,10 @@
 
             @media (max-width: 1280px) {
                 width: 280px;
+            }
+
+            @media (max-width: 900px) {
+                top: initial;
             }
 
             @media (max-width: 480px) {

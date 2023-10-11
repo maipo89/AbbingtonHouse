@@ -116,7 +116,9 @@
 				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'single-post-thumbnail' ); ?>
 
 					<div class="blogs__card">
-						<div class="blogs__card__image" style="background-image: url('<?php echo($image[0]) ?>');"></div>
+					    <a href="<?php the_permalink() ?>" >
+							<div class="blogs__card__image" style="background-image: url('<?php echo($image[0]) ?>');"></div>
+						</a>
 						<div class="blogs__card__description">
 							<h2><?php the_title(); ?></h2>
 							<?php the_content(); ?>

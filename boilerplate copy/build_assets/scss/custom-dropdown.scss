@@ -43,7 +43,7 @@
                     bottom: 0px;
                     width: 0.15rem;
                     height: 100%;
-                    transition: all 0.5s;
+                    // transition: all 0.5s;
                 } 
 
                 &::before {
@@ -144,12 +144,12 @@
     pointer-events: all;
 }
 
-.open .arrow::before {
+.arrow::before {
     left: -5px;
     transform: rotate(-45deg);
 }
 
-.open .arrow::after {
+.arrow::after {
     left: 5px;
     transform: rotate(45deg);
 }

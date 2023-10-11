@@ -152,7 +152,7 @@ add_action('wp_enqueue_scripts', 'theme_styles');
 // Google Map
 
 function my_acf_init() {
-  acf_update_setting('google_api_key', 'AIzaSyDMqSLoDfBqzu0bVuT1USXebfMK83OX42M');
+  acf_update_setting('google_api_key', 'AIzaSyBuTSbA4n5MXVZLbz6BhPghUuDvmJ28EiE');
 }
 add_action('acf/init', 'my_acf_init');
 

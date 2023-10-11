@@ -27,7 +27,7 @@
                                 <p><?php echo($name) ?></p>
                                 <p><?php echo($job) ?></p>
                             </div>
-                            <p class="bio-mobile"><?php echo($bio) ?></p>
+                            <div class="bio-mobile"><?php echo($bio) ?></div>
                         </div>
                     </div>
                 <?php endwhile; ?>

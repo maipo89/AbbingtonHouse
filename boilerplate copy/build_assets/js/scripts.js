@@ -783,6 +783,16 @@ $(document).ready(function() {
         return "";
     }
 
+    
+    // Hide empty p tags
+    
+    $('p').each(function() {
+        if ($.trim($(this).text()) === "" && $(this).children().length === 0) {
+            $(this).hide();
+        }
+    });
+
+
     // Check if the user has previously accepted cookies
     var cookiesAccepted = getCookie('cookiesAccepted');
     var performanceCookiesAccepted = getCookie('performanceCookiesAccepted');
