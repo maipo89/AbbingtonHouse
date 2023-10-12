@@ -479,6 +479,10 @@ $(document).ready(function() {
         parentElement.classList.add("container-captcha");
     }
 
+    $('#form').on('submit', function(event) {
+        event.preventDefault();
+    });
+
     // $(".form-admission__form__container .input-name").on("input", function() {
     //     $("#LEADCF5").val($(this).val());
     // });

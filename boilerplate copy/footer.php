@@ -60,7 +60,7 @@
 					</div>
 				</div>
 
-				<p class="legal-text">© 2023 Abbington House | All Rights Reserved | Abbington House is the trading name of Abbington House Limited | <a href="<?php echo get_home_url(); ?>/cookie-policy/">Legal</a></p>
+				<p class="legal-text">© 2023 Abbington House | All Rights Reserved | Abbington House is the trading name of Abbington 28 Ltd | <a href="<?php echo get_home_url(); ?>/cookie-policy/">Legal</a></p>
 
 				<div id="inner-footer" class="wrap cf inner-footer">
                     <p>Designed and built by <a href="https://onqor.com/" target="_blank">ONQOR</a></p>

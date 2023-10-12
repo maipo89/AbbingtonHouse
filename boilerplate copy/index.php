@@ -1,18 +1,29 @@
-<?php get_header(); ?>
+<?php
+get_header();
 
-        <?php
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-		$args = array(
-			'post_type' => 'post',
-			'posts_per_page' => -1, // Display all posts
-			'order' => 'DESC', // Order posts alphabetically
-			'orderby' => 'date' // Order by post title
-		);
+$category_name = get_query_var('category_name');
+$post_name = get_query_var('name');
 
-		$query = new WP_Query($args); 
+$args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 12, // Display 12 posts per page
+    'order' => 'DESC',
+    'orderby' => 'date',
+    'paged' => $paged,
+);
 
-		?>
+if (!empty($category_name)) {
+    $args['category_name'] = $category_name;
+}
 
+if (!empty($post_name)) {
+    $args['name'] = $post_name;
+}
+
+$query = new WP_Query($args);
+?>
 		<div class="blogs">
 			<div class="blogs__inputs">
 			    <div class="blogs__inputs__container">
@@ -77,28 +88,38 @@
 				</div>
 			</div>
 			<div class="blogs__container">
-			    <?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
-		
-					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'single-post-thumbnail' ); ?>
+        <?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
 
-						<div class="blogs__card">
-							<a href="<?php the_permalink() ?>" >
-								<div class="blogs__card__image" style="background-image: url('<?php echo($image[0]) ?>');"></div>
-							</a>
-							<div class="blogs__card__description">
-								<h2><?php the_title(); ?></h2>
-								<?php the_content(); ?>
-							</div>
-							<div class="blogs__card__button">
-									<a class="button secondary-button" href="<?php the_permalink() ?>">Read More</a>
-							</div>
-						</div>
+            <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'single-post-thumbnail'); ?>
 
-					<?php endwhile; ?>
+            <div class="blogs__card">
+                <a href="<?php the_permalink() ?>">
+                    <div class="blogs__card__image" style="background-image: url('<?php echo ($image[0]) ?>');"></div>
+                </a>
+                <div class="blogs__card__description">
+                    <h2><?php the_title(); ?></h2>
+                    <?php the_content(); ?>
+                </div>
+                <div class="blogs__card__button">
+                    <a class="button secondary-button" href="<?php the_permalink() ?>">Read More</a>
+                </div>
+            </div>
 
-				<?php endif; ?>
-			</div>
-		</div>
+        <?php endwhile; ?>
 
+        <?php else : ?>
+            <p>No posts found</p>
+        <?php endif; ?>
+    </div>
+
+    <!-- Pagination links outside the container -->
+    <div class="pagination">
+        <?php
+        echo paginate_links(array(
+            'total' => $query->max_num_pages,
+        ));
+        ?>
+    </div>
+</div>
 
 <?php get_footer(); ?>

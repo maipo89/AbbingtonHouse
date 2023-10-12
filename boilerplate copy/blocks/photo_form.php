@@ -14,7 +14,7 @@
     <div class="photo-form__form">
         <h2><?php echo($formTitle) ?></h2>
 
-        <script id='formScript592080000000423007' src='https://crm.zoho.eu/crm/WebFormServeServlet?rid=7457700bb80fd4a717c79294e0b3d565116ff360f1720fc66d096e71312ce04bgid43c814f375139ebc4a3e1bf337eb5a1ecb6317eb8bb744f1b84fafbd669e4dba&script=$sYG'></script>
+        <!-- <script id='formScript592080000000423007' src='https://crm.zoho.eu/crm/WebFormServeServlet?rid=7457700bb80fd4a717c79294e0b3d565116ff360f1720fc66d096e71312ce04bgid43c814f375139ebc4a3e1bf337eb5a1ecb6317eb8bb744f1b84fafbd669e4dba&script=$sYG'></script> -->
 
         <!-- <form id="formEnquire" name="formEnquire" action="<?php echo home_url(); ?>/mail_enquire.php" method="POST">
             <input class="input-name required" name="thename" type="text" placeholder="<?php echo($input[0]['input_placeholder']) ?>" />
@@ -44,6 +44,22 @@
                 <input type="submit" class="button" value="<?php echo($buttonText)?>" />
             </div>
         </form> -->
+
+        <form action='https://forms.zohopublic.eu/michael29/form/OurApproachShortForm/formperma/H0Se6ZqanFOeRznsxXVyvPDeuJ6QsVRAnBG5tEi1Wy8/htmlRecords/submit' name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
+            <input type="hidden" name="zf_referrer_name" value=""><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
+            <input type="hidden" name="zf_redirect_url" value=""><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
+            <input type="hidden" name="zc_gad" value=""><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
+            <input type="text" maxlength="255" name="Name_First" fieldType=7 placeholder="First&#x20;Name" />
+            <input type="text" maxlength="255" name="Name_Last" fieldType=7 placeholder="Last&#x20;Name" />
+            <input type="text" compname="PhoneNumber" name="PhoneNumber_countrycode" phoneFormat="1" isCountryCodeEnabled=false maxlength="20" value="" fieldType=11 id="international_PhoneNumber_countrycode" placeholder="Telephone" />
+            <input type="text" maxlength="255" name="Email" value="" fieldType=9 placeholder="Email" />
+            <textarea name="MultiLine" maxlength="65535" placeholder="Comments" ></textarea>
+            <div class="photo-form__form__button-container">
+                <button class="button" type="submit">Submit</button>
+            </div>
+        </form>
+
+
         <p class="call-text"><?php echo($textCall)?> <a href="tel:<?php echo($number)?>"><?php echo($number)?></a><p>
     </div>
 </div>
