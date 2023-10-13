@@ -169,21 +169,6 @@ if( function_exists('acf_add_options_page') ) {
   
 }
 
-// Pagination Blogs
-
-function custom_rewrite_rules($rules) {
-  $new_rules = array(
-      'blogs/author/([^/]+)/page/([0-9]+)/?$' => 'index.php?author_name=$matches[1]&paged=$matches[2]',
-      'blogs/([^/]+)/([^/]+)/page/([0-9]+)/?$' => 'index.php?category_name=$matches[1]&name=$matches[2]&paged=$matches[3]',
-      'blogs/([^/]+)/page/([0-9]+)/?$' => 'index.php?category_name=$matches[1]&paged=$matches[2]',
-      'blogs/([^/]+)/([^/]+)/page/([0-9]+)/?$' => 'index.php?category_name=$matches[1]&author_name=$matches[2]&paged=$matches[3]',
-  );
-
-  return $new_rules + $rules;
-}
-
-add_filter('rewrite_rules_array', 'custom_rewrite_rules');
-
 // Post Thumbnails 
 
 add_theme_support( 'post-thumbnails' );

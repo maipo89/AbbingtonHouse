@@ -325,4 +325,32 @@
             }
         }
     }
+
+    .pagination {
+        font-family: $alegreya;
+        font-size: 20px;
+        font-weight: 400;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+
+        &__container {
+            margin: 0 auto;
+        }
+
+        .next, .prev {
+            display: none;
+        }
+
+        .page-numbers {
+            padding-left: 6px;
+            padding-right: 6px;
+            color: $dark-gray;
+
+            &.current {
+                color: #85876A;
+            }
+        }
+    }
+
 }
