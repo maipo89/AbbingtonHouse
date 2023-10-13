@@ -32,8 +32,6 @@ $query = new WP_Query($args);
 ?>
         <div class="blogs">
 			<div class="blogs__inputs">
-			<p><?php var_dump($args['author_name']) ?></p>
-<p><?php echo($author_name) ?></p>
 			    <div class="blogs__inputs__container">
 				    <div class="search">
 						<input id="search-archive" placeholder="Search..."/>

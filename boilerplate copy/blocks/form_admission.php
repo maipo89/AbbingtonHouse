@@ -9,6 +9,7 @@
       $backgroundPattern = get_sub_field('background_pattern');
       $completeText = get_sub_field('complete_text');
       $completeSubtext = get_sub_field('complete_subtext');
+      $testimonialsPage = get_sub_field('testimonials_page')
 ?>
 
 <div class="form-admission">
@@ -18,7 +19,15 @@
             <h2><?php echo($title) ?></h2>
             <p><?php echo($text) ?></p>
 
-            <script id='formScript592080000000423007' src='https://crm.zoho.eu/crm/WebFormServeServlet?rid=7457700bb80fd4a717c79294e0b3d565116ff360f1720fc66d096e71312ce04bgid43c814f375139ebc4a3e1bf337eb5a1ecb6317eb8bb744f1b84fafbd669e4dba&script=$sYG'></script>
+            <?php if( $testimonialsPage ): ?>
+              
+                <script id='formScript592080000000590001' src='https://crm.zoho.eu/crm/WebFormServeServlet?rid=7457700bb80fd4a717c79294e0b3d5658da6bf3b371d184c147faf334af6c8a7gid43c814f375139ebc4a3e1bf337eb5a1ecb6317eb8bb744f1b84fafbd669e4dba&script=$sYG'></script>
+            
+            <?php else: ?>
+
+                <script id='formScript592080000000423007' src='https://crm.zoho.eu/crm/WebFormServeServlet?rid=7457700bb80fd4a717c79294e0b3d565116ff360f1720fc66d096e71312ce04bgid43c814f375139ebc4a3e1bf337eb5a1ecb6317eb8bb744f1b84fafbd669e4dba&script=$sYG'></script>
+
+            <?php endif; ?>
             
             <!-- <form id="formAdmission" name="formAdmission" action="<?php echo home_url(); ?>/mail.php" method="POST">
                 <div class="form-admission__form__container">

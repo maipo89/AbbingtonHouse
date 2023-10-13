@@ -71,6 +71,10 @@
             font-family: $alegreyaSans;
         }
 
+        .zcwf_row label {
+            display: none;
+        }
+
         img#imgid592080000000423007 {
             width: 190px;
             height: 66px;
@@ -129,7 +133,11 @@
         }
 
         textarea#Description {
-            height: 60px;
+            height: 80px;
+        }
+
+        input#formsubmit {
+            margin-top: 20px;
         }
 
         .zcwf_lblLeft .zcwf_col_lab {

@@ -463,25 +463,14 @@ $(document).ready(function() {
     });
 
     $("#formsubmit").removeClass("zcwf_button");
-
+    $("#First_Name").attr("placeholder", "First Name");
     $("#LEADCF5").attr("placeholder", "First Name");
     $("#Last_Name").attr("placeholder", "Last Name");
     $("#LEADCF4").attr("placeholder", "Telephone");
     $("#LEADCF82").attr("placeholder", "DD/MM/YYYY");
     $("#Email").attr("placeholder", "Email");
-    $("#Description").attr("placeholder", "Comment");
-    $(".input-focus-accessibility").attr("placeholder", "Captcha");
-
-    var element = document.getElementById("imgid592080000000423007");
-    if (element) {
-        var parentElement = element.parentNode;
-        // Add a class to the parent element
-        parentElement.classList.add("container-captcha");
-    }
-
-    $('#form').on('submit', function(event) {
-        event.preventDefault();
-    });
+    $("#Description").attr("placeholder", "Comments");
+    $("#LEADCF15").attr("placeholder", "Comments");
 
     // $(".form-admission__form__container .input-name").on("input", function() {
     //     $("#LEADCF5").val($(this).val());
