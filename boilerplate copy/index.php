@@ -3,6 +3,9 @@ get_header();
 
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
+$category_name = get_query_var('category_name');
+$post_name = get_query_var('name');
+
 $args = array(
     'post_type' => 'post',
     'posts_per_page' => 12, // Display 12 posts per page
@@ -10,6 +13,14 @@ $args = array(
     'orderby' => 'date',
     'paged' => $paged,
 );
+
+if (!empty($category_name)) {
+    $args['category_name'] = $category_name;
+}
+
+if (!empty($post_name)) {
+    $args['name'] = $post_name;
+}
 
 $query = new WP_Query($args);
 ?>
