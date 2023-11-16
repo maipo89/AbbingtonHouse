@@ -6,7 +6,7 @@
 add_image_size( 'bones-thumb-600', 600, 150, true );
 add_image_size( 'bones-thumb-300', 300, 100, true );
 add_image_size( 'onqor-xl', 2000 );
-add_image_size( 'onqor-hd', 1500 );
+add_image_size( 'onqor-hd', 1920 );
 add_image_size( 'onqor-large', 1000 );
 add_image_size( 'onqor-logo', 600 );
 add_image_size( 'onqor-small', 100 );
