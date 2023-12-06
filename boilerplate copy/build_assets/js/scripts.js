@@ -51,13 +51,13 @@ $(document).ready(function() {
                 if ($carousel.hasClass('slick-initialized')) {
                     $carousel.slick('unslick');
                 }
-                $(".services__container__cards-container__card").on("mouseover", function() {
-                    $(this).children('div.services__container__cards-container__card__paragraph').addClass('fade-in');
-                });
+                // $(".services__container__cards-container__card").on("mouseover", function() {
+                //     $(this).children('div.services__container__cards-container__card__paragraph').addClass('fade-in');
+                // });
               
-                $(".services__container__cards-container__card").on("mouseleave", function() {
-                    $(this).children('div.services__container__cards-container__card__paragraph').removeClass('fade-in');
-                });
+                // $(".services__container__cards-container__card").on("mouseleave", function() {
+                //     $(this).children('div.services__container__cards-container__card__paragraph').removeClass('fade-in');
+                // });
             }
             else {
                 if (!$carousel.hasClass('slick-initialized')) {
